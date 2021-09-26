@@ -3,8 +3,6 @@ layout: default
 permalink: '/'
 ---
 
-# cepdnaclk.github.io/faq
-
 ## List of frequently asked questions
 
 This is an attempt to collect a list of frequently asked questions and answers. If you can remember questions from the earlier site or has suggestions for questions that should go into a FAQ site, add them here.
