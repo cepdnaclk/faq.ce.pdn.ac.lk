@@ -6,8 +6,8 @@ permalink: "/qa/"
 # cepdnaclk.github.io/faq/qa
 
 ##### How to add questions to this FAQ list?
-1. Go to [https://github.com/cepdnaclk/faq/blob/main/pages/qa.md](https://github.com/cepdnaclk/faq/blob/main/pages/qa.md)
-2. Sign in to github.
+1. Sign in to GitHub.
+2. Go to [https://github.com/cepdnaclk/faq/blob/main/pages/qa.md](https://github.com/cepdnaclk/faq/)
 3. Fork the repo.
 4. Edit the file. (You may answer an existing question, and a new question or add a new question along with the answer)
 5. Send a pull request.
