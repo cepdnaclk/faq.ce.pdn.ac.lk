@@ -1,4 +1,4 @@
-# cepdnaclk.github.io/faq
+# cepdnaclk.github.io/sites/faq
 
 ## Source code
 
