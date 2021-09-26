@@ -1,10 +1,11 @@
-# cepdnaclk.github.io/sites/faq
+---
+layout: default
+permalink: '/'
+---
 
-## Source code
+# cepdnaclk.github.io/faq
 
-The source code from 2015 is avaliable [here](/src/). Unfortunately, the MySQL database structure is not found. **To do:** Find the mysql database backup and restore the website.
-
-## List of frequenty asked questions
+## List of frequently asked questions
 
 This is an attempt to collect a list of frequently asked questions and answers. If you can remember questions from the earlier site or has suggestions for questions that should go into a FAQ site, add them here.
 
