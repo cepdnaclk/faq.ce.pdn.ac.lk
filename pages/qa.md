@@ -20,7 +20,7 @@ See [https://ce-pdn-ac-lk.com/cewiki/server_use:use_of_servers](https://ce-pdn-a
 ---
 
 ##### How can I become a member of the github organization?
-Send an email to [this address](https://gihan.me/contact) from your @ce.pdn.ac.lk email (not your gmail, not your @eng.pdn.ac.lk).
+Send an email to e17154ATengDOTpdnDOTacDOTlk from your @ce.pdn.ac.lk email (not your gmail, not your @eng.pdn.ac.lk). You can send the email from you @eng.pdn.ac.lk address only if you have the registration number (not the name) as the email address.
 
 ---
 
@@ -28,8 +28,8 @@ Send an email to [this address](https://gihan.me/contact) from your @ce.pdn.ac.l
 <table>
     <tr><td>Network</td><td>Username</td><td>Password</td></tr>
     <tr><td>Pera-Wifi</td><td>e14000</td><td>Feels password</td></tr>
-    <tr><td>Eng-Student</td><td>None</td><td><a href="https://gihan.me/contact/">ask</a>(cannot post publicly)</td></tr>
-    <tr><td>NetLab</td><td>None</td><td><a href="https://gihan.me/contact/">ask</a>(cannot post publicly)</td></tr>
+    <tr><td>Eng-Student</td><td>None</td><td><a href="https://cepdnaclk.github.io/servers/admin//">ask</a>(cannot post publicly)</td></tr>
+    <tr><td>NetLab</td><td>None</td><td><a href="https://cepdnaclk.github.io/servers/admin/">ask</a>(cannot post publicly)</td></tr>
 </table>
 
 ---
