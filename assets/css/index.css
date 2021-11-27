@@ -5,6 +5,14 @@
     min-height: 75vh!important;
 }
 
+.highlight{
+    padding: 10px !important;
+}
+
+.highlighter-rouge{
+    border: 1px solid gray;
+    margin: 20px;
+}
 
 footer {
   padding: 2.5rem 0;

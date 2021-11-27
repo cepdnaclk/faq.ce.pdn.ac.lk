@@ -9,6 +9,7 @@ layout: table_wrapper
     {% include meta.html %}
 
     {%- feed_meta -%}
+
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include analytics.html -%}
     {%- endif -%}
@@ -24,17 +25,17 @@ layout: table_wrapper
         <div class="row">
             <div class="container col-sm-12 col-md-10 col-lg-10 mx-auto mt-3 py-2">
                 {{ content }}
-
-
-                <hr>
-                {%- if page.github -%}
-                <a class="edit" href="{{ site.gh_edit_repository }}/blob/{{ site.gh_edit_branch }}/{{ page.github }}" title="Edit on GitHub" rel="noreferrer" target="_blank">
-                    <i class="fa fa-github fa-13"></i> {{ site.gh_edit_link_text }}
-                </a>
-                {%- endif -%}
             </div>
         </div>
     </div>
+    {%- if page.github -%}
+    <div class="container">
+        <hr>
+        <a class="edit" href="{{ site.gh_edit_repository }}/blob/{{ site.gh_edit_branch }}/{{ page.github }}" title="Edit on GitHub" rel="noreferrer" target="_blank">
+            <i class="fa fa-github fa-13"></i> {{ site.gh_edit_link_text }}
+        </a>
+    </div>
+    {%- endif -%}
 
     {% include footer.html %}
 

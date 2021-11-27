@@ -11,8 +11,11 @@ layout: default
 {% assign content_ = content_ | replace: '<answer>', '<div>' %}
 {% assign content_ = content_ | replace: '</answer>', '</div>' %}
 
+{% assign content_ = content_ | replace: '<code class="', '<div class="highlight"><pre><code class="dracula ' %}
+{% assign content_ = content_ | replace: '</code>', '</code></pre></div>' %}
+
 {% include page_tree_builder.html pages=site.html_pages -%}
-{%- assign parent_page = pages_list | where: "title", "Field Selection" -%}
+{%- assign parent_page = pages_list | where: "title", page.parent -%}
 
 <div class="container">
     <a href="{% link faq/index.html %}">Home</a> /
