@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+{% assign content_ = content | replace: '<faq>', '<div>' %}
+{% assign content_ = content_ | replace: '</faq>', '</div><br>' %}
+
+{% assign content_ = content_ | replace: '<question>', '<div><b>Q.' %}
+{% assign content_ = content_ | replace: '</question>', '</b></div>' %}
+
+{% assign content_ = content_ | replace: '<answer>', '<div>' %}
+{% assign content_ = content_ | replace: '</answer>', '</div>' %}
+
+{% include page_tree_builder.html pages=site.html_pages -%}
+{%- assign parent_page = pages_list | where: "title", "Field Selection" -%}
+
+<div class="container">
+    <a href="{% link faq/index.html %}">Home</a> /
+    <a href="{{ parent_page[0].permalink }}">{{ page.parent }}</a> / {{ page.title }}
+    <br>
+    <br>
+
+    <h4>{{ page.title }}</h4>
+
+    <div class="container pt-3">
+        {{ content_ }}
+    </div>
+</div>

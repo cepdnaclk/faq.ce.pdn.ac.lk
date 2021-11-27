@@ -21,6 +21,13 @@ plugins:
 ga_tracking:
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
 
+# Edit on GitHub button
+gh_edit_link: false # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/cepdnaclk/faq.ce.pdn.ac.lk" # the github URL for your repo
+gh_edit_branch: "main" # the branch that your docs is served from
+
+
 permalink: pretty
 exclude:
   [
