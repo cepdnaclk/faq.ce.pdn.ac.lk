@@ -1,4 +1,4 @@
-title: "FAQ | Department of Computer Engineering"
+title: "CE FAQ"
 baseurl: "" # the subpath of your site, e.g. /blog
 
 author:
@@ -13,7 +13,6 @@ minima:
   date_format: "%b %-d, %Y"
 
 plugins:
- - jekyll-feed
  - jekyll-seo-tag
  - jekyll-sitemap
 
