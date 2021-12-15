@@ -24,3 +24,16 @@ footer {
 footer p:last-child {
   margin-bottom: 0;
 }
+
+/*
+.nobullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  background: #000000;
+  margin: 5px;
+}
+*/

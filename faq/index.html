@@ -10,8 +10,8 @@ title: "New Home"
 <h2>{{ page.title }}</h2>
 
 <h4>Categories</h4>
-<ul>
+<ul class="list-group">
     {% for page in categories %}
-    <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+    <li><a href="{{ page.permalink }}" class="list-group-item list-group-item-action list-group-item-primary">{{ page.title }}</a></li>
     {% endfor %}
 </ul>
