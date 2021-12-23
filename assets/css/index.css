@@ -25,15 +25,14 @@ footer p:last-child {
   margin-bottom: 0;
 }
 
-/*
+
 .nobullets {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 ul li {
-  background: #000000;
-  margin: 5px;
+  background: #000000 !important;
+  margin: 5px !important;
 }
-*/

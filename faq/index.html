@@ -12,6 +12,8 @@ title: "New Home"
 <h4>Categories</h4>
 <ul class="list-group">
     {% for page in categories %}
-    <li><a href="{{ page.permalink }}" class="list-group-item list-group-item-action list-group-item-primary">{{ page.title }}</a></li>
+    <div class="d-grid gap-3 ">
+    <div class="p-0 bg-light border " ><a href="{{ page.permalink }}" class="list-group-item list-group-item-action list-group-item-primary nobullets">{{ page.title }}</a></div>
+    </div>
     {% endfor %}
 </ul>
