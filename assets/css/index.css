@@ -33,6 +33,6 @@ footer p:last-child {
 }
 
 ul li {
-  background: #b39797 !important;
+  /*background: #000000 !important;*/
   margin: 5px !important;
 }
