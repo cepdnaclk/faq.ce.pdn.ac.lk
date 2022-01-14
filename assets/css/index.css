@@ -36,3 +36,9 @@ ul li {
   /*background: #000000 !important;*/
   margin: 5px !important;
 }
+
+#catNames {
+  color: black !important;
+  background-color: yellow;
+
+}
