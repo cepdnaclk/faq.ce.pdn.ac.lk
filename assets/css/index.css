@@ -39,6 +39,6 @@ ul li {
 
 #catNames {
   color: black !important;
-  background-color: yellow;
+  background-color: yellow !important;
 
 }

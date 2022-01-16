@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: "/home_new/"
-title: "New Home"
+title: "<h1>Frequently Asked Questions</h1>"
 ---
 
 {% include page_tree_builder.html pages=site.html_pages -%}
@@ -11,12 +11,13 @@ title: "New Home"
 
 <h4>Categories</h4>
 
-<ul class="list-group">
+<ul class="list-group" id="catNames">
     {% for page in categories %}
     <div class="d-grid gap-3 ">
         <div class="p-0 bg-light border "  >
             <a href="{{ page.permalink }}" class="list-group-item list-group-item-action list-group-item-primary nobullets">
                 <img src="\assets\img\{{page.title}}.png" width="60">{{ page.title }}</a>
+    
         </div>
     </div>
     {% endfor %}

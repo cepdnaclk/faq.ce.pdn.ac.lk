@@ -6,13 +6,20 @@ title: "General"
 index: 1
 ---
 
+<!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
+Later add to template-->
+<p style="text-align:right">
+  <button type="button" class="btn btn-dark"  data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="collapse1">EXPAND ALL</button>
+</p>
+
+
 <!-- 1 -->
 <p>
     <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapseExample">
         Will my @ce.pdn.ac.lk mail address and @eng.pdn.ac.lk mail address expire after graduation?
     </button>
 </p>
-  <div class="collapse" id="collapse1">
+  <div class="collapse multi-collapse" id="collapse1">
     <div class="card card-body">
         As of now (2020/04/14): @ce.pdn.ac.lk will be deleted one year after the graduation.<br>
          @eng.pdn.ac.lk will not be deleted in the foreseeable future.
@@ -25,7 +32,7 @@ index: 1
         What are my usernames and passwords for university websites?
     </button>
 </p>
-  <div class="collapse" id="collapse2">
+  <div class="collapse multi-collapse" id="collapse2">
     <div class="card card-body">
         <table class="table table-bordered border-dark table-striped">
             <tr><th>Account</th><th>Username</th><th>Password</th></tr>
@@ -51,7 +58,7 @@ index: 1
         How can I get help to recover passwords or create accounts?
     </button>
 </p>
-  <div class="collapse" id="collapse3">
+  <div class="collapse multi-collapse" id="collapse3">
     <div class="card card-body">
         <table class="table table-bordered border-dark table-striped ">
             <tr><th>Account</th><th>Whom to ask</th></tr>
@@ -66,3 +73,6 @@ index: 1
             </table>
     </div>
   </div>
+
+
+
