@@ -1,8 +1,8 @@
 ---
 layout: default
-permalink: '/'
+permalink: '/home_old'
 ---
-### Check the [new FAQ Home](/home_new)
+### Check the [new FAQ Home](/)
 ## List of frequently asked questions
 
 This is an attempt to collect a list of frequently asked questions and answers. If you can remember questions from the earlier site or has suggestions for questions that should go into a FAQ site, add them here.
