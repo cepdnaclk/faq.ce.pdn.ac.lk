@@ -1,6 +1,6 @@
 ---
 layout: testCategory2
-permalink: "/network_n_servers/aiken/"
+permalink: "/network-n-servers/aiken/"
 parent: "Network and Servers"
 title: "Aiken"
 index: 2
@@ -10,16 +10,14 @@ author : Adeepa
 
 
 <h3>aiken.ce.pdn.ac.lk Server</h3>
-<p>This is a HPC server of the Department of Computer Engineering, University of Peradeniya.</p>
-<p>The administrator changes will be documented [here](https://github.com/cepdnaclk/server-documentation-public).</p>
+<p>This is a HPC (High Performance Computing) server of the Department of Computer Engineering, University of Peradeniya.</p>
+<p>The administrator changes will be documented <a href="https://github.com/cepdnaclk/server-documentation-public">here</a>.</p>
 <p>You can use this server using the LDAP login for ce.pdn.ac.lk undergraduates (which is used for CO top floor lab, aiken and tesla) without sudo access.</p>
-
-
 
 <!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
 Later add to template-->
 <p style="text-align:right">
-  <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
+    <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
 </p>
 
 <!-- 1 -->
@@ -28,13 +26,13 @@ Later add to template-->
         How can a ce.pdn.ac.lk undergraduate get a docker enabled account?
     </button>
 </p>
-  <div class="collapse multi-collapse" id="collapse1">
+<div class="collapse multi-collapse" id="collapse1">
     <div class="card card-body">
         Send an email to headce[at]eng.pdn.ac.lk with your registration number requesting an account in this server.
-         If you are allowed to have one,
-         head of the Department will forward the request to the server admin and you will recieve a login.
+        If you are allowed to have one,
+        head of the Department will forward the request to the server admin and you will recieve a login.
     </div>
-  </div>
+</div>
 
 <!-- 2 -->
 <p>
@@ -42,11 +40,11 @@ Later add to template-->
         I am not an undergraduate of the Department of Computer Engineering, University of Peradeniya. Can I use this server?
     </button>
 </p>
-  <div class="collapse multi-collapse" id="collapse2">
+<div class="collapse multi-collapse" id="collapse2">
     <div class="card card-body">
         Ask headce[at]eng.pdn.ac.lk.
     </div>
-  </div>
+</div>
 
 <!-- 3 -->
 <p>
@@ -54,12 +52,11 @@ Later add to template-->
         How can I connect to this server?
     </button>
 </p>
-  <div class="collapse multi-collapse" id="collapse3">
+<div class="collapse multi-collapse" id="collapse3">
     <div class="card card-body">
-        You can use ssh login. [This](https://ce-pdn-ac-lk.com/cewiki/server_use:use_of_servers) is a good set of instructions on the matter. If it is not clear (or unaccessible),
-        contact dhanushki.mapitigama[at]eng.pdn.ac.lk
+        <p>You can use ssh login. <a href="https://ce-pdn-ac-lk.com/cewiki/server_use:use_of_servers">This</a> is a good set of instructions on the matter. If it is not clear (or unaccessible), contact dhanushki.mapitigama[at]eng.pdn.ac.lk</p>
     </div>
-  </div>
+</div>
 
 <!-- 4 -->
 <p>
@@ -67,12 +64,14 @@ Later add to template-->
         What is the hardware configuration of this server?
     </button>
 </p>
-  <div class="collapse multi-collapse" id="collapse4">
+<div class="collapse multi-collapse" id="collapse4">
     <div class="card card-body">
-        * Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz (20MB Cache, 32 Threads)  <br>
-        * 256 GB of RAM
+        <ul>
+            <li>Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz (20MB Cache, 32 Threads) </li>
+            <li>256 GB of RAM</li>
+        </ul>
     </div>
-  </div>
+</div>
 
 <!-- 5 -->
 <p>
@@ -80,11 +79,11 @@ Later add to template-->
         What is the operating system of this server?
     </button>
 </p>
-  <div class="collapse multi-collapse" id="collapse5">
+<div class="collapse multi-collapse" id="collapse5">
     <div class="card card-body">
         Ubuntu 18.04.5 LTS
     </div>
-  </div>
+</div>
 
 <!-- 6 -->
 <p>
@@ -92,25 +91,30 @@ Later add to template-->
         How can I run a Jupyter Notebook on the server and access it over the internet?
     </button>
 </p>
-  <div class="collapse multi-collapse" id="collapse6">
+<div class="collapse multi-collapse" id="collapse6">
     <div class="card card-body">
-        1. Create a conda environment with jupyter notebook package installed.
-2. Activate that environment.
-3. Run <code>jupyter notebook --generate-config</code>
-4. It will say the configuration file for your account. Edit the configuration file and add the following two lines. (They are originally commented out as given below.)
-```
+        <ol>
+            <li>Create a conda environment with jupyter notebook package installed.</li>
+            <li>Activate that environment.</li>
+            <li>Run <code class="md">jupyter notebook --generate-config</code></li>
+            <li>
+                It will say the configuration file for your account. Edit the configuration file and add the following two lines. (They are originally commented out as given below.)
+
+<code class="dracula bash">
 # c.NotebookApp.allow_origin = ''
 # c.NotebookApp.ip = 'localhost'
 c.NotebookApp.allow_origin = '*'
 c.NotebookApp.ip = '0.0.0.0'
-```
-5. Save the configuration file. You should still be in the conda environment.
-6. Run the jupyter notebook. <code>jupyter-notebook --no-browser</code>
-7. You will see a URL like this <code>http://SOMETHING:8888/tree?token=abc123def456</code>
-8. Type the following address into your PC browser <code>http://aiken.ce.pdn.ac.lk:8888/tree?token=abc123def456</code>
-9. Your browser (on your PC) will be showing the jupyter notebook running on the aiken server
+</code>
+            </li>
+            <li>Save the configuration file. You should still be in the conda environment.</li>
+            <li>Run the jupyter notebook. <code class="md">jupyter-notebook --no-browser</code></li>
+            <li>You will see a URL like this <code class="md">http://SOMETHING:8888/tree?token=abc123def456</code></li>
+            <li>Type the following address into your PC browser <code class="md">http://aiken.ce.pdn.ac.lk:8888/tree?token=abc123def456</code></li>
+            <li>Your browser (on your PC) will be showing the jupyter notebook running on the aiken server</li>
+        </ol>
     </div>
-  </div>
+</div>
 
 <!-- 7 -->
 <p>
@@ -118,12 +122,12 @@ c.NotebookApp.ip = '0.0.0.0'
         Can I install some software here?
     </button>
 </p>
-  <div class="collapse multi-collapse" id="collapse7">
+<div class="collapse multi-collapse" id="collapse7">
     <div class="card card-body">
-        Please request through any [CO staff member](http://www.ce.pdn.ac.lk/academic-staff/).
-        Please note that the server admin has no authority to install something unless it is requested by a staff memeber.
+        <p>Please request through any <a href="https://people.ce.pdn.ac.lk/staff/academic/">CO staff member</a>.
+        Please note that the server admin has no authority to install something unless it is requested by a staff memeber.</p>
     </div>
-  </div>
+</div>
 
 <!-- 8 -->
 <p>
@@ -131,11 +135,11 @@ c.NotebookApp.ip = '0.0.0.0'
         What can I do if my doubt is not listed here?
     </button>
 </p>
-  <div class="collapse multi-collapse" id="collapse8">
+<div class="collapse multi-collapse" id="collapse8">
     <div class="card card-body">
-        Ask the [admin](../admin/)
+        <p>Ask the <a href="{% link faq/network-n-servers/network-admin.html %}">CE Network Admin</a></p>
     </div>
-  </div>
+</div>
 
 <!-- 9 -->
 <p>
@@ -143,21 +147,23 @@ c.NotebookApp.ip = '0.0.0.0'
         What software is installed in this server?
     </button>
 </p>
-  <div class="collapse multi-collapse" id="collapse9">
+<div class="collapse multi-collapse" id="collapse9">
     <div class="card card-body">
-        * Ubuntu 18.04.5 LTS <br>
-        * conda 4.8.5
+        <ul>
+            <li>Ubuntu 18.04.5 LTS</li>
+            <li>conda 4.8.5</li>
+        </ul>
     </div>
-  </div>
+</div>
 
-  <!-- 10 -->
+<!-- 10 -->
 <p>
     <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapseExample">
         I broke something. What should I do?
     </button>
 </p>
-  <div class="collapse multi-collapse" id="collapse1">
+<div class="collapse multi-collapse" id="collapse1">
     <div class="card card-body">
-        Write an [email](../admin/) if this is not urgent. If not [call](../admin/).
+        <p>Write an email to <a href="{% link faq/network-n-servers/network-admin.html %}">CE Network Admin</a> if this is not urgent. If not, call <a href="{% link faq/network-n-servers/network-admin.html %}">CE Network Admin</a>.</p>
     </div>
-  </div>
+</div>
