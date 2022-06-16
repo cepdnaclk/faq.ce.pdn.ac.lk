@@ -5,21 +5,24 @@ layout: default
 {% include page_tree_builder.html pages=site.html_pages -%}
 {%- assign sub_categories = pages_list | where: "parent", page.title -%}
 
-<div class="container">
-    <a href="{% link faq/index.html %}">Home</a> / {{ page.title }}
-    <br>
-    <br>
-
-    <h2>{{ page.title }}</h2>
-
-    <div class="container py-3">
-        {{ content }}
-    </div>
-
-    <!--h4>Sub Categories</h4-->
-    <ul>
-        {% for page in sub_categories %}
-        <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
-        {% endfor %}
-    </ul>
+<div class="bg-secondary p-3 pb-1 rounded">
+    <h1 class="text-white">{{ page.title }}</h1>
+    <nav aria-label="breadcrumb page-breadcrumb">
+        <ol class="breadcrumb page-breadcrumb">
+            <li class="breadcrumb-item"><a href="{% link faq/index.html %}" class="link-light">Home</a></li>
+            <li class="breadcrumb-item text-white">
+                {{ page.title }}
+            </li>
+        </ol>
+    </nav>
 </div>
+
+<div class="container py-3 pt-5">
+    {{ content }}
+</div>
+
+<ul>
+    {% for page in sub_categories %}
+    <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+    {% endfor %}
+</ul>
