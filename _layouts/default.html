@@ -27,10 +27,10 @@ layout: table_wrapper
         </div>
     </div>
     {%- if page.github -%}
-    <div class="container">
-        <hr>
+    <!-- <hr> -->
+    <div class="container d-flex justify-content-end">
         <a class="edit" href="{{ site.gh_edit_repository }}/blob/{{ site.gh_edit_branch }}/{{ page.github }}" title="Edit on GitHub" rel="noreferrer" target="_blank">
-            <i class="fa fa-github fa-13"></i> {{ site.gh_edit_link_text }}
+            <i class="fab fa-github"></i> {{ site.gh_edit_link_text }}
         </a>
     </div>
     {%- endif -%}
