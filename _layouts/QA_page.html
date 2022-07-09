@@ -17,15 +17,21 @@ layout: default
 {% include page_tree_builder.html pages=site.html_pages -%}
 {%- assign parent_page = pages_list | where: "title", page.parent -%}
 
-<div class="container">
-    <a href="{% link faq/index.html %}">Home</a> /
-    <a href="{{ parent_page[0].permalink }}">{{ page.parent }}</a> / {{ page.title }}
-    <br>
-    <br>
+<div class="bg-secondary p-3 pb-1 rounded">
+        <h1 class="text-white">{{ page.title }}</h1>
+        <nav aria-label="breadcrumb page-breadcrumb">
+            <ol class="breadcrumb page-breadcrumb">
+                <li class="breadcrumb-item"><a href="{% link faq/index.html %}" class="link-light">Home</a></li>
+                <li class="breadcrumb-item">
+                    <a class="text-white" href="{{ parent_page[0].permalink }}">{{ page.parent }}</a>
+                </li>
+                <li class="breadcrumb-item text-white">
+                    {{ page.title }}
+                </li>
+            </ol>
+        </nav>
+</div>
 
-    <h4>{{ page.title }}</h4>
-
-    <div class="container pt-3">
-        {{ content_ }}
-    </div>
+<div class="container pt-5">
+    {{ content_ }}
 </div>

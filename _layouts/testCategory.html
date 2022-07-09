@@ -3,13 +3,20 @@ layout : default
 author : Adeepa
 ---
 {% include page_tree_builder.html pages=site.html_pages -%}
-<a href="{% link faq/index.html %}">Home</a> / {{ page.title }}
-    <br>
-    <br>
 
+<div class="bg-secondary p-3 pb-1 rounded">
+    <h1 class="text-white">{{ page.title }}</h1>
+    <nav aria-label="breadcrumb page-breadcrumb">
+        <ol class="breadcrumb page-breadcrumb">
+            <li class="breadcrumb-item"><a href="{% link faq/index.html %}" class="link-light">Home</a></li>
+            <li class="breadcrumb-item text-white">
+                {{ page.title }}
+            </li>
+        </ol>
+    </nav>
+</div>
 
-<div class="container">
-    <h1>{{page.title}}</h1>
+<div class="container pt-5">
     <h5>{{page.title}} FAQs of the Department of Computer Engineering </h5>
     <hr style="height:3px;border-width:0;color:gray;background-color:rgb(38, 0, 255)">
     {{ content }}
