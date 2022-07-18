@@ -1,0 +1,74 @@
+---
+layout: QA_page
+permalink: "/network-n-servers/connect-to-fpga-license-server-through-ssh-tunnel/"
+
+parent: "Network and Servers"
+title: "Connect to FPGA License Server through an SSH Tunnel"
+index: 5
+author: "Nuwan Jaliyagoda"
+
+github: faq/network-n-servers/5_connect_to_fpga_license_server_through_ssh_tunnel.html
+---
+
+<div class="container py-3">
+    For this option, you need an application which supports <i>SSH Tunneling</i>. You can use
+    <b>MobaXterm</b>, which is used in these instructions.
+</div>
+
+<div class="container py-3">
+    1. Open <b>MobaXterm</b>, and select the <b>Tunneling</b> option from the top toolbar.
+
+    <img class="my-3 img-thumbnail img-fluid" src="https://user-images.githubusercontent.com/11540782/179451873-7f47a5ad-a22a-448d-b260-f9828be34012.png" alt="">
+</div>
+
+<div class="container py-3">
+    2. Next, click on the <b>New SSH Tunnel</b> button. It will open a dialogue box like the following:
+
+    <img class="my-3 img-thumbnail img-fluid" src="https://user-images.githubusercontent.com/11540782/179452149-c5822237-6a63-44ee-84ff-be671a913904.png" alt="">
+
+    <ul>
+        <li>Select the <i>Local port forwarding</i> (<span style="color:red">Red</span> colour rectangle)</li>
+        <li>Fill the text boxes marked in <span style="color:blue">Blue</span> colour rectangles accordingly.</li>
+        <li>Fill the text box marked in <span style="color:yellow">Yellow</span> colour with your E Number.</li>
+    </ul>
+</div>
+
+<div class="container py-3">
+    3. <b>Save</b> and click the <b>Play</b> icon in the <i>MobaSSHTunnel</i> dialogue box. You may be asked to enter the password of your Department Server account. (Not the password of the FEeLS account)
+</div>
+
+<div class="container py-3">
+    4. When you start Quartus II, you will be asked to set up the Licence. In there, select the 4th option.
+
+    <img class="my-3 img-thumbnail img-fluid" src="https://user-images.githubusercontent.com/11540782/178090318-9efa23a7-86c9-45b6-86e2-07ace2f63756.png" alt="">
+</div>
+
+<div class="container py-3">
+    5. In the following window, please enter the Licence File as the following and press Enter:<br>
+
+    <div class="px-5 py-2">
+        <p class="lead font-monospace">
+            9000@localhost
+        </p>
+    </div>
+
+    If you configured the SSH tunnel from <span style="color: blue;">localhost:9000</span> into <span style="color: blue;">tesla.ce.pdn.ac.lk:1801</span>, it will appear 4 Vendors as shown in the below image.
+
+    <img class="my-3 img-thumbnail img-fluid" src="https://user-images.githubusercontent.com/11540782/179452704-4e23b6b2-9cf2-4dd8-ad02-b99ac910c0a4.png" alt="">
+</div>
+
+<div class="container py-3">
+    6. Congratulations! The setup is complete.
+</div>
+
+
+<div class="container pt-5">
+    <h5>Read more:</h5>
+    <ul>
+        <li>
+            <a href="https://www.ssh.com/academy/ssh/tunneling/" target="_blank">
+                SSH Academy: SSH Tunnel
+            </a>
+        </li>
+    </ul>
+</div>
