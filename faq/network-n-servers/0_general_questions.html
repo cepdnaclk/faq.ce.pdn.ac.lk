@@ -1,0 +1,95 @@
+---
+layout: testCategory2
+permalink: "/network-n-servers/general-questions/"
+parent: "Network and Servers"
+title: "General Questions"
+index: 0
+author : Nuwan
+---
+
+<!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
+Later add to template-->
+<p style="text-align:right">
+    <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
+</p>
+
+<!-- 1 -->
+<p>
+    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapseExample">
+        How to keep a program running even when I disconnect the remote terminal?
+    </button>
+</p>
+<div class="collapse multi-collapse" id="collapse1">
+    <div class="card card-body">
+        <p>Read <a href="https://www.maketecheasier.com/nohup-and-uses/">this</a> article.</p>
+    </div>
+</div>
+
+<!-- 2 -->
+<p>
+    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapseExample">
+        How can I install python packages?
+    </button>
+</p>
+<div class="collapse multi-collapse" id="collapse2">
+    <div class="card card-body">
+        <p>You can do it using conda with any account. Create your own conda environment to be safe. You do not need anyone’s permission to install a python package inside your conda environment. <a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">This</a> is a good quick start guide for conda.</p>
+
+        <p>In your first attempt to use conda, run the following command.</p>
+        <code class="bash">
+conda init bash
+        </code>
+        <p>You might have to run the following command on every login (unless .bashrc is run automatically)</p>
+        <code class="bash">
+source ~/.bashrc
+        </code>
+
+    </div>
+</div>
+
+<!-- 3 -->
+<p>
+    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapseExample">
+        How can I change the gcc or g++ version?
+    </button>
+</p>
+<div class="collapse multi-collapse" id="collapse3">
+    <div class="card card-body">
+        <p>Method 1: Please contact the <a href="https://cepdnaclk.github.io/servers/admin/">admin</a> and request them run update-alternatives as documented <a href="https://github.com/cepdnaclk/server-documentation-public">here</a>.</p>
+
+        <p>Method 2: All <b>gcc/g++</b> versions are installed in <b>/usr/bin/</b>. Following is an example on how you can use gcc-8 as gcc using a simple trick (without sudo).</p>
+        <code class="bash">
+gcc -v#You will see what the current gcc version is
+mkdir ~/symlinks
+cd ~/symlinks
+ln -s /usr/bin/gcc-8 ./gcc #We are creating a symbolic link called gcc to gcc-8
+export PATH="~/symlinks:$PATH" #We add the new gcc to the path (before the existing path)
+cd ~
+gcc -v #Now you get the gcc-8 when you run gcc command
+        </code>
+    </div>
+</div>
+
+<!-- 4 -->
+<p>
+    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapseExample">
+        Which server is more suitable for my work?
+    </button>
+</p>
+<div class="collapse multi-collapse" id="collapse4">
+    <div class="card card-body">
+        If you are working on a heavy CPU bound computation, use Aiken. Kepler would be suitable if you are working on deep learning because of better GPUs and ready made datasets on the server.
+    </div>
+</div>
+
+<!-- 5 -->
+<p>
+    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapseExample">
+        How can I conviniently run experiments on the server and remotely monitor them?
+    </button>
+</p>
+<div class="collapse multi-collapse" id="collapse5">
+    <div class="card card-body">
+        <p>Suggested solution: <a href="https://github.com/labmlai/labml">Labml</a> is an all in one solution for conducting, logging and monitoring NN based experiments on mobile/remote PC.</p>
+    </div>
+</div>

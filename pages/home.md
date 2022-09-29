@@ -1,8 +1,8 @@
 ---
 layout: default
-permalink: '/'
+permalink: '/home_old'
 ---
-
+### Check the [new FAQ Home](/)
 ## List of frequently asked questions
 
 This is an attempt to collect a list of frequently asked questions and answers. If you can remember questions from the earlier site or has suggestions for questions that should go into a FAQ site, add them here.
@@ -40,3 +40,5 @@ This is an attempt to collect a list of frequently asked questions and answers. 
 
 
 **To do:** Move this content to the FAQ site once implemented. Move these to the cewiki if we are not going to build a FAQ site.
+
+

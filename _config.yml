@@ -1,5 +1,5 @@
-title: "FAQ | Department of Computer Engineering"
-baseurl: "/faq" # the subpath of your site, e.g. /blog
+title: "CE FAQ"
+baseurl: "" # the subpath of your site, e.g. /blog
 
 author:
   name: Department of Computer Engineering
@@ -13,13 +13,19 @@ minima:
   date_format: "%b %-d, %Y"
 
 plugins:
- - jekyll-feed
  - jekyll-seo-tag
  - jekyll-sitemap
 
 # Google Analytics Tracking (optional)
 ga_tracking:
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
+
+# Edit on GitHub button
+gh_edit_link: false # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/cepdnaclk/faq.ce.pdn.ac.lk" # the github URL for your repo
+gh_edit_branch: "main" # the branch that your docs is served from
+
 
 permalink: pretty
 exclude:

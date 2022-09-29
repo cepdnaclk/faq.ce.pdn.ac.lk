@@ -1,0 +1,75 @@
+---
+layout: blank
+permalink: "/"
+title: "Frequently Asked Questions"
+---
+
+<header class="blog-header py-3 px-3 d-none d-sm-none d-md-block">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-5 pt-1">
+            <img class="ms-5 mx-auto d-block img-fluid" src="/assets/img/banner.svg" style="height:64px;" alt="Logo">
+        </div>
+        <div class="col-8 d-none">
+            &nbsp;
+        </div>
+        <div class="col-2 d-flex justify-content-end align-items-center">
+            <a class="d-none btn btn-sm btn-outline-secondary" href="http://www.ce.pdn.ac.lk" target="_blank">Department Site</a>
+        </div>
+    </div>
+</header>
+
+<div class="container pb-5">
+    <div class="row">
+        <div class="container col-sm-12 col-md-10 col-lg-10 mx-auto mt-3 py-2">
+
+            {% include page_tree_builder.html pages=site.html_pages -%}
+            {%- assign categories = pages_list | where: "parent", "home" -%}
+
+            <h1>{{ page.title }}</h1>
+
+            <h4>Categories</h4>
+
+            <div class="row g-2 pt-3">
+                {% for page in categories %}
+                <div class="col-sm-6 col-12 mb-1 g-2">
+                    <a class="text-decoration-none" href="{{ page.permalink }}">
+                        <div class="container card p-2 bg-light">
+                            <div class="row">
+                                <div class="col-sm-3 col-md-2 col-12 d-flex justify-content-start">
+                                    <img style="width:64px;" src="/assets/img/{{page.title}}.png" class="img-fluid rounded-start align-self-center" alt="{{page.title}}">
+                                </div>
+                                <div class="col-sm-9 col-md-10 col-12">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">{{ page.title }}</h5>
+                                        <!-- <p class="card-text"></p>
+                                        <p class="card-text"><small class="text-muted"></small></p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- <a href="/home_old">Old FAQ site home</a> -->
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // executes when HTML-Document is loaded and DOM is ready
+
+        $( ".card" ).hover(
+        function() {
+            $(this).addClass('shadow').css('cursor', 'pointer');
+        }, function() {
+            $(this).removeClass('shadow');
+        }
+        );
+
+        // document ready
+    });
+</script>

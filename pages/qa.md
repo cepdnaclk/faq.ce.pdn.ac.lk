@@ -25,7 +25,7 @@ Send an email to e17154ATengDOTpdnDOTacDOTlk from your @ce.pdn.ac.lk email (not 
 ---
 
 ##### What are my Wifi networks and login credentials?
-<table>
+<table class="table table-bordered">
     <tr><td>Network</td><td>Username</td><td>Password</td></tr>
     <tr><td>Pera-Wifi</td><td>e14000</td><td>Feels password</td></tr>
     <tr><td>Eng-Student</td><td>None</td><td><a href="https://cepdnaclk.github.io/servers/admin/">ask</a>(cannot post publicly)</td></tr>
@@ -108,7 +108,7 @@ As of now (2020/04/14): @ce.pdn.ac.lk will be deleted one year after the graduat
 
 ##### What are my usernames and passwords for university websites?
 
-<table>
+<table class="table table-bordered">
 <tr><th>Account</th><th>Username</th><th>Password</th></tr>
     <tr>
         <td>https://feels.pdn.ac.lk/</td>
@@ -128,7 +128,7 @@ As of now (2020/04/14): @ce.pdn.ac.lk will be deleted one year after the graduat
 
 ##### How can I get help to recover passwords or create accounts?
 
-<table>
+<table class="table table-bordered">
 <tr><th>Account</th><th>Whom to ask</th></tr>
 <tr><td>https://feels.pdn.ac.lk/</td><td>feels[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
 <tr><td>CO Top floor lab linux computers, tesla, aiken, babbage, [at]ce.pdn.ac.lk email, results.ce.pdn.ac.lk</td><td><a href="https://cepdnaclk.github.io/servers/admin/">CO server admin</a></td></tr>
