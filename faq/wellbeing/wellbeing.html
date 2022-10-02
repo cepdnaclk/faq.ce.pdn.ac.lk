@@ -6,79 +6,57 @@ title: "Wellbeing"
 index: 10
 ---
 
-<!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
+<!--EXPAND ALL a ON TOP RIGHT CORNER
 Later add to template-->
 <p style="text-align:right">
-  <button type="button" class="btn btn-dark btn-expand-all" >EXPAND ALL</button>
+  <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
 </p>
 
 
 <!-- 1 -->
-<p>
-    <button class="btn btn-success text-left" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapseExample" >
-        I have a few concerns about my academic program, and I would like to talk to a staff member.<br>
-         Whom should I talk to?
-    </button>
-</p>
-  <div class="collapse multi-collapse" id="collapse1">
-    <div class="card card-body">
-        Any staff member would be happy to help.<br> However, the most straightforward person to reach would be your advisor/a senior student counselor.
-        <br>You can find your advisor here.
-    </div>
-  </div>
+{% include qa-template.html
+id=""
+question="I have a few concerns about my academic program, and I would like to talk to a staff member.<br>
+Whom should I talk to?"
+answer="Any staff member would be happy to help.<br> However, the most straightforward person to reach would be your
+advisor/a senior student counselor.
+<br>You can find your advisor here."
+%}
 
 <!-- 2 -->
-  <p>
-    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapseExample">
-        I am concerned about my mental health and prefer advice from a professional.
-        <br> What resources are available for me at the faculty/university?
-    </button>
-</p>
-  <div class="collapse multi-collapse" id="collapse2">
-    <div class="card card-body">
-        You can find a lot of information on the support at the faculty level in the FEeLS page <add link here> <br>
-            University has an established unit with counseling and psychological professionals called Capsu <insert link here>
-    </div>
-  </div>
+{% include qa-template.html
+id="2"
+question="I am concerned about my mental health and prefer advice from a professional.
+<br> What resources are available for me at the faculty/university?"
+answer="You can find a lot of information on the support at the faculty level in the FEeLS page [add link here] <br>
+University has an established unit with counseling and psychological professionals called Capsu [insert link here]"
+%}
 
 <!-- 3 -->
-<p>
-    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapseExample">
-        I would like to raise my voice on a problem applicable to most of my colleagues at the department. <br> What places can I go to?
-    </button>
-</p>
-  <div class="collapse multi-collapse" id="collapse3">
-    <div class="card card-body">
-        <ul>
-            <li>Staff student liaison committee</li>
-            <li>Head of Department</li>
-          </ul>
-    </div>
-  </div>
+{% include qa-template.html
+id="3"
+question="I would like to raise my voice on a problem applicable to most of my colleagues at the department. <br>
+What
+places can I go to?"
+answer="<ul>
+  <li>Staff student liaison committee</li>
+  <li>Head of Department</li>
+</ul>"
+%}
 
-  <!-- 4  -->
-  <p>
-    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapseExample">
-        What opportunities are there for me to interact with others at the department?
-    </button>
-</p>
-  <div class="collapse multi-collapse" id="collapse2">
-    <div class="card card-body">
-        Answer Not Available!
-    </div>
-  </div>
+<!-- 4  -->
+{% include qa-template.html
+id="4"
+question="What opportunities are there for me to interact with others at the department?"
+answer="No answer available yet"
+%}
 
-  <!-- 5 -->
-  <p>
-    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapseExample">
-        For a concern on a course, whom to contact
-    </button>
-</p>
-  <div class="collapse multi-collapse" id="collapse2">
-    <div class="card card-body">
-        <ul>
-            <li>Course coordinator</li>
-            <li>Head of Department</li>
-          </ul>
-    </div>
-  </div>
+<!-- 5 -->
+{% include qa-template.html
+id="5"
+question="For a concern on a course, whom to contact"
+answer="<ul>
+  <li>Course Coordinator</li>
+  <li>Head of Department</li>
+</ul>"
+%}
