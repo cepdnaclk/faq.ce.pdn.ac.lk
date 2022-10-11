@@ -1,7 +1,7 @@
 ---
 layout: blank
 permalink: "/"
-title: "Frequently Asked Questions"
+title: "FAQ"
 ---
 
 <header class="blog-header py-3 px-3 d-none d-sm-none d-md-block">
@@ -25,7 +25,7 @@ title: "Frequently Asked Questions"
             {% include page_tree_builder.html pages=site.html_pages -%}
             {%- assign categories = pages_list | where: "parent", "home" -%}
 
-            <h1>{{ page.title }}</h1>
+            <h1>Frequently Asked Questions ({{ page.title }})</h1>
 
             <h4>Categories</h4>
 
@@ -53,6 +53,26 @@ title: "Frequently Asked Questions"
             </div>
 
             <!-- <a href="/home_old">Old FAQ site home</a> -->
+            <div>
+                <br><br> 
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            <h5>Need help?</h5>
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+                          <strong>If you need help with what you are looking for or have any doubts, please reach out to the maintainers listed <a href="https://github.com/orgs/cepdnaclk/teams/admins-cepdnaclk-github-io/members">here</a>.</strong> <br>
+                             If you are not a member of the Github organization to view that link, please reach out to <a href="https://people.ce.pdn.ac.lk/students/e17/154/">Akila</a>, <a href="https://people.ce.pdn.ac.lk/students/e18/100/">Adeepa</a> . <br>
+                             If everything else fails, reach out to <a href="https://people.ce.pdn.ac.lk/staff/academic/roshan-ragel/">Prof. Roshan Ragel</a>.
+                        </div>
+                      </div>
+                    </div>
+                   
+                  </div>
+            </div>
+            
 
         </div>
     </div>
