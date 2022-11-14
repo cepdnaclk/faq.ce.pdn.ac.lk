@@ -10,20 +10,39 @@ index: 6
 <!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
 Later add to template-->
 <p style="text-align:right">
-  <button type="button" class="btn btn-dark btn-expand-all" >EXPAND ALL</button>
+  <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
 </p>
 
 
 <!-- 1 -->
 <p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapseExample">
-        How to get started with the Open BCI Cyton Board?
-    </button>
-</p>
-  <div class="collapse multi-collapse" id="collapse1">
-    <div class="card card-body">
-        See <a href="https://cepdnaclk.github.io/e15-4yp-Brain-Computer-Interface-for-controlling-virtual-objects/">
-            https://cepdnaclk.github.io/e15-4yp-Brain-Computer-Interface-for-controlling-virtual-objects/</a>
-    </div>
-  </div>
+  <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+    aria-expanded="false" aria-controls="collapseExample">
 
+  </button>
+</p>
+<div class="collapse multi-collapse" id="collapse1">
+  <div class="card card-body">
+
+  </div>
+</div>
+
+
+<!-- 1 -->
+{% include qa-template.html
+id="1"
+question="How to get started with the Open BCI Cyton Board?"
+answer="See <a href='https://cepdnaclk.github.io/e15-4yp-Brain-Computer-Interface-for-controlling-virtual-objects/'>
+  https://cepdnaclk.github.io/e15-4yp-Brain-Computer-Interface-for-controlling-virtual-objects/</a>"
+%}
+
+
+<!-- 2 -->
+{% include qa-template.html
+id="2"
+question="How to use the department 3D printing service ?"
+answer="See the guidelines for beginners in below page:
+<a
+  href='https://docs.google.com/document/d/e/2PACX-1vT8810lDPsQQmlC24Jw1W97etCDl_E0me4gEvUOxAHOqHfCrQ2m_wi1vK6QvAW4gXhP_j82iDbm6X1X/pub'>Ender
+  3 Pro 3D Printer User Guide</a>"
+%}

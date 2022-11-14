@@ -20,9 +20,11 @@ layout: default
 <div class="container py-3 pt-5">
     {{ content }}
 
+    {%- if page.toc != false -%}
     <ul>
         {% for page in sub_categories %}
         <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
         {% endfor %}
     </ul>
+    {%- endif -%}
 </div>
