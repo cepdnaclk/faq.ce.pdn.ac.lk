@@ -13,7 +13,8 @@ title: "FAQ"
             &nbsp;
         </div>
         <div class="col-2 d-flex justify-content-end align-items-center">
-            <a class="d-none btn btn-sm btn-outline-secondary" href="http://www.ce.pdn.ac.lk" target="_blank">Department Site</a>
+            <a class="d-none btn btn-sm btn-outline-secondary" href="http://www.ce.pdn.ac.lk" target="_blank">Department
+                Site</a>
         </div>
     </div>
 </header>
@@ -36,7 +37,8 @@ title: "FAQ"
                         <div class="container card p-2 bg-light">
                             <div class="row">
                                 <div class="col-sm-3 col-md-2 col-12 d-flex justify-content-start">
-                                    <img style="width:64px;" src="/assets/img/{{page.title}}.png" class="img-fluid rounded-start align-self-center" alt="{{page.title}}">
+                                    <img style="width:64px;" src="/assets/img/{{page.title}}.png"
+                                        class="img-fluid rounded-start align-self-center" alt="{{page.title}}">
                                 </div>
                                 <div class="col-sm-9 col-md-10 col-12">
                                     <div class="card-body d-flex flex-column">
@@ -52,42 +54,34 @@ title: "FAQ"
                 {% endfor %}
             </div>
 
-            <!-- <a href="/home_old">Old FAQ site home</a> -->
-            <div>
-                <br><br> 
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                            <h5>Need help?</h5>
-                        </button>
-                      </h2>
-                      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                        <div class="accordion-body">
-                          <strong>If you need help with what you are looking for or have any doubts, please reach out to the maintainers listed <a href="https://github.com/orgs/cepdnaclk/teams/admins-cepdnaclk-github-io/members">here</a>.</strong> <br>
-                             If you are not a member of the Github organization to view that link, please reach out to <a href="https://people.ce.pdn.ac.lk/students/e17/154/">Akila</a>, <a href="https://people.ce.pdn.ac.lk/students/e18/100/">Adeepa</a> . <br>
-                             If everything else fails, reach out to <a href="https://people.ce.pdn.ac.lk/staff/academic/roshan-ragel/">Prof. Roshan Ragel</a>.
-                        </div>
-                      </div>
-                    </div>
-                   
-                  </div>
-            </div>
-            
+            <div class="container" style="margin-top: 120px;">
+                <strong>If you need help with what you are looking for or have any doubts, please reach out
+                    to the maintainers listed <a
+                        href="https://github.com/orgs/cepdnaclk/teams/admins-cepdnaclk-github-io/members">here</a>.</strong>
+                <br>
+                If you are not a member of the Github organization to view that link, please reach out to <a
+                    href="https://people.ce.pdn.ac.lk/students/e17/154/">Akila</a>, <a
+                    href="https://people.ce.pdn.ac.lk/students/e18/100/">Adeepa</a> . <br>
+                If everything else fails, reach out to <a
+                    href="https://people.ce.pdn.ac.lk/staff/academic/roshan-ragel/">Prof. Roshan Ragel</a>.
 
+            </div>
         </div>
     </div>
 </div>
 
+{% include footer.html %}
+
 <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready(function () {
         // executes when HTML-Document is loaded and DOM is ready
 
-        $( ".card" ).hover(
-        function() {
-            $(this).addClass('shadow').css('cursor', 'pointer');
-        }, function() {
-            $(this).removeClass('shadow');
-        }
+        $(".card").hover(
+            function () {
+                $(this).addClass('shadow').css('cursor', 'pointer');
+            }, function () {
+                $(this).removeClass('shadow');
+            }
         );
 
         // document ready
