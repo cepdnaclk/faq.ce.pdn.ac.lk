@@ -1,0 +1,282 @@
+---
+layout: QA_page
+permalink: "/network-n-servers/kepler/"
+parent: "Network and Servers"
+title: "Kepler"
+index: 3
+author : Adeepa
+---
+
+<!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
+Later add to template-->
+<p style="text-align:right">
+  <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
+</p>
+
+<p>
+  This is a GPU server of the Department of Computer Engineering, University of Peradeniya.
+</p>
+
+<p>
+  You can use this server using the LDAP login for ce.pdn.ac.lk undergraduates (which is used for CO top floor lab,
+  aiken
+  and tesla) without sudo access.
+</p>
+
+
+<!-- 1 -->
+<p>
+  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+    aria-expanded="false" aria-controls="collapseExample">
+    Is there a limit to GPU Usage on this server?
+  </button>
+</p>
+<div class="collapse multi-collapse" id="collapse1">
+  <div class="card card-body">
+    <p><b>Short answer</b>: You should inform the <a href='/network-n-servers/contact-network-admin/'>admin</a> if you
+      are using
+      more than 4GB of GPU memory.</p>
+
+    <p><b>Long answer</b>: You are allowed to use the whole GPU for your work. But there are some guidelines to make
+      sure you don't block
+      others from using the GPU unnecessarily. The Tesla K40C card on this server can be used by more than one person
+      simultaneously in most situations.</p>
+
+    <p>
+      GPU usage can be checked by running the command <i>nvidia-smi</i>. The CPU and RAM usage can be checked by running
+      the command <i>htop</i>.
+    </p>
+
+    <p>
+      <i>If a user is blocking the GPU by using more than 4GB at a given moment</i>:
+      Contact the admin and request him/her to kill the process.
+    </p>
+
+    <p>
+      <i>If a user is blocking the GPU by using more than 4GB at a given moment</i>:
+      Contact the admin and request him/her to kill the process.
+    </p>
+
+    <p>
+      <i>If you are using the GPU for deep learning</i>:
+      If your code is implemented using a neural network framework, it might try to allocate the full GPU memory even
+      when it
+      is not needed. This issue can be corrected by modifying the code.
+    </p>
+
+    <p>
+      This is the code to be added for tensorflow 2.2 or newer.
+    </p>
+
+    <code class="python">
+      import tensorflow as tf
+      gpus = tf.config.experimental.list_physical_devices('GPU')
+      if gpus:
+      try:
+      for gpu in gpus:
+      tf.config.experimental.set_memory_growth(gpu, True)
+      
+      except RuntimeError as e:
+      print(e)
+      </code>
+
+    <p>
+      You may find such code to correct this issue in similar frameworks as well.
+    </p>
+
+    <p>
+      If you make this change and your NN training still requires more than 4GB of GPU memory, you can try setting a
+      smaller batch_size in the NN training step. Following is a piece of code for Keras.
+    </p>
+
+    <code class="python">
+      nn.fit(xTrain,yTrain,epochs=100,verbose=1,batch_size=8)
+    </code>
+
+    <p>
+      If you cannot reduce the memory footprint of your NN training, please inform the admin so that s/he will not kill
+      your process to give space to another user.
+    </p>
+
+    <p>
+      <i>If you are using the GPU for something else</i>:
+      It is okay to use the full GPU memory for short periods of time (around 5 min). But if you use the GPU for a
+      longer period of time you should inform the admin about your requirement.
+    </p>
+
+  </div>
+</div>
+
+<!-- 2 -->
+{% include qa-template.html
+id="2"
+question="How can I connect to this server?"
+answer="You can use ssh login. Since kepler.ce.pdn.ac.lk is not a public IP you shoud either (a) use a computer in the
+Peradeniya network or (b) ssh to a public IP server like tesla.ce.pdn.ac.lk or aiken.ce.pdn.ac.lk and ssh to
+kepler.ce.pdn.ac.lk from there."
+%}
+
+<!-- 3 -->
+{% include qa-template.html
+id="3"
+question="What is ssh?"
+answer="<a href='https://ce-pdn-ac-lk.com/cewiki/server_use:use_of_servers'>This</a> is a good set of instructions on
+the matter. If it is not clear (or unaccessible), contact
+dhanushki.mapitigama[at]eng.pdn.ac.lk"
+%}
+
+<!-- 4 -->
+{% include qa-template.html
+id="4"
+question="What are the GPUs in this server?"
+answer="Tesla K40c and Quadro K620."
+%}
+
+<!-- 5 -->
+{% include qa-template.html
+id="5"
+question="What is the operating system of this server?"
+answer="Ubuntu 20.4 "
+%}
+
+<!-- 6 -->
+<p>
+  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6"
+    aria-expanded="false" aria-controls="collapseExample">
+    What software is installed in this server?
+  </button>
+</p>
+<div class="collapse multi-collapse" id="collapse6">
+  <div class="card card-body">
+    <ul>
+      <li>Ubuntu 20.04.1 LTS</li>
+      <li>NVIDIA-Driver Version: 455</li>
+      <li>CUDA Version: 11.1 Update 1</li>
+      <li>cuDNN 8.0.4</li>
+      <li>conda 4.8.5</li>
+      <li>cmake 3.16.3</li>
+      <li>gcc 9.3.0</li>
+      <li>openjdk 11.0.8</li>
+      <li>ffmpeg 4.2.4</li>
+      <li>SWIG 4.0.1</li>
+      <li>R 3.6.3</li>
+      <li>Blender 2.82</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 7 -->
+<p>
+  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7"
+    aria-expanded="false" aria-controls="collapseExample">
+    What datasets are hosted in kepler?
+  </button>
+</p>
+<div class="collapse multi-collapse" id="collapse7">
+  <div class="card card-body">
+    <p>
+      We store frequently used datasets inside the kepler.ce.pdn.ac.lk local storage for easy access. You can access
+      these by the following commands
+    </p>
+
+    <code class="bash">
+ls /storage/datasets/
+    </code>
+
+    <p>These datasets are in the read only mode. You can use these datsets as the input for your tasks but you have to
+      output
+      the results to your home directory. The following datasets are stored at the moment.</p>
+
+    <ul>
+      <li><a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR (10 and 100)</a></li>
+      <li>MOT 15,16,17,20: (https://motchallenge.net/). Please note that there is an issue with unzipping
+        MOT17.</li>
+      <li>Shapenet (core) v1: (https://www.shapenet.org/), [Research paper](https://arxiv.org/abs/1512.03012).
+      </li>
+      <li>Learning to See in the Dark: (https://github.com/cchen156/Learning-to-See-in-the-Dark), [Research
+        Paper: https://cchen156.github.io/paper/18CVPR_SID.pdf]</li>
+      <li>Brightening Train</li>
+      <li>LOL Dataset (https://daooshee.github.io/BMVC2018website/)</li>
+      <li>Dakshina (https://github.com/google-research-datasets/dakshina)</li>
+      <li>Oxford Town Center Dataset</li>
+      <li>Exclusively Dark Image Dataset:
+        [Gitrepo](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset/tree/master/Dataset), [Research
+        paper: http://cs-chan.com/doc/cviu.pdf]</li>
+      <li>UCF101 Action recognition dataset (https://www.crcv.ucf.edu/data/UCF101.php), [Research
+        paper](https://www.crcv.ucf.edu/papers/UCF101_CRCV-TR-12-01.pdf)</li>
+      <li>The Oxford-IIIT Pet Dataset (https://www.robots.ox.ac.uk/~vgg/data/pets/)</li>
+      <li>ImageNet Object Localization Challenge [Kaggle
+        page](https://www.kaggle.com/competitions/imagenet-object-localization-challenge)</li>
+    </ul>
+
+    <p>If you have suggestions for what datasets should be made available on this server, please send a request via
+      email available in https://www.cs.umd.edu/~gihan/contact/ address.
+    </p>
+  </div>
+</div>
+
+<!-- 8 -->
+<p>
+  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8"
+    aria-expanded="false" aria-controls="collapseExample">
+    What other ML tools are hosted in kepler?
+  </button>
+</p>
+<div class="collapse multi-collapse" id="collapse8">
+  <div class="card card-body">
+    You can access these by the following commands
+
+    <code class="bash">
+ls /storage/datasets/
+    </code>
+  </div>
+</div>
+
+<!-- 9 -->
+<p>
+  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8"
+    aria-expanded="false" aria-controls="collapseExample">
+    How to compile CUDA C/C++ code?
+  </button>
+</p>
+<div class="collapse multi-collapse" id="collapse8">
+  <div class="card card-body">
+    <code class="bash">
+nvcc code.cu -arch=sm_35
+    </code>
+
+    <p>The <i>-arch=sm_35</i> flag is required to compile code properly on this server.</p>
+  </div>
+</div>
+
+<!-- 10 -->
+{% include qa-template.html
+id="10"
+question="Can I install some software here?"
+answer="Please request through any <a href='https://people.ce.pdn.ac.lk/staff/academic/'>CO staff member</a>. Please
+note that the server admin has no authority to
+install something unless it is requested by a staff memeber."
+%}
+
+
+<!-- 11 -->
+{% include qa-template.html
+id="11"
+question="What can I do if my doubt is not listed here?"
+answer="<a class='btn-link' href='/network-n-servers/contact-network-admin/'>Ask via email</a>"
+%}
+
+<!-- 12 -->
+{% include qa-template.html
+id="12"
+question="I am not an undergraduate of the Department of Computer Engineering, University of Peradeniya. Can I use this
+server?"
+answer="Ask headce[at]eng.pdn.ac.lk."
+%}
+
+<!-- 13 -->
+{% include qa-template.html
+id="13"
+question="I broke something. What should I do?"
+answer="<a class='btn-link' href='/network-n-servers/contact-network-admin/'>Contact server admin</a>"
+%}
