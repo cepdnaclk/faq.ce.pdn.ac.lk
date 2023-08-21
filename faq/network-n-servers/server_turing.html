@@ -46,13 +46,14 @@ turing.ce.pdn.ac.lk from there."
 %}
 
 <!-- 3 -->
-{% include qa-template.html
+<!-- Resource no longer available -->
+<!-- {% include qa-template.html
 id="3"
 question="What is SSH?"
 answer="<a href='https://ce-pdn-ac-lk.com/cewiki/server_use:use_of_servers'>This</a> is a good set of instructions on
 the matter. If it is not clear (or unaccessible), contact
 dhanushki.mapitigama[at]eng.pdn.ac.lk"
-%}
+%} -->
 
 <!-- 4 -->
 {% include qa-template.html
@@ -69,52 +70,34 @@ answer="Ubuntu 22.04 "
 %}
 
 <!-- 6 -->
-<p>
-  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6"
-    aria-expanded="false" aria-controls="collapseExample">
-    What software is installed in this server?
-  </button>
-</p>
-<div class="collapse multi-collapse" id="collapse6">
-  <div class="card card-body">
-    <ul>
-      <li>Ubuntu 22.04</li>
-      <li>NVIDIA-Driver Version: 530.41.03</li>
-      <li>CUDA Version: 12.1 (You can update this using conda)</li>
-    </ul>
-  </div>
-</div>
+{% include qa-template.html
+id="6"
+question="What software is installed in this server?"
+answer="
+- Ubuntu 22.04
+- NVIDIA-Driver Version: 530.41.03
+- CUDA Version: 12.1 (You can update this using conda)
+" %}
+
 
 <!-- 7 -->
-<p>
-  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7"
-    aria-expanded="false" aria-controls="collapseExample">
-    What datasets are hosted in Turing?
-  </button>
-</p>
-<div class="collapse multi-collapse" id="collapse7">
-  <div class="card card-body">
-    <p>
-      We store frequently used datasets inside the turing.ce.pdn.ac.lk local storage for easy access. You can access
-      these by the following commands
-    </p>
+{% include qa-template.html
+id="7"
+question="What datasets are hosted in Turing?"
+answer="
+We store frequently used datasets inside the turing.ce.pdn.ac.lk local storage for easy access. You can access
+  these by the following commands
 
-    <code class="bash">
-ls /storage/datasets/
-    </code>
+`ls /storage/datasets/`
 
-    <p>These datasets are in the read only mode. You can use these datsets as the input for your tasks but you have to
-      output the results to your home directory. The following datasets are stored at the moment.</p>
+These datasets are in the read only mode. You can use these datsets as the input for your tasks but you have to
+  output the results to your home directory. The following datasets are stored at the moment.
 
-    <ul>
-      <li>THIS LIST WILL BE POPULATED SOON.</li>
-    </ul>
+- THIS LIST WILL BE POPULATED SOON
 
-    <p>If you have suggestions for what datasets should be made available on this server, please send a request via
-      email available in https://www.cs.umd.edu/~gihan/contact/ address.
-    </p>
-  </div>
-</div>
+If you have suggestions for what datasets should be made available on this server, please send a request via
+  email available in [https://www.cs.umd.edu/~gihan/contact/](https://www.cs.umd.edu/~gihan/contact/) address." %}
+
 
 
 <!-- 9 -->
@@ -126,23 +109,19 @@ answer="Use https://anaconda.org/anaconda/cudatoolkit"
 
 
 <!-- 11 -->
-<p>
-  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11"
-    aria-expanded="false" aria-controls="collapseExample">
-    Can I install some software here?
-  </button>
-</p>
-<div class="collapse multi-collapse" id="collapse11">
-  <div class="card card-body">
-    Please request through any CO staff member. Please note that the server admin has no authority to install something unless it is requested by a staff memeber.
-  </div>
-</div>
+{% include qa-template.html
+id="11"
+question="Can I install some software here?"
+answer="Please request through any CO staff member. Please note that the server admin has no authority to install something
+unless it is requested by a staff memeber."
+%}
+
 
 <!-- 12 -->
 {% include qa-template.html
 id="12"
 question="What can I do if my doubt is not listed here?"
-answer="<a class='btn-link' href='/network-n-servers/contact-network-admin/'>Ask via email</a>"
+answer="[Ask via email](/network-n-servers/contact-network-admin/)"
 %}
 
 <!-- 13 -->
@@ -157,7 +136,7 @@ answer="Ask headce[at]eng.pdn.ac.lk."
 {% include qa-template.html
 id="14"
 question="I broke something. What should I do?"
-answer="<a class='btn-link' href='/network-n-servers/contact-network-admin/'>Contact server admin</a>"
+answer="[Contact server admin](/network-n-servers/contact-network-admin/)</a>"
 %}
 
 <!-- 15 -->

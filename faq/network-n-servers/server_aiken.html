@@ -123,8 +123,9 @@ c.NotebookApp.ip = '0.0.0.0'
             <li>Save the configuration file. You should still be in the conda environment.</li>
             <li>Run the jupyter notebook. <code class="md">jupyter-notebook --no-browser</code></li>
             <li>You will see a URL like this <code class="md">http://SOMETHING:8888/tree?token=abc123def456</code></li>
-            <li>Type the following address into your PC browser <code
-                    class="md">http://aiken.ce.pdn.ac.lk:8888/tree?token=abc123def456</code></li>
+            <li>Type the following address into your PC browser
+                <code class="md">http://aiken.ce.pdn.ac.lk:8888/tree?token=abc123def456</code>
+            </li>
             <li>Your browser (on your PC) will be showing the jupyter notebook running on the aiken server</li>
         </ol>
     </div>
@@ -176,12 +177,12 @@ c.NotebookApp.ip = '0.0.0.0'
 
 <!-- 10 -->
 <p>
-    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10"
         aria-expanded="false" aria-controls="collapseExample">
         I broke something. What should I do?
     </button>
 </p>
-<div class="collapse multi-collapse" id="collapse1">
+<div class="collapse multi-collapse" id="collapse10">
     <div class="card card-body">
         <p>Write an email to <a href="{% link faq/network-n-servers/3_contact_network_admin.html %}">CE Network
                 Admin</a> if this is not urgent. If not, call <a
@@ -190,17 +191,35 @@ c.NotebookApp.ip = '0.0.0.0'
 </div>
 
 <!-- 11 -->
-{% include qa-template.html
-    id="14"
-    question="How to run a Singularity container on Aiken?"
-    answer="
-    <ol>
-      <li>Send a request to the server admin via the <a href='https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/'>server admin contact page</a> to run this command: <code class='bash'>sudo singularity config fakeroot --add eXXYYY</code></li>
-      <li>Download the sample def file: <code class='bash'>eyyxxx@aiken:~$ wget https://raw.githubusercontent.com/cepdnaclk/singularity-deployment/main/base.def</code></li>
-      <li>Build the container: <code class='bash'>eyyxxx@aiken:~$ singularity build --fakeroot base.sif base.def</code></li>
-      <li>Run commands using the container: <code class='bash'>eyyxxx@aiken:~$ singularity exec base.sif &lt;your-command&gt;</code></li>
-    </ol>
-    <p>If you need to learn more, go to: <a href='https://github.com/cepdnaclk/singularity-deployment'>https://github.com/cepdnaclk/singularity-deployment</a></p>"
-  %}
-  
 
+{% include qa-template.html
+id="11"
+theme="btn-success"
+question="How to run a Singularity container on Aiken?"
+answer="
+<ol>
+    <li>
+        Send a request to the server admin via the <a
+            href='https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/'>server admin contact
+            page</a> to run this command:
+        <code class='bash'>sudo singularity config fakeroot --add eXXYYY</code>
+    </li>
+    <li>
+        Download the sample def file:
+        <code
+            class='bash'>eyyxxx@aiken:~$ wget https://raw.githubusercontent.com/cepdnaclk/singularity-deployment/main/base.def</code>
+    </li>
+    <li>
+        Build the container:
+        <code class='bash'>eyyxxx@aiken:~$ singularity build --fakeroot base.sif base.def</code>
+    </li>
+    <li>
+        Run commands using the container:
+        <code class='bash'>eyyxxx@aiken:~$ singularity exec base.sif &lt;your-command&gt;</code>
+    </li>
+</ol>
+<p>If you need to learn more, go to: <a
+        href='https://github.com/cepdnaclk/singularity-deployment'>https://github.com/cepdnaclk/singularity-deployment</a>
+</p>
+"
+%}

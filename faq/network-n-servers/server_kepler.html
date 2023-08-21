@@ -26,19 +26,20 @@ Later add to template-->
 {% include qa-template.html
 id="2"
 question="How can I connect to this server?"
-answer="You can use ssh login. Since kepler.ce.pdn.ac.lk is not a public IP you shoud either (a) use a computer in the
-Peradeniya network or (b) ssh to a public IP server like tesla.ce.pdn.ac.lk or aiken.ce.pdn.ac.lk and ssh to
-kepler.ce.pdn.ac.lk from there."
+answer="You can use ssh login. Since kepler.ce.pdn.ac.lk is not a public IP you shoud either 
+- use a computer in the Peradeniya network or 
+- ssh to a public IP server like tesla.ce.pdn.ac.lk or aiken.ce.pdn.ac.lk and ssh to kepler.ce.pdn.ac.lk from there."
 %}
 
 <!-- 3 -->
-{% include qa-template.html
+<!-- Resource no longer available -->
+<!-- {% include qa-template.html
 id="3"
 question="What is ssh?"
 answer="<a href='https://ce-pdn-ac-lk.com/cewiki/server_use:use_of_servers'>This</a> is a good set of instructions on
 the matter. If it is not clear (or unaccessible), contact
 dhanushki.mapitigama[at]eng.pdn.ac.lk"
-%}
+%} -->
 
 <!-- 4 -->
 {% include qa-template.html
@@ -55,120 +56,85 @@ answer="Ubuntu 20.4 "
 %}
 
 <!-- 6 -->
-<p>
-  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6"
-    aria-expanded="false" aria-controls="collapseExample">
-    What software is installed in this server?
-  </button>
-</p>
-<div class="collapse multi-collapse" id="collapse6">
-  <div class="card card-body">
-    <ul>
-      <li>Ubuntu 20.04.1 LTS</li>
-      <li>NVIDIA-Driver Version: 455</li>
-      <li>CUDA Version: 11.1 Update 1</li>
-      <li>cuDNN 8.0.4</li>
-      <li>conda 4.8.5 (UPDATE: You can install Conda by yourself)</li>
-      <li>cmake 3.16.3</li>
-      <li>gcc 9.3.0</li>
-      <li>openjdk 11.0.8</li>
-      <li>ffmpeg 4.2.4</li>
-      <li>SWIG 4.0.1</li>
-      <li>R 3.6.3</li>
-      <li>Blender 2.82</li>
-    </ul>
-  </div>
-</div>
+{% include qa-template.html
+id="6"
+question="What software is installed in this server?"
+answer="
+  * Ubuntu 20.04.1 LTS
+  * NVIDIA-Driver Version: 455
+  * CUDA Version: 11.1 Update 1
+  * cuDNN 8.0.4
+  * conda 4.8.5 (UPDATE: You can install Conda by yourself)
+  * cmake 3.16.3
+  * gcc 9.3.0
+  * openjdk 11.0.8
+  * ffmpeg 4.2.4
+  * SWIG 4.0.1
+  * R 3.6.3
+  * Blender 2.82
+"
+%}
 
 <!-- 7 -->
-<p>
-  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7"
-    aria-expanded="false" aria-controls="collapseExample">
-    What datasets are hosted in kepler?
-  </button>
-</p>
-<div class="collapse multi-collapse" id="collapse7">
-  <div class="card card-body">
-    <p>
-      We store frequently used datasets inside the kepler.ce.pdn.ac.lk local storage for easy access. You can access
-      these by the following commands
-    </p>
+{% include qa-template.html
+id="5"
+question="What datasets are hosted in kepler?"
+answer="
+We store frequently used datasets inside the kepler.ce.pdn.ac.lk local storage for easy access. You can access these by
+the following command: 
 
-    <code class="bash">
-ls /storage/datasets/
-    </code>
+`ls /storage/datasets/`
 
-    <p>These datasets are in the read only mode. You can use these datsets as the input for your tasks but you have to
-      output
-      the results to your home directory. The following datasets are stored at the moment.</p>
+These datasets are in the read only mode. You can use these datsets as the input for your tasks but you have to output
+the results to your home directory. The following datasets are stored at the moment.
 
-    <ul>
-      <li><a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR (10 and 100)</a></li>
-      <li>MOT 15,16,17,20: (https://motchallenge.net/). Please note that there is an issue with unzipping
-        MOT17.</li>
-      <li>Shapenet (core) v1: (https://www.shapenet.org/), [Research paper](https://arxiv.org/abs/1512.03012).
-      </li>
-      <li>Learning to See in the Dark: (https://github.com/cchen156/Learning-to-See-in-the-Dark), [Research
-        Paper: https://cchen156.github.io/paper/18CVPR_SID.pdf]</li>
-      <li>Brightening Train</li>
-      <li>LOL Dataset (https://daooshee.github.io/BMVC2018website/)</li>
-      <li>Dakshina (https://github.com/google-research-datasets/dakshina)</li>
-      <li>Oxford Town Center Dataset</li>
-      <li>Exclusively Dark Image Dataset:
-        [Gitrepo](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset/tree/master/Dataset), [Research
-        paper: http://cs-chan.com/doc/cviu.pdf]</li>
-      <li>UCF101 Action recognition dataset (https://www.crcv.ucf.edu/data/UCF101.php), [Research
-        paper](https://www.crcv.ucf.edu/papers/UCF101_CRCV-TR-12-01.pdf)</li>
-      <li>The Oxford-IIIT Pet Dataset (https://www.robots.ox.ac.uk/~vgg/data/pets/)</li>
-      <li>ImageNet Object Localization Challenge [Kaggle
-        page](https://www.kaggle.com/competitions/imagenet-object-localization-challenge)</li>
-    </ul>
+* [CIFAR (10 and 100)](https://www.cs.toronto.edu/~kriz/cifar.html)
+* MOT 15,16,17,20: [https://motchallenge.net/](https://motchallenge.net/). Please note that there is an issue with unzipping MOT17.
+* Shapenet (core) v1: [https://www.shapenet.org/](https://www.shapenet.org/), [Research Paper](https://arxiv.org/abs/1512.03012).
+* Learning to See in the Dark: [https://github.com/cchen156/Learning-to-See-in-the-Dark](https://github.com/cchen156/Learning-to-See-in-the-Dark), [Research Paper](https://cchen156.github.io/paper/18CVPR\_SID.pdf\)
+* Brightening Train
+* [LOL Dataset](https://daooshee.github.io/BMVC2018website/)
+* [Dakshina](https://github.com/google-research-datasets/dakshina)
+* Oxford Town Center Dataset
+* Exclusively Dark Image Dataset: [Git Repo](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset/tree/master/Dataset), [Research paper](http://cs-chan.com/doc/cviu.pdf\)
+* [UCF101 Action recognition dataset](https://www.crcv.ucf.edu/data/UCF101.php), [Research Paper](https://www.crcv.ucf.edu/papers/UCF101\_CRCV-TR-12-01.pdf)
+* [The Oxford-IIIT Pet Dataset](https://www.robots.ox.ac.uk/~vgg/data/pets/)
+* ImageNet Object Localization Challenge [Kaggle Page](https://www.kaggle.com/competitions/imagenet-object-localization-challenge)
 
-    <p>If you have suggestions for what datasets should be made available on this server, please send a request via
-      email available in https://www.cs.umd.edu/~gihan/contact/ address.
-    </p>
-  </div>
-</div>
+If you have suggestions for what datasets should be made available on this server, please send a request via email
+available in [https://www.cs.umd.edu/~gihan/contact/](https://www.cs.umd.edu/~gihan/contact/) address.
+"
+%}
 
 <!-- 8 -->
-<p>
-  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8"
-    aria-expanded="false" aria-controls="collapseExample">
-    What other ML tools are hosted in Kepler?
-  </button>
-</p>
-<div class="collapse multi-collapse" id="collapse8">
-  <div class="card card-body">
-    You can access these by the following commands
+{% include qa-template.html
+id="8"
+question="What other ML tools are hosted in Kepler?"
+answer="
+You can access these by the following commands:
+`ls /storage/datasets`
+"
+%}
 
-    <code class="bash">
-ls /storage/datasets/
-    </code>
-  </div>
-</div>
 
 <!-- 9 -->
-<p>
-  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9"
-    aria-expanded="false" aria-controls="collapseExample">
-    How to compile CUDA C/C++ code?
-  </button>
-</p>
-<div class="collapse multi-collapse" id="collapse9">
-  <div class="card card-body">
-    <code class="bash">
-nvcc code.cu -arch=sm_35
-    </code>
+{% include qa-template.html
+id="9"
+question="How to compile CUDA C/C++ code?"
+answer="
+  You can try with following command: 
 
-    <p>The <i>-arch=sm_35</i> flag is required to compile code properly on this server.</p>
-  </div>
-</div>
+  `nvcc code.cu -arch=sm_35`
+
+  The __-arch=sm_35__ flag is required to compile code properly on this server."
+%} 
+
 
 <!-- 10 -->
 {% include qa-template.html
 id="10"
 question="Can I install some software here?"
-answer="Please request through any <a href='https://people.ce.pdn.ac.lk/staff/academic/'>CO staff member</a>. Please
+answer="Please request through any [CO staff member](https://people.ce.pdn.ac.lk/staff/academic/). Please
 note that the server admin has no authority to
 install something unless it is requested by a staff memeber."
 %}
@@ -178,7 +144,7 @@ install something unless it is requested by a staff memeber."
 {% include qa-template.html
 id="11"
 question="What can I do if my doubt is not listed here?"
-answer="<a class='btn-link' href='/network-n-servers/contact-network-admin/'>Ask via email</a>"
+answer="[Ask via email](/network-n-servers/contact-network-admin/)"
 %}
 
 <!-- 12 -->
@@ -193,7 +159,7 @@ answer="Ask headce[at]eng.pdn.ac.lk."
 {% include qa-template.html
 id="13"
 question="I broke something. What should I do?"
-answer="<a class='btn-link' href='/network-n-servers/contact-network-admin/'>Contact server admin</a>"
+answer="[Contact server admin](/network-n-servers/contact-network-admin/)</a>"
 %}
 
 
@@ -201,7 +167,7 @@ answer="<a class='btn-link' href='/network-n-servers/contact-network-admin/'>Con
 {% include qa-template.html
   id="14"
   question="How to run a Singularity container on Kepler?"
-  answer="
+answer="
   <ol>
     <li>Send a request to the server admin via the <a href='https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/'>server admin contact page</a> to run this command: <code class='bash'>sudo singularity config fakeroot --add eXXYYY</code></li>
     <li>Download the sample def file: <code class='bash'>eyyxxx@kepler:~$ wget https://raw.githubusercontent.com/cepdnaclk/singularity-deployment/main/base.def</code></li>
