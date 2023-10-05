@@ -1,0 +1,56 @@
+{
+    "MakerSpace Lab": {
+        "link": "/equipment/user-manuals/makerspace/",
+        "manuals": [
+            {
+                "title": "Tenma Oscilloscope",
+                "description": "300MHz Dual Trace Analog Oscilloscope",
+                "thumb": "#",
+                "urls": [
+                    {
+                        "title": "User Manual",
+                        "link": "#"
+                    },
+                    {
+                        "title": "Operating Manual",
+                        "link": "#"
+                    }
+                ]
+            },
+            {
+                "title": "Tenma Switch Mode Bench PSU",
+                "description": "Model: 72-8340A",
+                "thumb": "#",
+                "urls": [
+                    {
+                        "title": "User Review (Video)",
+                        "link": "#"
+                    },
+                    {
+                        "title": "Technical Specifications",
+                        "link": "#"
+                    }
+                ]
+            },
+            {
+                "title": "PRECISION Signal Generator",
+                "description": "Dual Channel Function/Arbitrary Waveform Generators",
+                "thumb": "#",
+                "urls": [
+                    {
+                        "title": "Technical Specifications",
+                        "link": "#"
+                    }
+                ]
+            }
+        ]
+    },
+    "Electronics Lab": {
+        "link": "/equipment/user-manuals/electronics-lab",
+        "manuals": []
+    },
+    "Network Lab": {
+        "link": "/equipment/user-manuals/network-lab",
+        "manuals": []
+    }
+}
