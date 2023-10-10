@@ -6,12 +6,24 @@ title: "Equipment"
 index: 6
 ---
 
+<h5>User Manuals</h5>
+<div>
+  <ul>
+    {%- assign manuals = site.data.user_manuals -%}
+    {%- for m in manuals -%}
+    <li><a href="{{ m[1]['link'] | relative_url }}">{{ m[0] }}</a></li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+<hr>
 
 <!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
 Later add to template-->
 <p style="text-align:right">
   <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
 </p>
+
 
 <!-- 1 -->
 {% include qa-template.html

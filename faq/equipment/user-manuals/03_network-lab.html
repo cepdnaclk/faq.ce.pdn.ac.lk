@@ -1,0 +1,33 @@
+---
+layout: QA_page
+permalink: /equipment/user-manuals/network-lab/
+
+grand_parent: "Equipment"
+parent: "User Manuals"
+title: "Networking Lab"
+
+author: "Nuwan Jaliyagoda"
+---
+
+{%- assign manuals = site.data.user_manuals -%}
+
+<h3>User Manuals - {{ page.title }}</h3>
+
+<div class="pt-3">
+    {%- for m in manuals -%}
+    {%- if m[0] == page.title -%}
+    <ul>
+        {%- for eq in m[1]['manuals'] -%}
+        <li class="pb-2">
+            <b>{{ eq['title'] }}</b><span class="text-muted ms-2">{{ eq['description'] }}</span>
+            <div class="px-3">
+                {%- for url in eq['urls'] -%}
+                <a class="ms-3" href="{{ url['link'] | relative_url}}" target="_blank">{{url['title']}}</a>
+                {%- endfor -%}
+            </div>
+        </li>
+        {%- endfor -%}
+    </ul>
+    {%- endif -%}
+    {%- endfor -%}
+</div>
