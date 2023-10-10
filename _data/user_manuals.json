@@ -9,11 +9,11 @@
                 "urls": [
                     {
                         "title": "User Manual",
-                        "link": "#"
+                        "link": "https://drive.google.com/file/d/1JKNHXBG50qj1F-vPREiIU1kXxbLWxEI2/view?usp=drive_link"
                     },
                     {
-                        "title": "Operating Manual",
-                        "link": "#"
+                        "title": "Specifications",
+                        "link": "https://drive.google.com/file/d/1AQqXA7QY8HpiNYhCzNvcbh03F4CQw-LK/view?usp=drive_link"
                     }
                 ]
             },
@@ -23,12 +23,17 @@
                 "thumb": "#",
                 "urls": [
                     {
-                        "title": "User Review (Video)",
-                        "link": "#"
+                        "title": "Instruction Manual",
+                        "link": "https://drive.google.com/file/d/14CYosU7cW6OjB4a8aPQPyk1B8akS0LO9/view?usp=drive_link"
                     },
                     {
                         "title": "Technical Specifications",
-                        "link": "#"
+                        "link": "https://drive.google.com/file/d/1_hm-3SsrTo942theigiY6NXCzd3oNfVg/view?usp=drive_link"
+                    },
+
+                    {
+                        "title": "Calibration Report",
+                        "link": "https://drive.google.com/file/d/1sgSTi2DkcCs8B3hinTzdItZ7zdaPZOkM/view?usp=drive_link"
                     }
                 ]
             },
@@ -38,9 +43,18 @@
                 "thumb": "#",
                 "urls": [
                     {
-                        "title": "Technical Specifications",
-                        "link": "#"
+                        "title": "User Manual",
+                        "link": "https://drive.google.com/file/d/1EAHecuojuF1Dx8ERHdJFpNt0p-XSyN5K/view?usp=drive_link"
+                    },
+                    {
+                        "title": "Data Sheet",
+                        "link": "https://drive.google.com/file/d/1LMritF-CZvWq4qAKnP_Q-pPDK-W14uBF/view?usp=drive_link"
+                    },
+                    {
+                        "title": "Programming Manual",
+                        "link": "https://drive.google.com/file/d/1Lsx487LB7YEMNaai4D6P1EiQiX-bw2fb/view?usp=drive_link"
                     }
+
                 ]
             }
         ]
@@ -49,7 +63,7 @@
         "link": "/equipment/user-manuals/electronics-lab",
         "manuals": []
     },
-    "Network Lab": {
+    "Networking Lab": {
         "link": "/equipment/user-manuals/network-lab",
         "manuals": []
     }
