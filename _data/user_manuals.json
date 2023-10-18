@@ -30,7 +30,6 @@
                         "title": "Technical Specifications",
                         "link": "https://drive.google.com/file/d/1_hm-3SsrTo942theigiY6NXCzd3oNfVg/view?usp=drive_link"
                     },
-
                     {
                         "title": "Calibration Report",
                         "link": "https://drive.google.com/file/d/1sgSTi2DkcCs8B3hinTzdItZ7zdaPZOkM/view?usp=drive_link"
@@ -54,17 +53,130 @@
                         "title": "Programming Manual",
                         "link": "https://drive.google.com/file/d/1Lsx487LB7YEMNaai4D6P1EiQiX-bw2fb/view?usp=drive_link"
                     }
-
                 ]
             }
         ]
     },
     "Electronics Lab": {
         "link": "/equipment/user-manuals/electronics-lab",
-        "manuals": []
+        "manuals": [
+            {
+                "title": "Dual Channel Function/Arbitrary Waveform Generator",
+                "description": "4050 Series",
+                "thumb": "#",
+                "urls": [
+                    {
+                        "title": "Data Sheet",
+                        "link": "https://drive.google.com/file/d/10Tok-KrJ9KDI_fepO1fqfP09xNmOrWDD/view?usp=sharing"
+                    },
+                    {
+                        "title": "User Manual",
+                        "link": "https://drive.google.com/file/d/1iVLeZGV8zgfRNvl8CG5d86vHlt5xYs5B/view?usp=share_link"
+                    },
+                    {
+                        "title": "Programming Manual",
+                        "link": "https://drive.google.com/file/d/1DUXMMyFBQwlL0kLwC6-ZmMvP-e8zJNB_/view?usp=sharing"
+                    }
+                ]
+            },
+            {
+                "title": "Tenma Switch Mode Bench PSU",
+                "description": "Model: 72-8340A",
+                "thumb": "#",
+                "urls": [
+                    {
+                        "title": "Instruction Manual",
+                        "link": "https://drive.google.com/file/d/14CYosU7cW6OjB4a8aPQPyk1B8akS0LO9/view?usp=drive_link"
+                    },
+                    {
+                        "title": "Technical Specifications",
+                        "link": "https://drive.google.com/file/d/1_hm-3SsrTo942theigiY6NXCzd3oNfVg/view?usp=drive_link"
+                    },
+                    {
+                        "title": "Calibration Report",
+                        "link": "https://drive.google.com/file/d/1sgSTi2DkcCs8B3hinTzdItZ7zdaPZOkM/view?usp=drive_link"
+                    }
+                ]
+            },
+            {
+                "title": "Tenma Oscilloscope",
+                "description": "300MHz Dual Trace Analog Oscilloscope",
+                "thumb": "#",
+                "urls": [
+                    {
+                        "title": "User Manual",
+                        "link": "https://drive.google.com/file/d/1JKNHXBG50qj1F-vPREiIU1kXxbLWxEI2/view?usp=drive_link"
+                    },
+                    {
+                        "title": "Specifications",
+                        "link": "https://drive.google.com/file/d/1AQqXA7QY8HpiNYhCzNvcbh03F4CQw-LK/view?usp=drive_link"
+                    }
+                ]
+            }
+        ]
     },
     "Networking Lab": {
         "link": "/equipment/user-manuals/network-lab",
-        "manuals": []
+        "manuals": [
+            {
+                "title": "Cisco ASA 5506-X",
+                "description": "Network Firewall",
+                "thumb": "#",
+                "urls": [
+                    {
+                        "title": "User Manual",
+                        "link": "https://drive.google.com/file/d/13hKgLplxDYQ3MgKc1WknH_RW3CIMP9l6/view?usp=share_link"
+                    }
+                ]
+            },
+            {
+                "title": "CISCO Catalyst 2950/2955",
+                "description": "Network Switch",
+                "thumb": "#",
+                "urls": [
+                    {
+                        "title": "Command Reference",
+                        "link": "https://drive.google.com/file/d/12Q6xtH2Fv3wQM8XcBwbhIAmyBPMqiaNz/view?usp=share_link"
+                    },
+                    {
+                        "title": "Configuration Guide",
+                        "link": "https://drive.google.com/file/d/1IAEQ-kJU2nckYqbIrzqV6ETTqep7jhVG/view?usp=share_link"
+                    }
+                ]
+            },
+            {
+                "title": "CISCO Catalyst 3850",
+                "description": "Network Switch",
+                "thumb": "#",
+                "urls": [
+                    {
+                        "title": "Hardware Installation Guide",
+                        "link": "https://drive.google.com/file/d/1-JEt54EkHpMS8YBB4RY_Chzpv8RLJJq4/view?usp=share_link"
+                    }
+                ]
+            },
+            {
+                "title": "HP A5500 EI & A5500 SI",
+                "description": "Network Switch",
+                "thumb": "#",
+                "urls": [
+                    {
+                        "title": "Installation Guide",
+                        "link": "https://drive.google.com/file/d/1Qu4WMA2pzerwOODgzldLHq_N7fsg4Y0Z/view?usp=share_link"
+                    }
+                ]
+            },
+            {
+                "title": "SRX1400 Services Gateway",
+                "description": "",
+                "thumb": "#",
+                "urls": [
+                    {
+                        "title": "Hardware Guide",
+                        "link": "SRX1400 Services Gateway"
+                    }
+                ]
+            }
+        ]
     }
 }
