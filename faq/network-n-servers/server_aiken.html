@@ -108,20 +108,7 @@ Later add to template-->
         <ol>
             <li>Create a conda environment with jupyter notebook package installed.</li>
             <li>Activate that environment.</li>
-            <li>Run <code class="md">jupyter notebook --generate-config</code></li>
-            <li>
-                It will say the configuration file for your account. Edit the configuration file and add the following
-                two lines. (They are originally commented out as given below.)
-
-                <code class="dracula bash">
-# c.NotebookApp.allow_origin = ''
-# c.NotebookApp.ip = 'localhost'
-c.NotebookApp.allow_origin = '*'
-c.NotebookApp.ip = '0.0.0.0'
-</code>
-            </li>
-            <li>Save the configuration file. You should still be in the conda environment.</li>
-            <li>Run the jupyter notebook. <code class="md">jupyter-notebook --no-browser</code></li>
+            <li>Run the jupyter notebook. <code class="md">jupyter notebook --no-browser --port=8888 --ip=0.0.0.0</code></li>
             <li>You will see a URL like this <code class="md">http://SOMETHING:8888/tree?token=abc123def456</code></li>
             <li>Type the following address into your PC browser
                 <code class="md">http://aiken.ce.pdn.ac.lk:8888/tree?token=abc123def456</code>
