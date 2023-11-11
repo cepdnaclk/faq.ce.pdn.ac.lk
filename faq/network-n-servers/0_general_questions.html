@@ -114,3 +114,134 @@ gcc -v #Now you get the gcc-8 when you run gcc command
             conducting, logging and monitoring NN based experiments on mobile/remote PC.</p>
     </div>
 </div>
+
+
+
+<!-- 6 -->
+<p>
+    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6"
+        aria-expanded="false" aria-controls="collapseExample">
+        How to install and use conda (Anaconda or Miniconda) on Peradeniya servers without sudo accounts
+    </button>
+</p>
+<div class="collapse multi-collapse" id="collapse6">
+    <div class="card card-body">
+        <ol>
+            <li>
+                SSH into the server using your non-sudo user account.
+            </li>
+            <li>
+                It is assumed that you are installing conda on your home directory ~/miniconda<br>
+                However, given how Peradeniya storage system works, you might have instructions to install it in some other project directory.
+            </li>
+            <li>
+                Go to the miniconda/conda download webpage and copy the download link for the installer. 
+                For example, Miniconda3 Linux 64 bit installer on <br>
+                <a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a> is 
+                <a href="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh">https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</a>
+            </li>
+            <li>
+                Run the following commands on the SSH shell. (Mind the spaces)<br>
+
+                <table style="font-family: Arial, sans-serif; border-collapse: collapse; width: 80%; margin: 20px;">
+                    <tr>
+                        <th style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Command</th>
+                        <th style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Description</th>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>wget<br> https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code></td>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Download the installer.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>bash<br> Miniconda3-latest-Linux-x86_64.sh</code></td>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Run the .sh bash installer.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">ENTER</td>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">To continue with the installer</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Keep reading the agreement to the end</td>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>yes</code></td>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">To agree</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>~/miniconda</code></td>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Select an installation folder. This is just an example. You may use something that you see fit.</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>no</code></td>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Do not run the init.<br>
+                            Ideally, you should be able to. However, our multiple NFS (network file system) makes things very complicated.</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>~/miniconda/bin/conda init --user bash</code></td>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">
+                            <code>
+                                ~/miniconda/bin/conda init
+                            </code>
+                            <br>
+                            Here, we make sure we run the init from our new installation.
+                            <br>
+                            <code>--user</code>
+                            <br>
+                            This change is only for your user account
+                            <br>
+                            <code>bash</code>
+                            <br>
+                            This change is only for your ~/.bashrc
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>--user</code></td>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">This change is only for your user account.</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Logout and login to the SSH shell again</td>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>source ~/.bashrc</code></td>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Once this is run, you should see (base) on your SSH prompt. </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">
+                            <code>which conda</code>
+                            <br>
+                            <code>which python</code>
+                        </td>
+                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">You can use these commands to verify if you are using the correct conda/python installations.</td>
+                    </tr>
+                </table>
+                
+            </li>
+            <li>
+                <a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">This document</a> is a good quick start guide for conda.
+            </li>
+            
+            <li>
+                When you log in through SSH later, if you don't see (base) in the prompt, you have to run <b>source ~/.bashrc</b>
+            </li>
+            
+            <li>
+                If you have any questions, you can reach out to the following people. <br>
+                
+                <ul>
+                    <li> <a href="https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/"><b>CO</b> Tesla/Kepler/Aiken/Turing</a></li>
+                    <li><a href="https://github.com/eepdnaclk/server/tree/main/admin"><b>EE</b> COVID server</a></li>
+                </ul>
+            </li>
+
+            <li>
+                If you have questions about anything, please try to ask them on the <b>PeraCOM Discord #ask-for-help</b> channel. 
+                That is helpful to the community as a whole. 
+                If you are not already on the discord, please ask for an invitation from (<a href="e17154@eng.pdn.ac.lk">e17154@eng.pdn.ac.lk</a> and <a href="e16088@eng.pdn.ac.lk">e16088@eng.pdn.ac.lk</a>)
+            </li>
+        </ol>
+    </div>
+</div>
