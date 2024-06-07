@@ -141,85 +141,30 @@ gcc -v #Now you get the gcc-8 when you run gcc command
                 <a href="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh">https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</a>
             </li>
             <li>
-                Run the following commands on the SSH shell. (Mind the spaces)<br>
+                Run the following commands on the SSH shell. (Mind the spaces)
+                <br>
+                <ol>
+                    <li>Download the installer <code class="md">wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code></li>
+                    <li>Run the .sh bash installer. <code class="md">bash Miniconda3-latest-Linux-x86_64.sh</code></li>
+                    <li>To continue with the installer -> Press ENTER</li>
+                    <li>Keep reading the agreement to the end</li>
+                    <li>To agree <code class="md">yes</code></li>
+                    <li>Select an installation folder. This is just an example. You may use something that you see fit. <code class="md">~/miniconda</code></li>
+                    <li>Do not run the init. Ideally, you should be able to. However, our multiple NFS (network file system) makes things very complicated. <code class="md">no</code></li>
 
-                <table style="font-family: Arial, sans-serif; border-collapse: collapse; width: 80%; margin: 20px;">
-                    <tr>
-                        <th style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Command</th>
-                        <th style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Description</th>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>wget<br> https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Download the installer.</td>
-                    </tr>
-                    
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>bash<br> Miniconda3-latest-Linux-x86_64.sh</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Run the .sh bash installer.</td>
-                    </tr>
-                    
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">ENTER</td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">To continue with the installer</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Keep reading the agreement to the end</td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"></td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>yes</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">To agree</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>~/miniconda</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Select an installation folder. This is just an example. You may use something that you see fit.</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>no</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Do not run the init.<br>
-                            Ideally, you should be able to. However, our multiple NFS (network file system) makes things very complicated.</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>~/miniconda/bin/conda init --user bash</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">
-                            <code>
-                                ~/miniconda/bin/conda init
-                            </code>
-                            <br>
-                            Here, we make sure we run the init from our new installation.
-                            <br>
-                            <code>--user</code>
-                            <br>
-                            This change is only for your user account
-                            <br>
-                            <code>bash</code>
-                            <br>
-                            This change is only for your ~/.bashrc
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>--user</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">This change is only for your user account.</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Logout and login to the SSH shell again</td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"></td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>source ~/.bashrc</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Once this is run, you should see (base) on your SSH prompt. </td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">
-                            <code>which conda</code>
-                            <br>
-                            <code>which python</code>
-                        </td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">You can use these commands to verify if you are using the correct conda/python installations.</td>
-                    </tr>
-                </table>
-                
+                    <li>Run the following command<code class="md">~/miniconda/bin/conda init --user bash</code>
+                        
+                        <b>~/miniconda/bin/conda init </b><span>- Here, we make sure we run the init from our new installation.</span><br>
+                        <b>--user </b><span>- This change is only for your user account.</span><br>
+                        <b>bash </b><span>- This change is only for your ~/.bashrc</span><br>
+                    </li>
+
+                    <li>Logout and login to the SSH shell again</li>
+                    <li>Once below line is run, you should see (base) on your SSH prompt. <code class="md">source ~/.bashrc</code></li>
+                    <li>Run below commands to to verify if you are using the correct conda/python installations. <code class="md">which conda<br>which python</code></li>
+                </ol>                
             </li>
+
             <li>
                 <a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">This document</a> is a good quick start guide for conda.
             </li>
