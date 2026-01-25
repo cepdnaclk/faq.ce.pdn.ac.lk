@@ -16,11 +16,16 @@ function getPageContent() {
     
     // Extract text content, excluding scripts and styles
     let content = '';
-    const elements = contentContainer.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li, div > b, div:not(:has(*))');
+    const elements = contentContainer.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li, b');
     
     elements.forEach(element => {
+        // Skip script and style elements
+        if (element.tagName === 'SCRIPT' || element.tagName === 'STYLE') {
+            return;
+        }
+        
         const text = element.textContent.trim();
-        if (text && !element.querySelector('script') && !element.querySelector('style')) {
+        if (text) {
             // Add proper spacing for headings
             if (element.tagName.startsWith('H')) {
                 content += '\n' + text + '.\n';
@@ -31,6 +36,20 @@ function getPageContent() {
     });
     
     return content.trim();
+}
+
+function resetButtonState() {
+    const button = document.getElementById('tts-button');
+    const icon = document.getElementById('tts-icon');
+    
+    if (button && icon) {
+        isSpeaking = false;
+        button.classList.remove('btn-danger');
+        button.classList.add('btn-primary');
+        button.title = 'Listen to this page';
+        icon.classList.remove('fa-stop');
+        icon.classList.add('fa-volume-up');
+    }
 }
 
 function toggleTextToSpeech() {
@@ -45,12 +64,7 @@ function toggleTextToSpeech() {
     if (isSpeaking) {
         // Stop speaking
         speechSynthesis.cancel();
-        isSpeaking = false;
-        button.classList.remove('btn-danger');
-        button.classList.add('btn-primary');
-        button.title = 'Listen to this page';
-        icon.classList.remove('fa-stop');
-        icon.classList.add('fa-volume-up');
+        resetButtonState();
     } else {
         // Start speaking
         const content = getPageContent();
@@ -69,22 +83,12 @@ function toggleTextToSpeech() {
         
         // Event listeners
         speechSynthesisUtterance.onend = function() {
-            isSpeaking = false;
-            button.classList.remove('btn-danger');
-            button.classList.add('btn-primary');
-            button.title = 'Listen to this page';
-            icon.classList.remove('fa-stop');
-            icon.classList.add('fa-volume-up');
+            resetButtonState();
         };
         
         speechSynthesisUtterance.onerror = function(event) {
             console.error('Speech synthesis error:', event);
-            isSpeaking = false;
-            button.classList.remove('btn-danger');
-            button.classList.add('btn-primary');
-            button.title = 'Listen to this page';
-            icon.classList.remove('fa-stop');
-            icon.classList.add('fa-volume-up');
+            resetButtonState();
             alert('An error occurred while trying to speak. Please try again.');
         };
         
