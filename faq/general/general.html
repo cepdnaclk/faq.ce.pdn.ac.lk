@@ -1,78 +1,170 @@
 ---
-layout: testCategory
+layout: category
 permalink: "/general/"
 parent: "home"
 title: "General"
-index: 1
+index: 0
 ---
 
 <!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
 Later add to template-->
-<p style="text-align:right">
-  <button type="button" class="btn btn-dark btn-expand-all" >EXPAND ALL</button>
+<p style="text-align: right">
+  <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
 </p>
 
+<!-- 0 -->
+<p>
+  <button
+    class="btn btn-light"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#collapse0"
+    aria-expanded="true"
+    aria-controls="collapseExample"
+  >
+    What is <b>Computer Engineering</b> ?
+  </button>
+</p>
+<div class="collapse multi-collapse" id="collapse0">
+  <div class="card card-body">
+    Actually, it will be a really long answer. But the following picture (Credit
+    goes to it's original creator) will answer your question. Source:
+    <a
+      href="https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2005-march06final.pdf"
+      >www.acm.org</a
+    >
+    <div class="container">
+      <img
+        src="{{ '/img/general/com.jpg' | relative_url }}"
+        alt="Computer Engineering"
+        class="img-fluid p-3"
+      />
+    </div>
+  </div>
+</div>
 
 <!-- 1 -->
 <p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapseExample">
-        Will my @ce.pdn.ac.lk mail address and @eng.pdn.ac.lk mail address expire after graduation?
-    </button>
+  <button
+    class="btn btn-light"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#collapse1"
+    aria-expanded="false"
+    aria-controls="collapseExample"
+  >
+    Will my @ce.pdn.ac.lk mail address and @eng.pdn.ac.lk mail address expire
+    after graduation?
+  </button>
 </p>
-  <div class="collapse multi-collapse" id="collapse1">
-    <div class="card card-body">
-        As of now (2020/04/14): @ce.pdn.ac.lk will be deleted one year after the graduation.<br>
-         @eng.pdn.ac.lk will not be deleted in the foreseeable future.
-    </div>
+
+<div class="collapse multi-collapse" id="collapse1">
+  <div class="card card-body">
+    As of now (2020/04/14): @ce.pdn.ac.lk will be deleted one year after the
+    graduation.<br />
+    @eng.pdn.ac.lk will not be deleted in the foreseeable future.
   </div>
+</div>
 
 <!-- 2 -->
-  <p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapseExample">
-        What are my usernames and passwords for university websites?
-    </button>
+
+<p>
+  <button
+    class="btn btn-light"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#collapse2"
+    aria-expanded="false"
+    aria-controls="collapseExample"
+  >
+    What are my usernames and passwords for university websites?
+  </button>
 </p>
-  <div class="collapse multi-collapse" id="collapse2">
-    <div class="card card-body">
-        <table class="table table-bordered border-dark table-striped">
-            <tr><th>Account</th><th>Username</th><th>Password</th></tr>
-                <tr>
-                    <td>https://feels.pdn.ac.lk/</td>
-                    <td>eXXYYY</td>
-                    <td>Given to you during faculty orientation</td>
-                </tr>
-            <tr><td>CO Top floor lab linux computers, tesla, aiken, babbage, [at]ce.pdn.ac.lk email, results.ce.pdn.ac.lk</td><td>eXXYYY</td><td>Given to you during the department orientation</td></tr>
-            <tr><td>CO Top floor windows password</td><td>eXXYYY</td><td>Given on the first day of using windows software for a lab after enrolling in the department</td></tr>
-            <tr><td>CC windows password</td><td>eXXYYY</td><td>FILL THIS</td></tr>
-            <tr> <td>[at]eng.pdn.ac.lk password</td><td>You choose</td><td>You choose</td></tr>
-            <tr><td>https://ce-pdn-ac-lk.com/</td><td>You choose</td><td>You choose</td></tr>
-            <tr><td>https://ce-pdn-ac-lk.com/my_coursemgmnt/</td><td>You choose</td><td>You choose</td></tr>
-            <tr><td>http://me.pefaa.net/</td><td>You choose</td><td>You choose</td></tr>
-            </table>
-    </div>
+<div class="collapse multi-collapse" id="collapse2">
+  <div class="card card-body">
+    <table class="table table-bordered border-dark table-striped">
+      <tr>
+        <th>Account</th>
+        <th>Username</th>
+        <th>Password</th>
+      </tr>
+      <tr>
+        <td>https://feels.pdn.ac.lk/</td>
+        <td>eXXYYY</td>
+        <td>Given to you during faculty orientation</td>
+      </tr>
+      <tr>
+        <td>
+          CO Top floor lab linux computers, tesla, aiken, babbage,
+          [at]ce.pdn.ac.lk email, results.ce.pdn.ac.lk
+        </td>
+        <td>eXXYYY</td>
+        <td>Given to you during the department orientation</td>
+      </tr>
+      <tr>
+        <td>CO Top floor windows password</td>
+        <td>eXXYYY</td>
+        <td>
+          Given on the first day of using windows software for a lab after
+          enrolling in the department
+        </td>
+      </tr>
+      <tr>
+        <td>CC windows password</td>
+        <td>eXXYYY</td>
+        <td>
+          Given on the first day of using windows software for a lab after
+          enrolling in the department
+        </td>
+      </tr>
+      <tr>
+        <td>[at]eng.pdn.ac.lk password</td>
+        <td>You choose</td>
+        <td>You choose</td>
+      </tr>
+    </table>
   </div>
+</div>
 
 <!-- 3 -->
 <p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapseExample">
-        How can I get help to recover passwords or create accounts?
-    </button>
+  <button
+    class="btn btn-light"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#collapse3"
+    aria-expanded="false"
+    aria-controls="collapseExample"
+  >
+    How can I get help to recover passwords or create accounts?
+  </button>
 </p>
-  <div class="collapse multi-collapse" id="collapse3">
-    <div class="card card-body">
-        <table class="table table-bordered border-dark table-striped ">
-            <tr><th>Account</th><th>Whom to ask</th></tr>
-            <tr><td>https://feels.pdn.ac.lk/</td><td>feels[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
-            <tr><td>CO Top floor lab linux computers, tesla, aiken, babbage, [at]ce.pdn.ac.lk email, results.ce.pdn.ac.lk</td><td><a href="https://cepdnaclk.github.io/servers/admin/">CO server admin</a></td></tr>
-            <tr><td>CO Top floor windows password</td><td><a href="https://cepdnaclk.github.io/servers/admin/">CO server admin</a></td></tr>
-            <tr><td>CC windows password</td><td><a href="https://cepdnaclk.github.io/servers/admin/">CO server admin</a></td></tr>
-            <tr><td>[at]eng.pdn.ac.lk password</td><td>roshanr[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
-            <tr><td>https://ce-pdn-ac-lk.com/</td><td>kamalanath[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
-            <tr><td>https://ce-pdn-ac-lk.com/my_coursemgmnt/</td><td>kamalanath[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
-            <tr><td>http://me.pefaa.net/</td><td>kamalanath[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
-            </table>
-    </div>
+<div class="collapse multi-collapse" id="collapse3">
+  <div class="card card-body">
+    <table class="table table-bordered border-dark table-striped">
+      <tr>
+        <th>Account</th>
+        <th>Whom to ask</th>
+      </tr>
+      <tr>
+        <td>https://feels.pdn.ac.lk/</td>
+        <td>'Lost Password' option on the login page</td>
+      </tr>
+      <tr>
+        <td>
+          CO Top floor lab linux computers, tesla, aiken, babbage,
+          [at]ce.pdn.ac.lk email, results.ce.pdn.ac.lk
+        </td>
+        <td><a href="mailto:urathnayake@eng.pdn.ac.lk">Umega Rathnayake</a></td>
+      </tr>
+      <tr>
+        <td>CO Top floor windows password</td>
+        <td><a href="mailto:bandaraw@eng.pdn.ac.lk">Bandara Wasundara</a></td>
+      </tr>
+      <tr>
+        <td>CC windows password</td>
+        <td><a href="mailto:urathnayake@eng.pdn.ac.lk">Umega Rathnayake</a></td>
+      </tr>
+    </table>
   </div>
-
-
-
+</div>

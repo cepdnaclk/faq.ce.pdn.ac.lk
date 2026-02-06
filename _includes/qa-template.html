@@ -1,0 +1,15 @@
+{%- if include.theme -%}
+{%- assign theme=include.theme -%}
+{%- else -%}
+{%- assign theme="secondary" -%}
+{%- endif -%}
+
+<div class="d-grid mb-3" >
+    <a class="btn btn-{{ theme }} text-start mb-2" data-bs-toggle="collapse" data-bs-target="#collapse{{ include.id }}"
+        aria-expanded="false" aria-controls="collapseExample">
+        {{ include.question | markdownify }}
+    </a>
+    <div class="collapse multi-collapse" id="collapse{{ include.id }}">
+        <div class="card card-body">{{ include.answer | markdownify }}</div>
+    </div>
+</div>

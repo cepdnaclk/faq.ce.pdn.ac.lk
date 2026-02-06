@@ -15,7 +15,8 @@ permalink: "/qa/"
 ---
 
 ##### How to connect to department servers?
-See [https://ce-pdn-ac-lk.com/cewiki/server_use:use_of_servers](https://ce-pdn-ac-lk.com/cewiki/server_use:use_of_servers)
+    You can use the Department LDAP login. If you have any issue, please mention it in the 'ask-for-help' channel of the
+    PeraCom Discord server.
 
 ---
 
@@ -119,8 +120,6 @@ As of now (2020/04/14): @ce.pdn.ac.lk will be deleted one year after the graduat
 <tr><td>CO Top floor windows password</td><td>eXXYYY</td><td>Given on the first day of using windows software for a lab after enrolling in the department</td></tr>
 <tr><td>CC windows password</td><td>eXXYYY</td><td>FILL THIS</td></tr>
 <tr> <td>[at]eng.pdn.ac.lk password</td><td>You choose</td><td>You choose</td></tr>
-<tr><td>https://ce-pdn-ac-lk.com/</td><td>You choose</td><td>You choose</td></tr>
-<tr><td>https://ce-pdn-ac-lk.com/my_coursemgmnt/</td><td>You choose</td><td>You choose</td></tr>
 <tr><td>http://me.pefaa.net/</td><td>You choose</td><td>You choose</td></tr>
 </table>
 
@@ -135,8 +134,6 @@ As of now (2020/04/14): @ce.pdn.ac.lk will be deleted one year after the graduat
 <tr><td>CO Top floor windows password</td><td><a href="https://cepdnaclk.github.io/servers/admin/">CO server admin</a></td></tr>
 <tr><td>CC windows password</td><td><a href="https://cepdnaclk.github.io/servers/admin/">CO server admin</a></td></tr>
 <tr><td>[at]eng.pdn.ac.lk password</td><td>roshanr[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
-<tr><td>https://ce-pdn-ac-lk.com/</td><td>kamalanath[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
-<tr><td>https://ce-pdn-ac-lk.com/my_coursemgmnt/</td><td>kamalanath[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
 <tr><td>http://me.pefaa.net/</td><td>kamalanath[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
 </table>
 

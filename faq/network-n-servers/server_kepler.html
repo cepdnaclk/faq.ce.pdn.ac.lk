@@ -1,0 +1,184 @@
+---
+layout: QA_page
+permalink: "/network-n-servers/kepler/"
+parent: "Network and Servers"
+title: "Kepler"
+index: 3
+author : Adeepa
+---
+
+<!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
+Later add to template-->
+<p style="text-align:right">
+  <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
+</p>
+
+<p>
+  This is a GPU server of the Department of Computer Engineering, University of Peradeniya.
+</p>
+
+<p>
+  You can use this server using the LDAP login for ce.pdn.ac.lk undergraduates (which is used for CO top floor lab,
+  aiken and tesla) without sudo access.
+</p>
+
+<!-- 2 -->
+{% include qa-template.html
+id="2"
+question="How can I connect to this server?"
+answer="You can use ssh login. Since kepler.ce.pdn.ac.lk is not a public IP you should either
+- use a computer in the Peradeniya network or
+- ssh to a public IP server like tesla.ce.pdn.ac.lk or aiken.ce.pdn.ac.lk and ssh to kepler.ce.pdn.ac.lk from there."
+%}
+
+<!-- 4 -->
+{% include qa-template.html
+id="4"
+question="What are the GPUs in this server?"
+answer="Tesla K40c and Quadro K620."
+%}
+
+<!-- 5 -->
+{% include qa-template.html
+id="5"
+question="What is the operating system of this server?"
+answer="Ubuntu 20.4 "
+%}
+
+<!-- 6 -->
+{% include qa-template.html
+id="6"
+question="What software is installed in this server?"
+answer="
+* Ubuntu 20.04.1 LTS
+* NVIDIA-Driver Version: 455
+* CUDA Version: 11.1 Update 1
+* cuDNN 8.0.4
+* conda 4.8.5 (UPDATE: You can install Conda by yourself)
+* cmake 3.16.3
+* gcc 9.3.0
+* openjdk 11.0.8
+* ffmpeg 4.2.4
+* SWIG 4.0.1
+* R 3.6.3
+* Blender 2.82
+"
+%}
+
+<!-- 7 -->
+{% include qa-template.html
+id="5"
+question="What datasets are hosted in kepler?"
+answer="
+We store frequently used datasets inside the kepler.ce.pdn.ac.lk local storage for easy access. You can access these by
+the following command:
+
+`ls /storage/datasets/`
+
+These datasets are in the read only mode. You can use these datsets as the input for your tasks but you have to output
+the results to your home directory. The following datasets are stored at the moment.
+
+* [CIFAR (10 and 100)](https://www.cs.toronto.edu/~kriz/cifar.html)
+* MOT 15,16,17,20: [https://motchallenge.net/](https://motchallenge.net/). Please note that there is an issue with
+unzipping MOT17.
+* Shapenet (core) v1: [https://www.shapenet.org/](https://www.shapenet.org/), [Research
+Paper](https://arxiv.org/abs/1512.03012).
+* Learning to See in the Dark:
+[https://github.com/cchen156/Learning-to-See-in-the-Dark](https://github.com/cchen156/Learning-to-See-in-the-Dark),
+[Research Paper](https://cchen156.github.io/paper/18CVPR\_SID.pdf\)
+* Brightening Train
+* [LOL Dataset](https://daooshee.github.io/BMVC2018website/)
+* [Dakshina](https://github.com/google-research-datasets/dakshina)
+* Oxford Town Center Dataset
+* Exclusively Dark Image Dataset: [Git
+Repo](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset/tree/master/Dataset), [Research
+paper](http://cs-chan.com/doc/cviu.pdf\)
+* [UCF101 Action recognition dataset](https://www.crcv.ucf.edu/data/UCF101.php), [Research
+Paper](https://www.crcv.ucf.edu/papers/UCF101\_CRCV-TR-12-01.pdf)
+* [The Oxford-IIIT Pet Dataset](https://www.robots.ox.ac.uk/~vgg/data/pets/)
+* ImageNet Object Localization Challenge [Kaggle
+Page](https://www.kaggle.com/competitions/imagenet-object-localization-challenge)
+
+If you have suggestions for what datasets should be made available on this server, please send a request via email
+available in [https://www.cs.umd.edu/~gihan/contact/](https://www.cs.umd.edu/~gihan/contact/) address.
+"
+%}
+
+<!-- 8 -->
+{% include qa-template.html
+id="8"
+question="What other ML tools are hosted in Kepler?"
+answer="
+You can access these by the following commands:
+`ls /storage/datasets`
+"
+%}
+
+
+<!-- 9 -->
+{% include qa-template.html
+id="9"
+question="How to compile CUDA C/C++ code?"
+answer="
+You can try with following command:
+
+`nvcc code.cu -arch=sm_35`
+
+The __-arch=sm_35__ flag is required to compile code properly on this server."
+%}
+
+
+<!-- 10 -->
+{% include qa-template.html
+id="10"
+question="Can I install some software here?"
+answer="Please request through any [CO staff member](https://people.ce.pdn.ac.lk/staff/academic/). Please
+note that the server admin has no authority to
+install something unless it is requested by a staff memeber."
+%}
+
+
+<!-- 11 -->
+{% include qa-template.html
+id="11"
+question="What can I do if my doubt is not listed here?"
+answer="[Ask via email](/network-n-servers/contact-network-admin/)"
+%}
+
+<!-- 12 -->
+{% include qa-template.html
+id="12"
+question="I am not an undergraduate of the Department of Computer Engineering, University of Peradeniya. Can I use this
+server?"
+answer="Ask headce[at]eng.pdn.ac.lk."
+%}
+
+<!-- 13 -->
+{% include qa-template.html
+id="13"
+question="I broke something. What should I do?"
+answer="[Contact server admin](/network-n-servers/contact-network-admin/)</a>"
+%}
+
+
+<!-- 14 -->
+{% include qa-template.html
+id="14"
+question="How to run a Singularity container on Kepler?"
+answer="
+<ol>
+  <li>Send a request to the server admin via the <a
+      href='https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/'>server admin contact page</a> to run this
+    command: <code class='bash'>sudo singularity config fakeroot --add eXXYYY</code></li>
+  <li>Download the sample def file: <code
+      class='bash'>eyyxxx@kepler:~$ wget https://raw.githubusercontent.com/cepdnaclk/singularity-deployment/main/base.def</code>
+  </li>
+  <li>Build the container: <code class='bash'>eyyxxx@kepler:~$ singularity build --fakeroot base.sif base.def</code>
+  </li>
+  <li>Run commands using the container: <code
+      class='bash'>eyyxxx@kepler:~$ singularity exec base.sif &lt;your-command&gt;</code></li>
+</ol>
+<p>If you need to learn more, go to: <a
+    href='https://github.com/cepdnaclk/singularity-deployment'>https://github.com/cepdnaclk/singularity-deployment</a>
+</p>"
+%}

@@ -1,0 +1,131 @@
+---
+layout: QA_page
+permalink: "/network-n-servers/tesla/"
+parent: "Network and Servers"
+title: "Tesla"
+index: 4
+author : Adeepa
+---
+
+<!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
+Later add to template-->
+<p style="text-align:right">
+  <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
+</p>
+
+<!-- 1 -->
+{% include qa-template.html
+id="1"
+question="How can I connect to this server?"
+answer="You can use ssh login"
+%}
+
+<!-- 2 -->
+<p>
+  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
+    aria-expanded="false" aria-controls="collapseExample">
+    What is the Hardware Configuration of this server?
+  </button>
+</p>
+<div class="collapse multi-collapse" id="collapse2">
+  <div class="card card-body">
+    <ul>
+      <li>Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz (8MB Cache, 8 threads)</li>
+      <li>32 GB Memory</li>
+      <li>Tesla C2075 GPU (6GB DDR5 Memory, 448 CUDA Cores, Compute Capability 2.0)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 3 -->
+{% include qa-template.html
+id="3"
+question="What is the operating system of this server?"
+answer="Ubuntu 14.04.5 LTS"
+%}
+
+<!-- 4 -->
+<p>
+  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4"
+    aria-expanded="false" aria-controls="collapseExample">
+    What software is in installed in this server?
+  </button>
+</p>
+<div class="collapse multi-collapse" id="collapse4">
+  <div class="card card-body">
+    <ul>
+      <li>MySQL : Students can request login to use the MySQL server for their projects.</li>
+      <li>Apache server: Students can request web server space for their projects.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 5 -->
+<p>
+  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5"
+    aria-expanded="false" aria-controls="collapseExample">
+    How can I run a Jupyter Notebook on the server and access it over the internet?
+  </button>
+</p>
+<div class="collapse multi-collapse" id="collapse5">
+  <div class="card card-body">
+    <ol>
+      <li>Create a conda environment with jupyter notebook package installed.</li>
+      <li>Activate that environment.</li>
+      <li>
+        <div>Run <i>jupyter notebook --generate-config</i></div>
+      </li>
+      <li>
+        <div>It will say the configuration file for your account. Edit the configuration file and add the following two
+          lines. (They are originally commented out as given below.)
+          <code class="bash">
+# c.NotebookApp.allow_origin = ''
+# c.NotebookApp.ip = 'localhost'
+c.NotebookApp.allow_origin = '*'
+c.NotebookApp.ip = '0.0.0.0'
+        </code>
+        </div>
+      </li>
+      <li>Save the configuration file. You should still be in the conda environment.</li>
+      <li>
+        <p>Run the <i>jupyter notebook. jupyter-notebook --no-browser</i></p>
+      </li>
+      <li>You will see a URL like this <i>http://SOMETHING:8888/tree?token=abc123def456</i></li>
+      <li>Type the following address into your PC browser
+        <i>http://tesla.ce.pdn.ac.lk:8888/tree?token=abc123def456</i>
+      </li>
+      <li>Your browser (on your PC) will be showing the jupyter notebook running on the tesla server.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- 6 -->
+{% include qa-template.html
+id="6"
+question="Can I install some software here?"
+answer="Please request through any <a href='https://people.ce.pdn.ac.lk/staff/academic/'>CO staff member</a>. Please
+note that the server admin has no authority to
+install something unless it is requested by a staff memeber."
+%}
+
+<!-- 7 -->
+{% include qa-template.html
+id="7"
+question="What can I do if my doubt is not listed here?"
+answer="<a class='btn-link' href='/network-n-servers/contact-network-admin/'>Ask via email</a>"
+%}
+
+<!-- 12 -->
+{% include qa-template.html
+id="12"
+question="I am not an undergraduate of the Department of Computer Engineering, University of Peradeniya. Can I use this
+server?"
+answer="Ask headce[at]eng.pdn.ac.lk."
+%}
+
+<!-- 13 -->
+{% include qa-template.html
+id="13"
+question="I broke something. What should I do?"
+answer="<a class='btn-link' href='/network-n-servers/contact-network-admin/'>Contact server admin</a>"
+%}

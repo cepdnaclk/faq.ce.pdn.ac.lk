@@ -1,0 +1,154 @@
+---
+layout: QA_page
+permalink: "/network-n-servers/turing/"
+parent: "Network and Servers"
+title: "Turing"
+index: 5
+author : Nuwan
+---
+
+<!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
+Later add to template-->
+<p style="text-align:right">
+  <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
+</p>
+
+<p>
+  This is a GPU server of the Department of Computer Engineering, University of Peradeniya.
+</p>
+
+<p>
+  You can use this server using the LDAP login for ce.pdn.ac.lk undergraduates (which is used for CO top floor lab,
+  Aiken and Tesla) without sudo access.
+</p>
+
+<div>
+  <u>Specifications</u>
+  <ul>
+    <li>Intel Core i9-13900K CPU</li>
+    <li>NVIDIA GeForce RTX 3090 Ti GPU</li>
+    <li>32 GB (2x16 GB) DDR5-6000 Memory</li>
+    <li>4 TB (2x2 TB) M.2 SSD</li>
+  </ul>
+</div>
+
+
+<hr>
+
+
+<!-- 2 -->
+{% include qa-template.html
+id="2"
+question="How can I connect to this server?"
+answer="You can use SSH login. Since turing.ce.pdn.ac.lk is not a public IP you shoud either (a) use a computer in the
+Peradeniya network or (b) SSH to a public IP server like tesla.ce.pdn.ac.lk or aiken.ce.pdn.ac.lk and SSH to
+turing.ce.pdn.ac.lk from there."
+%}
+
+
+<!-- 4 -->
+{% include qa-template.html
+id="4"
+question="What are the GPUs in this server?"
+answer="NVIDIA GeForce RTX 3090 Ti"
+%}
+
+<!-- 5 -->
+{% include qa-template.html
+id="5"
+question="What is the operating system of this server?"
+answer="Ubuntu 22.04 "
+%}
+
+<!-- 6 -->
+{% include qa-template.html
+id="6"
+question="What software is installed in this server?"
+answer="
+- Ubuntu 22.04
+- NVIDIA-Driver Version: 530.41.03
+- CUDA Version: 12.1 (You can update this using conda)
+" %}
+
+
+<!-- 7 -->
+{% include qa-template.html
+id="7"
+question="What datasets are hosted in Turing?"
+answer="
+We store frequently used datasets inside the turing.ce.pdn.ac.lk local storage for easy access. You can access
+these by the following commands
+
+`ls /storage/datasets/`
+
+These datasets are in the read only mode. You can use these datsets as the input for your tasks but you have to
+output the results to your home directory. The following datasets are stored at the moment.
+
+- THIS LIST WILL BE POPULATED SOON
+
+If you have suggestions for what datasets should be made available on this server, please send a request via
+email available in [https://www.cs.umd.edu/~gihan/contact/](https://www.cs.umd.edu/~gihan/contact/) address." %}
+
+
+
+<!-- 9 -->
+{% include qa-template.html
+id="9"
+question="I want a different version of NVCC?"
+answer="Use https://anaconda.org/anaconda/cudatoolkit"
+%}
+
+
+<!-- 11 -->
+{% include qa-template.html
+id="11"
+question="Can I install some software here?"
+answer="Please request through any CO staff member. Please note that the server admin has no authority to install
+something
+unless it is requested by a staff memeber."
+%}
+
+
+<!-- 12 -->
+{% include qa-template.html
+id="12"
+question="What can I do if my doubt is not listed here?"
+answer="[Ask via email](/network-n-servers/contact-network-admin/)"
+%}
+
+<!-- 13 -->
+{% include qa-template.html
+id="13"
+question="I am not an undergraduate of the Department of Computer Engineering, University of Peradeniya. Can I use this
+server?"
+answer="Ask headce[at]eng.pdn.ac.lk."
+%}
+
+<!-- 14 -->
+{% include qa-template.html
+id="14"
+question="I broke something. What should I do?"
+answer="[Contact server admin](/network-n-servers/contact-network-admin/)</a>"
+%}
+
+<!-- 15 -->
+{% include qa-template.html
+id="14"
+question="How to run a Singularity container on Turing?"
+answer="
+<ol>
+  <li>Send a request to the server admin via the <a
+      href='https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/'>server admin contact page</a> to run this
+    command: <code class='bash'>sudo singularity config fakeroot --add eXXYYY</code></li>
+  <li>Download the sample def file: <code
+      class='bash'>eyyxxx@turing:~$ wget https://raw.githubusercontent.com/cepdnaclk/singularity-deployment/main/base.def</code>
+  </li>
+  <li>Build the container: <code class='bash'>eyyxxx@turing:~$ singularity build --fakeroot base.sif base.def</code>
+  </li>
+  <li>Run commands using the container: <code
+      class='bash'>eyyxxx@turing:~$ singularity exec base.sif &lt;your-command&gt;</code></li>
+</ol>
+<p>If you need to learn more, go to: <a
+    href='https://github.com/cepdnaclk/singularity-deployment'>https://github.com/cepdnaclk/singularity-deployment</a>
+</p>"
+%}
