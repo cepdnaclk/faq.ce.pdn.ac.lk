@@ -1,0 +1,93 @@
+---
+layout: QA_page
+permalink: "/network-n-servers/ada/"
+parent: "Network and Servers"
+title: "Ada"
+index: 7
+author :
+---
+
+<!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
+Later add to template-->
+<p style="text-align:right">
+    <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
+  </p>
+
+  <p>
+    This is a GPU server of the Department of Computer Engineering, University of Peradeniya.
+  </p>
+
+  <p>
+    You can use this server using the LDAP login for ce.pdn.ac.lk undergraduates (which is used for CO top floor lab,
+    Aiken and Tesla) without sudo access.
+  </p>
+
+  <hr>
+
+<!-- 1 -->
+  {% include qa-template.html
+  id="1"
+  question="How to connect to this server?"
+  answer="The methodology is very similar to how we would connect to kepler.ce.pdn.ac.lk or turing.ce.pdn.ac.lk.
+
+  The only difference is ada.ce.pdn.ac.lk in place of kepler.ce.pdn.ac.lk.
+  Basic ssh connection instructions are <a href = 'https://faq.ce.pdn.ac.lk/network-n-servers/kepler/'>here</a>. Jupyter notebook, MobaXterm, and VSCode connection information are <a href = 'https://www.cs.umd.edu/~gihan/resources/pdn-hpc/'>here</a>."
+  %}
+
+
+  <!-- 2 -->
+  {% include qa-template.html
+  id="2"
+  question="What is the IP address of this server?"
+  answer="This server uses the internal IP address 10.40.18.12. This address is only valid within the Peradeniya network."
+  %}
+
+  <!-- 3 -->
+  {% include qa-template.html
+  id="3"
+  question="What is the hostname of this server?"
+  answer="ada.ce.pdn.ac.lk. This hostname is only valid within the Peradeniya network."
+  %}
+
+  <!-- 4 -->
+  {% include qa-template.html
+  id="4"
+  question="How can I get access to this server?"
+  answer="If you are an undergraduate of the Department of Computer Engineering, you already have access to this server. If not, email headce[at]eng.pdn.ac.lk."
+  %}
+
+  <!-- 5 -->
+  {% include qa-template.html
+  id="5"
+  question="What is the hardware configuration of this server?"
+  answer="
+  <ul>
+    <li><a href='https://www.intel.com/content/www/us/en/products/sku/240486/intel-xeon-w73565x-processor-82-5m-cache-2-50-ghz/specifications.html'>Intel(R) Xeon(R) w7-3565X</a> CPU (32 cores, 64 threads)</li>
+    <li>3 * <a href='https://www.nvidia.com/en-us/products/workstations/rtx-a6000/'>NVIDIA RTX 6000 Ada Generation</a> 48GB GPUs</li>
+    <li>512 GB RAM</li>
+  </ul>"
+  %}
+
+  <!-- 6 -->
+  {% include qa-template.html
+  id="6"
+  question="What is the operating system of this server?"
+  answer="Ubuntu 24.04.3 LTS"
+  %}
+
+  <!-- 7 -->
+  {% include qa-template.html
+  id="7"
+  question="How to install software on this server?"
+  answer="First, try to install it using the conda package manager. <a href = 'https://www.cs.umd.edu/~gihan/resources/pdn-hpc/'>Read more</a>.<br>
+  Then, try singularity. <a href = 'https://faq.ce.pdn.ac.lk/network-n-servers/turing/'>Read more</a> (the methodology is similar to Turing)<br>
+  Finally, ask on #ask-for-help on Discord.
+  "
+  %}
+
+  <!-- 8 -->
+  {% include qa-template.html
+  id="8"
+  question="My question is not listed here. What should I do?"
+  answer="<a href='https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/'>Ask via email from the server admin</a>."
+  %}
