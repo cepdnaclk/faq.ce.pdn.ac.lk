@@ -1,0 +1,44 @@
+---
+layout: QA_page
+permalink: "/network-n-servers/neumann/"
+parent: "Network and Servers"
+title: "Neumann"
+index: 8
+author :
+---
+
+<!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
+Later add to template-->
+<p style="text-align:right">
+    <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
+  </p>
+
+  <p>
+    This is a GPU server of the Department of Computer Engineering, University of Peradeniya.
+  </p>
+
+  <p>
+    You can use this server using the LDAP login for ce.pdn.ac.lk undergraduates (which is used for CO top floor lab,
+    Aiken and Tesla) without sudo access.
+  </p>
+
+  <hr>
+
+  <!-- 1 -->
+  {% include qa-template.html
+  id="1"
+  question="What is the hardware configuration of this server?"
+  answer="
+  <ul>
+    <li>Dell PowerEdge R440 HPC</li>
+    <li>2 x <a href='https://www.intel.com/content/www/us/en/products/sku/192444/intel-xeon-gold-5218-processor-22m-cache-2-30-ghz/specifications.html'>Intel(R) Xeon(R) Gold 5218</a> CPU (2*16 cores, 2*32 threads) @ 3.90 GHz</li>
+    <li>192 GiB RAM</li>
+  </ul>"
+  %}
+
+  <!-- 2 -->
+  {% include qa-template.html
+  id="2"
+  question="What is the operating system of this server?"
+  answer="AlmaLinux (binary-compatible with Red Hat Enterprise Linux (RHEL))"
+  %}
