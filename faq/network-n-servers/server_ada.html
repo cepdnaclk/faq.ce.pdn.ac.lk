@@ -28,10 +28,11 @@ Later add to template-->
   {% include qa-template.html
   id="1"
   question="How to connect to this server?"
-  answer="The methodology is very similar to how we would connect to kepler.ce.pdn.ac.lk or turing.ce.pdn.ac.lk.
-
-  The only difference is ada.ce.pdn.ac.lk in place of kepler.ce.pdn.ac.lk.
-  Basic ssh connection instructions are <a href = 'https://faq.ce.pdn.ac.lk/network-n-servers/kepler/'>here</a>."
+  answer="Since ada.ce.pdn.ac.lk does not have a public IP, you can either SSH directly from inside the university network, or SSH through Tesla (which has a public IP) from outside the university network. <a href='/network-n-servers/connect_to_servers/'>Read how to SSH</a>
+  <br><br>Direct (from inside the university network):<br>
+  <b>ssh e14000@ada.ce.pdn.ac.lk</b>
+  <br><br>Jump through Tesla (from outside):<br>
+  <b>ssh -J e14000@tesla.ce.pdn.ac.lk e14000@ada.ce.pdn.ac.lk</b>"
   %}
 
 
