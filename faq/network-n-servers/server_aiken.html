@@ -42,20 +42,6 @@ Later add to template-->
     </div>
 </div>
 
-<!-- 2 -->
-<p>
-    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
-        aria-expanded="false" aria-controls="collapseExample">
-        I am not an undergraduate of the Department of Computer Engineering, University of Peradeniya. Can I use this
-        server?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse2">
-    <div class="card card-body">
-        Ask headce[at]eng.pdn.ac.lk.
-    </div>
-</div>
-
 <!-- 3 -->
 <p>
     <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
@@ -136,19 +122,6 @@ Later add to template-->
     </div>
 </div>
 
-<!-- 8 -->
-<p>
-    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8"
-        aria-expanded="false" aria-controls="collapseExample">
-        What can I do if my doubt is not listed here?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse8">
-    <div class="card card-body">
-        <p>Ask the <a href="{% link faq/network-n-servers/3_contact_network_admin.html %}">CE Network Admin</a></p>
-    </div>
-</div>
-
 <!-- 9 -->
 <p>
     <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9"
@@ -212,4 +185,12 @@ answer="
         href='https://github.com/cepdnaclk/singularity-deployment'>https://github.com/cepdnaclk/singularity-deployment</a>
 </p>
 "
+%}
+
+<!-- 12 -->
+{% include qa-template.html
+id="12"
+theme="success"
+question="What can I do if my doubt is not listed here?"
+answer="<a href='/network-n-servers/contact-network-admin/'>Ask the CE Network Admin</a>"
 %}
