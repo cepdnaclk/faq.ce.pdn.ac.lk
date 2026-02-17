@@ -19,22 +19,22 @@ Example:
 
 
 <!-- FAQ Block -->
-{% assign content_ = include.content | replace: '<faq>', '<div class="pb-3">' %}
-{% assign content_ = content_ | replace: '</faq>', '</div><br>' %}
+{% assign content_formatted = include.content | replace: '<faq>', '<div class="pb-3">' %}
+{% assign content_formatted = content_formatted | replace: '</faq>', '</div><br>' %}
 
 <!-- Question Block -->
-{% assign content_ = content_ | replace: '<question>', '<div class="p-2 alert alert-secondary" role="alert"><b>Q.&nbsp;' %}
-{% assign content_ = content_ | replace: '</question>', '</b></div>' %}
+{% assign content_formatted = content_formatted | replace: '<question>', '<div class="p-2 alert alert-warning" role="alert"><b>Q.&nbsp;' %}
+{% assign content_formatted = content_formatted | replace: '</question>', '</b></div>' %}
 
 <!-- Answer Block -->
-{% assign content_ = content_ | replace: '<answer>', '<div class="p-2 pt-0">' %}
-{% assign content_ = content_ | replace: '</answer>', '</div>' %}
+{% assign content_formatted = content_formatted | replace: '<answer>', '<div class="p-2 pt-0">' %}
+{% assign content_formatted = content_formatted | replace: '</answer>', '</div>' %}
 
 <!-- Assign default code formatter as 'bash' -->
-{% assign content_ = content_ | replace: '<code>', '<code class="bash">' %}
+{% assign content_formatted = content_formatted | replace: '<code>', '<code class="bash">' %}
 
 <!-- Adding code block formatting -->
-{% assign content_ = content_ | replace: '<code class="', '<div class=" highlight"><pre><code class="dracula ' %}
-{% assign content_ = content_ | replace: '</code>', '</code></pre></div>' %}
+{% assign content_formatted = content_formatted | replace: '<code class="', '<div class=" highlight"><pre><code class="dracula ' %}
+{% assign content_formatted = content_formatted | replace: '</code>', '</code></pre></div>' %}
 
-{{ content_ }}
+{{ content_formatted }}
