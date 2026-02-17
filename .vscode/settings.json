@@ -33,5 +33,5 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["CUDA"]
+  "cSpell.words": ["CUDA", "eyyxxx"]
 }
