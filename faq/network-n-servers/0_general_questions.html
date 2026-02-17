@@ -7,34 +7,16 @@ index: 0
 author : Nuwan
 ---
 
-<!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
-Later add to template-->
-<p style="text-align:right">
-    <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
-</p>
-
-<!-- 1 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
-        aria-expanded="false" aria-controls="collapseExample">
-        How to keep a program running even when I disconnect the remote terminal?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse1">
-    <div class="card card-body">
+<faq>
+    <question>How to keep a program running even when I disconnect the remote terminal?</question>
+    <answer>
         <p>Read <a href="https://www.maketecheasier.com/nohup-and-uses/">this</a> article.</p>
-    </div>
-</div>
+    </answer>
+</faq>
 
-<!-- 2 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
-        aria-expanded="false" aria-controls="collapseExample">
-        How to install Python packages using conda (Anaconda or Miniconda) on Peradeniya servers without sudo accounts
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse2">
-    <div class="card card-body">
+<faq>
+    <question>How to install Python packages using conda (Anaconda or Miniconda) on Peradeniya servers without sudo accounts</question>
+    <answer>
         <ol>
             <li>
                 SSH into the server using your non-sudo user account.
@@ -148,18 +130,12 @@ Later add to template-->
 
         </ol>
         <p><small>Source: <a href="https://docs.google.com/document/d/17ADZR2yeEooEmDdvB1BdhFnpnCsliv4tDfJn1tMBw94/edit">Google Doc</a></small></p>
-    </div>
-</div>
+    </answer>
+</faq>
 
-<!-- 3 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
-        aria-expanded="false" aria-controls="collapseExample">
-        How can I change the gcc or g++ version?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse3">
-    <div class="card card-body">
+<faq>
+    <question>How can I change the gcc or g++ version?</question>
+    <answer>
         <p>Method 1: Please contact the <a href="https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/">admin</a> and request them
             run update-alternatives as documented <a
                 href="https://github.com/cepdnaclk/server-documentation-public">here</a>.</p>
@@ -175,47 +151,29 @@ export PATH="~/symlinks:$PATH" #We add the new gcc to the path (before the exist
 cd ~
 gcc -v #Now you get the gcc-8 when you run gcc command
         </code>
-    </div>
-</div>
+    </answer>
+</faq>
 
-<!-- 4 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4"
-        aria-expanded="false" aria-controls="collapseExample">
-        Which server is more suitable for my work?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse4">
-    <div class="card card-body">
+<faq>
+    <question>Which server is more suitable for my work?</question>
+    <answer>
         If you are working on a heavy CPU bound computation, use Aiken. Kepler would be suitable if you are working on
         deep learning because of better GPUs and ready made datasets on the server.
-    </div>
-</div>
+    </answer>
+</faq>
 
-<!-- 5 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5"
-        aria-expanded="false" aria-controls="collapseExample">
-        How busy are the GPU servers?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse5">
-    <div class="card card-body">
+<faq>
+    <question>How busy are the GPU servers?</question>
+    <answer>
         <p>You can check the current GPU utilization of our servers using the
             <a href="https://cepdnaclk.github.io/servermonitoring/reports/server-gpu-util/">GPU Usage Meter</a>.
         </p>
-    </div>
-</div>
+    </answer>
+</faq>
 
-<!-- 6 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6"
-        aria-expanded="false" aria-controls="collapseExample">
-        How do I limit which GPUs my program uses?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse6">
-    <div class="card card-body">
+<faq>
+    <question>How do I limit which GPUs my program uses?</question>
+    <answer>
         <p>First, list the available GPUs and their IDs by running:</p>
         <b>nvidia-smi -L</b>
         <p>You will see output like:</p>
@@ -232,31 +190,19 @@ GPU 2: NVIDIA A100 (UUID: GPU-...)</pre>
         <p>You can verify which GPUs are visible by running:</p>
         <b>echo $CUDA_VISIBLE_DEVICES</b>
         <p>This is useful when sharing a server with others, so your program does not occupy all GPUs.</p>
-    </div>
-</div>
+    </answer>
+</faq>
 
-<!-- 7 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7"
-        aria-expanded="false" aria-controls="collapseExample">
-        I am not an undergraduate of the Department of Computer Engineering, University of Peradeniya. Can I use the servers?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse7">
-    <div class="card card-body">
+<faq>
+    <question>I am not an undergraduate of the Department of Computer Engineering, University of Peradeniya. Can I use the servers?</question>
+    <answer>
         Ask headce[at]eng.pdn.ac.lk.
-    </div>
-</div>
+    </answer>
+</faq>
 
-<!-- 8 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8"
-        aria-expanded="false" aria-controls="collapseExample">
-        Requesting/managing project storage on Peradeniya Servers
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse8">
-    <div class="card card-body">
+<faq>
+    <question>Requesting/managing project storage on Peradeniya Servers</question>
+    <answer>
         <p>
             Individual students have their storage as babbage.ce.pdn.ac.lk:/home/e14000 [Not really, but don't worry].
             This storage is mounted to the same location to every other server through network interfaces.
@@ -303,18 +249,12 @@ GPU 2: NVIDIA A100 (UUID: GPU-...)</pre>
                 </li>
             </ul>
         </p>
-    </div>
-</div>
+    </answer>
+</faq>
 
-<!-- 9 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9"
-        aria-expanded="false" aria-controls="collapseExample">
-        What can I do if my doubt is not listed here?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse9">
-    <div class="card card-body">
+<faq>
+    <question>What can I do if my doubt is not listed here?</question>
+    <answer>
         <p><a href="/network-n-servers/contact-network-admin/">Ask the CE Network Admin</a></p>
-    </div>
-</div>
+    </answer>
+</faq>
