@@ -7,22 +7,11 @@ title: "FAQ"
 <header class="blog-header py-3 px-3 d-none d-sm-none d-md-block">
   <div class="row flex-nowrap justify-content-between align-items-center">
     <div class="col-5 pt-1">
-      <img
-        class="ms-5 mx-auto d-block img-fluid"
-        src="/assets/img/banner.svg"
-        style="height: 64px"
-        alt="Logo"
-      />
+      <img class="ms-5 mx-auto d-block img-fluid" src="/assets/img/banner.svg" style="height: 64px" alt="Logo" />
     </div>
     <div class="col-8 d-none">&nbsp;</div>
     <div class="col-2 d-flex justify-content-end align-items-center">
-      <a
-        class="d-none btn btn-sm btn-outline-secondary"
-        href="http://www.ce.pdn.ac.lk"
-        target="_blank"
-      >
-        Department Site
-      </a>
+      <a class="d-none btn btn-sm btn-outline-secondary" href="http://www.ce.pdn.ac.lk" target="_blank">Department Site</a>
     </div>
   </div>
 </header>
@@ -30,8 +19,7 @@ title: "FAQ"
 <div class="container pb-5">
   <div class="row">
     <div class="container col-sm-12 col-md-10 col-lg-10 mx-auto mt-3 py-2">
-      {% include page_tree_builder.html pages=site.html_pages -%} {%- assign categories = pages_list
-      | where: "parent", "home" -%}
+      {% include page_tree_builder.html pages=site.html_pages -%} {%- assign categories = pages_list | where: "parent", "home" -%}
 
       <h1>Frequently Asked Questions ({{ page.title }})</h1>
 
@@ -44,12 +32,7 @@ title: "FAQ"
             <div class="container card p-2 bg-light">
               <div class="row">
                 <div class="col-sm-3 col-md-2 col-12 d-flex justify-content-start">
-                  <img
-                    style="width: 64px"
-                    src="{{ page.icon }}"
-                    class="img-fluid rounded-start align-self-center"
-                    alt="{{page.title}}"
-                  />
+                  <img style="width: 64px" src="{{ page.icon }}" class="img-fluid rounded-start align-self-center" alt="{{page.title}}" />
                 </div>
                 <div class="col-sm-9 col-md-10 col-12">
                   <div class="card-body d-flex flex-column">
@@ -67,11 +50,8 @@ title: "FAQ"
 
       <div class="container" style="margin-top: 120px">
         <strong>
-          If you need help with what you are looking for or have any doubts, please reach out to the
-          maintainers listed
-          <a href="https://github.com/orgs/cepdnaclk/teams/admins-cepdnaclk-github-io/members">
-            here
-          </a>
+          If you need help with what you are looking for or have any doubts, please reach out to the maintainers listed
+          <a href="https://github.com/orgs/cepdnaclk/teams/admins-cepdnaclk-github-io/members">here</a>
           .
         </strong>
         <br />
