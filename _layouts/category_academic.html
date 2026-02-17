@@ -2,18 +2,15 @@
 layout: default
 ---
 
-{% include page_tree_builder.html pages=site.html_pages -%}
-{%- assign sub_categories = pages_list | where: "parent", page.title -%}
+{% include page_tree_builder.html pages=site.html_pages -%} {%- assign sub_categories = pages_list |
+where: "parent", page.title -%}
 
 <div class="container">
-    <a href="{% link faq/index.html %}">Home</a> / {{ page.title }}
-    <br>
-    <br>
+  <a href="{% link faq/index.html %}">Home</a> / {{ page.title }}
+  <br />
+  <br />
 
-    <h2>{{ page.title }}</h2>
+  <h2>{{ page.title }}</h2>
 
-    <div class="container py-3">
-        {{ content }}
-    </div>
-
+  <div class="container py-3">{{ content }}</div>
 </div>

@@ -15,7 +15,7 @@
   margin: 20px;
 }
 
-.page-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+.page-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   color: white;
 }
 
@@ -45,13 +45,12 @@ footer {
   color: #999;
   text-align: center;
   background-color: #cdcdcd;
-  border-top: .05rem solid #bfbfbf;
+  border-top: 0.05rem solid #bfbfbf;
 }
 
 footer p:last-child {
   margin-bottom: 0;
 }
-
 
 .nobullets {
   list-style-type: none !important;
@@ -72,7 +71,6 @@ ul li {
 .multi-collapse {
   margin-bottom: 12px !important;
 }
-
 
 .btn-course {
   margin-bottom: 6px;
