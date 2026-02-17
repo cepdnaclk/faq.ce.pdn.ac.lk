@@ -11,32 +11,76 @@ github: faq/network-n-servers/6_use_jupyter_notebook.html
 ---
 
 <div class="container py-3">
-     <p>This guide explains how to run a Jupyter Notebook on a department server and access it from your browser. The steps differ depending on whether the server has a public IP address or not.</p>
+  <p>
+    This guide explains how to run a Jupyter Notebook on a department server and access it from your
+    browser. The steps differ depending on whether the server has a public IP address or not.
+  </p>
 
-     <h4>Servers without public IP addresses (Turing, Kepler, Ada, Ampere, Neumann)</h4>
-     <p>These servers require SSH tunneling through a public-facing server. Turing is used as an example here — replace it with the server you are using.</p>
-     <ol>
-        <li>SSH into Tesla (a public-facing server).</li>
-        <li>From Tesla, SSH into Turing.</li>
-        <li>Create a conda environment on Turing and activate it. <br><a href="/network-n-servers/general-questions/">Read instructions</a></li>
-        <li>Install Jupyter: <b>conda install jupyter</b></li>
-        <li>Start the notebook: <b>jupyter notebook --no-browser --port=8889 --ip=0.0.0.0</b></li>
-        <li>You will see a token in the output. Copy it.</li>
-        <li>On your local machine, open WSL (Windows) or Terminal (Linux/Mac) and set up an SSH tunnel:<br>
-            <b>ssh -N -f -L localhost:8888:turing.ce.pdn.ac.lk:8889 YOUR_USERNAME@tesla.ce.pdn.ac.lk</b></li>
-        <li>Open your browser and go to <b>http://localhost:8888</b>. Paste the token when prompted.</li>
-     </ol>
+  <h4>Servers without public IP addresses (Turing, Kepler, Ada, Ampere, Neumann)</h4>
+  <p>
+    These servers require SSH tunneling through a public-facing server. Turing is used as an example
+    here — replace it with the server you are using.
+  </p>
+  <ol>
+    <li>SSH into Tesla (a public-facing server).</li>
+    <li>From Tesla, SSH into Turing.</li>
+    <li>
+      Create a conda environment on Turing and activate it.
+      <br />
+      <a href="/network-n-servers/general-questions/">Read instructions</a>
+    </li>
+    <li>
+      Install Jupyter:
+      <b>conda install jupyter</b>
+    </li>
+    <li>
+      Start the notebook:
+      <b>jupyter notebook --no-browser --port=8889 --ip=0.0.0.0</b>
+    </li>
+    <li>You will see a token in the output. Copy it.</li>
+    <li>
+      On your local machine, open WSL (Windows) or Terminal (Linux/Mac) and set up an SSH tunnel:
+      <br />
+      <b>ssh -N -f -L localhost:8888:turing.ce.pdn.ac.lk:8889 YOUR_USERNAME@tesla.ce.pdn.ac.lk</b>
+    </li>
+    <li>
+      Open your browser and go to
+      <b>http://localhost:8888</b>
+      . Paste the token when prompted.
+    </li>
+  </ol>
 
-     <hr>
+  <hr />
 
-     <h4>Servers with public IP addresses (Tesla, Aiken)</h4>
-     <p>These servers can be accessed directly. Tesla is used as an example here.</p>
-     <ol>
-        <li>SSH into Tesla.</li>
-        <li>Create a conda environment and activate it. <br><a href="/network-n-servers/general-questions/">Read instructions</a></li>
-        <li>Install Jupyter: <b>conda install jupyter</b></li>
-        <li>Start the notebook: <b>jupyter notebook --no-browser --port=8888 --ip=0.0.0.0</b></li>
-        <li>You will see a URL like <b>http://SOMETHING:8888/tree?token=abc123def456</b></li>
-        <li>Open your browser and go to <b>http://tesla.ce.pdn.ac.lk:8888/tree?token=abc123def456</b> (replace the token with yours).</li>
-     </ol>
+  <h4>Servers with public IP addresses (Tesla, Aiken)</h4>
+  <p>These servers can be accessed directly. Tesla is used as an example here.</p>
+  <ol>
+    <li>SSH into Tesla.</li>
+    <li>
+      Create a conda environment and activate it.
+      <br />
+      <a href="/network-n-servers/general-questions/">Read instructions</a>
+    </li>
+    <li>
+      Install Jupyter:
+      <b>conda install jupyter</b>
+    </li>
+    <li>
+      Start the notebook:
+      <b>jupyter notebook --no-browser --port=8080 --ip=0.0.0.0</b>
+    </li>
+    <li>
+      You will see a URL like
+      <b>http://SOMETHING:8080/tree?token=abc123def456</b>
+    </li>
+    <li>
+      Open your browser and go to
+      <b>http://tesla.ce.pdn.ac.lk:8080/tree?token=abc123def456</b>
+      (replace the token with yours).
+    </li>
+  </ol>
+
+  <b>NOTE:</b>
+  If you are accessing Tesla from outside the university network, you will need to set up a SSH
+  tunnel to Tesla to get access to a local port.
 </div>
