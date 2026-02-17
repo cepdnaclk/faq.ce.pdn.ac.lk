@@ -2,6 +2,21 @@
 layout: default
 ---
 
+<!-- TODO move into a common component -->
+{% assign content_ = content | replace: '<faq>', '<div>' %}
+        {% assign content_ = content_ | replace: '</faq>', '</div><br>' %}
+
+{% assign content_ = content_ | replace: '<question>', '<div><b>Q.&nbsp;' %}
+            {% assign content_ = content_ | replace: '</question>', '</b></div>' %}
+
+{% assign content_ = content_ | replace: '<answer>', '<div>' %}
+        {% assign content_ = content_ | replace: '</answer>', '</div>' %}
+
+{% assign content_ = content_ | replace: '<code class="', '<div class=" highlight"><pre><code class="dracula ' %}
+{% assign content_ = content_ | replace: '</code>', '</code></pre>
+</div>' %}
+
+
 {% include page_tree_builder.html pages=site.html_pages -%} {%- assign sub_categories = pages_list |
 where: "parent", page.title -%}
 
@@ -18,7 +33,9 @@ where: "parent", page.title -%}
 </div>
 
 <div class="container py-3 pt-5">
-  {{ content }} {%- if page.toc != false -%}
+  {{ content_ }}
+
+  {%- if page.toc != false -%}
   <ul>
     {% for page in sub_categories %}
     <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
