@@ -1,0 +1,68 @@
+---
+layout: qa_page
+permalink: "/network-n-servers/neumann/"
+parent: "Network and Servers"
+title: "Neumann"
+index: 8
+author: Gihan
+---
+
+<p>This is a GPU server of the Department of Computer Engineering, University of Peradeniya.</p>
+
+<p>
+  You can use this server using the LDAP login for ce.pdn.ac.lk undergraduates (which is used for CO top floor lab, Aiken and Tesla) without
+  sudo access.
+</p>
+
+<faq>
+  <question>How can I connect to this server?</question>
+  <answer>
+    Since Neumann does not have a public IP (internal IP: 10.40.18.20), you can either SSH directly from inside the university network, or
+    SSH through Tesla (which has a public IP) from outside the university network.
+    <a href="/network-n-servers/connect_to_servers/">Read how to SSH</a>
+    <br />
+    <br />
+
+    Direct (from inside the university network):
+    <br />
+    <code class="bash">ssh e14000@10.40.18.20</code>
+
+    Jump through Tesla (from outside):
+    <br />
+    <code class="bash">ssh -J e14000@tesla.ce.pdn.ac.lk e14000@10.40.18.20</code>
+  </answer>
+</faq>
+
+<faq>
+  <question>What is the IP address of this server?</question>
+  <answer>10.40.18.20 (internal, not accessible from outside the university network)</answer>
+</faq>
+
+<faq>
+  <question>What is the hardware configuration of this server?</question>
+  <answer>
+    <ul>
+      <li>Dell PowerEdge R440 HPC</li>
+      <li>
+        2 x
+        <a
+          href="https://www.intel.com/content/www/us/en/products/sku/192444/intel-xeon-gold-5218-processor-22m-cache-2-30-ghz/specifications.html"
+        >
+          Intel(R) Xeon(R) Gold 5218
+        </a>
+        CPU (2*16 cores, 2*32 threads) @ 3.90 GHz
+      </li>
+      <li>192 GiB RAM</li>
+    </ul>
+  </answer>
+</faq>
+
+<faq>
+  <question>What is the operating system of this server?</question>
+  <answer>AlmaLinux (binary-compatible with Red Hat Enterprise Linux (RHEL))</answer>
+</faq>
+
+<faq>
+  <question>What can I do if my doubt is not listed here?</question>
+  <answer><a href="/network-n-servers/contact-network-admin/">Ask the CE Network Admin</a></answer>
+</faq>

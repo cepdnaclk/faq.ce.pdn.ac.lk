@@ -1,0 +1,40 @@
+<!--
+
+This will be act as a wrapper for the content of the faq pages.
+
+It will replace the custom tags with the appropriate HTML tags to style the content.
+
+Example:
+
+<faq>
+    <question>
+       What is Lorem Ipsum?
+    </question>
+    <answer>
+       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </answer>
+</faq>
+
+-->
+
+
+<!-- FAQ Block -->
+{% assign content_formatted = include.content | replace: '<faq>', '<div class="pb-3">' %}
+{% assign content_formatted = content_formatted | replace: '</faq>', '</div><br>' %}
+
+<!-- Question Block -->
+{% assign content_formatted = content_formatted | replace: '<question>', '<div class="p-2 alert alert-warning" role="alert"><b>Q.&nbsp;' %}
+{% assign content_formatted = content_formatted | replace: '</question>', '</b></div>' %}
+
+<!-- Answer Block -->
+{% assign content_formatted = content_formatted | replace: '<answer>', '<div class="p-2 pt-0">' %}
+{% assign content_formatted = content_formatted | replace: '</answer>', '</div>' %}
+
+<!-- Assign default code formatter as 'bash' -->
+{% assign content_formatted = content_formatted | replace: '<code>', '<code class="bash">' %}
+
+<!-- Adding code block formatting -->
+{% assign content_formatted = content_formatted | replace: '<code class="', '<div class=" highlight"><pre><code class="dracula ' %}
+{% assign content_formatted = content_formatted | replace: '</code>', '</code></pre></div>' %}
+
+{{ content_formatted }}

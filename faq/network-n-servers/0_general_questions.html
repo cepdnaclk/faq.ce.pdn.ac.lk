@@ -1,306 +1,326 @@
 ---
-layout: QA_page
+layout: qa_page
 permalink: "/network-n-servers/general-questions/"
 parent: "Network and Servers"
 title: "General Questions"
 index: 0
-author : Nuwan
+author: Nuwan
 ---
 
-<!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
-Later add to template-->
-<p style="text-align:right">
-    <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
-</p>
+<faq>
+  <question>How to keep a program running even when I disconnect the remote terminal?</question>
+  <answer>
+    <p>
+      Read
+      <a href="https://www.maketecheasier.com/nohup-and-uses/">this</a>
+      article.
+    </p>
+  </answer>
+</faq>
 
-<!-- 1 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
-        aria-expanded="false" aria-controls="collapseExample">
-        How to keep a program running even when I disconnect the remote terminal?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse1">
-    <div class="card card-body">
-        <p>Read <a href="https://www.maketecheasier.com/nohup-and-uses/">this</a> article.</p>
+<faq>
+  <question>How to install Python packages using conda (Anaconda or Miniconda) on Peradeniya servers without sudo accounts</question>
+  <answer>
+    <ol>
+      <li>SSH into the server using your non-sudo user account.</li>
+      <li>
+        It is assumed that you are installing conda on your home directory ~/miniconda
+        <br />
+        However, given how Peradeniya storage system works, you might have instructions to install it in some other project directory.
+      </li>
+      <li>
+        Go to the miniconda/conda download webpage and copy the download link for the installer. For example, Miniconda3 Linux 64 bit
+        installer on
+        <br />
+        <a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a>
+        is
+        <a href="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh">
+          https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+        </a>
+      </li>
+      <li>
+        Run the following commands on the SSH shell. (Mind the spaces)
+        <br />
+
+        <table style="font-family: Arial, sans-serif; border-collapse: collapse; width: 80%; margin: 20px">
+          <tr>
+            <th style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">Command</th>
+            <th style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">Description</th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">
+              <code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code>
+            </td>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">Download the installer.</td>
+          </tr>
+
+          <tr>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">
+              <code>bash Miniconda3-latest-Linux-x86_64.sh</code>
+            </td>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">Run the .sh bash installer.</td>
+          </tr>
+
+          <tr>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">ENTER</td>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">To continue with the installer</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">Keep reading the agreement to the end</td>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px"></td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px"><code>yes</code></td>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">To agree</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px"><code>~/miniconda</code></td>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">
+              Select an installation folder. This is just an example. You may use something that you see fit.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px"><code>no</code></td>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">
+              Do not run the init.
+              <br />
+              Ideally, you should be able to. However, our multiple NFS (network file system) makes things very complicated.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px"><code>~/miniconda/bin/conda init --user bash</code></td>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">
+              <code>~/miniconda/bin/conda init</code>
+              <br />
+              Here, we make sure we run the init from our new installation.
+              <br />
+              <code>--user</code>
+              <br />
+              This change is only for your user account
+              <br />
+              <code>bash</code>
+              <br />
+              This change is only for your ~/.bashrc
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px"><code>--user</code></td>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">This change is only for your user account.</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">Logout and login to the SSH shell again</td>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px"></td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px"><code>source ~/.bashrc</code></td>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">
+              Once this is run, you should see (base) on your SSH prompt.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">
+              <code>which conda</code>
+              <br />
+              <code>which python</code>
+            </td>
+            <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">
+              You can use these commands to verify if you are using the correct conda/python installations.
+            </td>
+          </tr>
+        </table>
+      </li>
+      <li>
+        <a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">
+          This document
+        </a>
+        is a good quick start guide for conda.
+      </li>
+
+      <li>
+        When you log in through SSH later, if you don't see (base) in the prompt, you have to run
+        <b>source ~/.bashrc</b>
+      </li>
+
+      <li>
+        If you have any questions, you can reach out to the following people.
+        <br />
+
+        <ul>
+          <li>
+            <a href="https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/">
+              <b>CO</b>
+              Tesla/Kepler/Aiken/Turing
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/eepdnaclk/server/tree/main/admin">
+              <b>EE</b>
+              COVID server
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <p>
+      <small>
+        Source:
+        <a href="https://docs.google.com/document/d/17ADZR2yeEooEmDdvB1BdhFnpnCsliv4tDfJn1tMBw94/edit">Google Doc</a>
+      </small>
+    </p>
+  </answer>
+</faq>
+
+<faq>
+  <question>How can I change the gcc or g++ version?</question>
+  <answer>
+    <p>
+      Method 1: Please contact the
+      <a href="https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/">admin</a>
+      and request them run update-alternatives as documented
+      <a href="https://github.com/cepdnaclk/server-documentation-public">here</a>
+      .
+    </p>
+
+    <p>
+      Method 2: All
+      <b>gcc/g++</b>
+      versions are installed in
+      <b>/usr/bin/</b>
+      . Following is an example on how you can use gcc-8 as gcc using a simple trick (without sudo).
+    </p>
+    <code class="bash">
+      gcc -v#You will see what the current gcc version is mkdir ~/symlinks cd ~/symlinks ln -s /usr/bin/gcc-8 ./gcc #We are creating a
+      symbolic link called gcc to gcc-8 export PATH="~/symlinks:$PATH" #We add the new gcc to the path (before the existing path) cd ~ gcc
+      -v #Now you get the gcc-8 when you run gcc command
+    </code>
+  </answer>
+</faq>
+
+<faq>
+  <question>Which server is more suitable for my work?</question>
+  <answer>
+    If you are working on a heavy CPU bound computation, use Aiken. Kepler would be suitable if you are working on deep learning because of
+    better GPUs and ready made datasets on the server.
+  </answer>
+</faq>
+
+<faq>
+  <question>How busy are the GPU servers?</question>
+  <answer>
+    <p>
+      You can check the current GPU utilization of our servers using the
+      <a href="https://cepdnaclk.github.io/servermonitoring/reports/server-gpu-util/">GPU Usage Meter</a>
+      .
+    </p>
+  </answer>
+</faq>
+
+<faq>
+  <question>How do I limit which GPUs my program uses?</question>
+  <answer>
+    <p>First, list the available GPUs and their IDs by running:</p>
+    <b>nvidia-smi -L</b>
+    <p>You will see output like:</p>
+    <div>
+      GPU 0: NVIDIA A100 (UUID: GPU-...)
+      <br />
+      GPU 1: NVIDIA A100 (UUID: GPU-...)
+      <br />
+      GPU 2: NVIDIA A100 (UUID: GPU-...)
     </div>
-</div>
+    <p>
+      The numbers (0, 1, 2) are the GPU IDs. Use the
+      <b>CUDA_VISIBLE_DEVICES</b>
+      environment variable to limit which GPUs your program can use.
+    </p>
+    <p>To use only GPU 0:</p>
+    <b>export CUDA_VISIBLE_DEVICES=0</b>
+    <p>To use GPU 0 and GPU 2:</p>
+    <b>export CUDA_VISIBLE_DEVICES=0,2</b>
+    <p>Then run your code as usual:</p>
+    <b>python trainer.py</b>
+    <p>You can verify which GPUs are visible by running:</p>
+    <b>echo $CUDA_VISIBLE_DEVICES</b>
+    <p>This is useful when sharing a server with others, so your program does not occupy all GPUs.</p>
+  </answer>
+</faq>
 
-<!-- 2 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
-        aria-expanded="false" aria-controls="collapseExample">
-        How can I install python packages?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse2">
-    <div class="card card-body">
+<faq>
+  <question>I am not an undergraduate of the Department of Computer Engineering, University of Peradeniya. Can I use the servers?</question>
+  <answer>Ask headce[at]eng.pdn.ac.lk.</answer>
+</faq>
 
-        <!--
+<faq>
+  <question>Requesting/managing project storage on Peradeniya Servers</question>
+  <answer>
+    <p>
+      Individual students have their storage as babbage.ce.pdn.ac.lk:/home/e14000 [Not really, but don't worry]. This storage is mounted to
+      the same location to every other server through network interfaces. However, you can request additional storage for your projects on
+      individual servers. This storage is usually faster than babbage.
+    </p>
+    <br />
+    <p>
+      Make a post on
+      <b>#ask-for-help</b>
+      on
+      <b>#PeraCOM</b>
+      Discord with the following information.
+    </p>
 
-        <p>You can do it using conda with any account. Create your own conda environment to be safe. You do not need
-            anyone’s permission to install a python package inside your conda environment. <a
-                href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">This</a>
-            is a good quick start guide for conda.</p>
+    <ol>
+      <li>Which server do you need this folder to be created on?</li>
+      <li>
+        Project name (This should follow the cepdnaclk github repo naming convention. E.g. e14-co542-deep-learning,
+        e15-4yp-object-detection, pg-deepselectnet).
+      </li>
+      <li>
+        E numbers of the project group (this can be one or more students).If you are a postgrad student, your aiken/tesla username is your
+        "e number".
+      </li>
+      <li>Endorsing academic staff member (this can be the course coordinator or the project adviser).</li>
+    </ol>
 
-        <p>In your first attempt to use conda, run the following command.</p>
-        <code class="bash">
-conda init bash
-        </code>
-        <p>You might have to run the following command on every login (unless .bashrc is run automatically)</p>
-        <code class="bash">
-source ~/.bashrc
-        </code>
+    <p>
+      We will create a unix group and a folder with chmod 770 permission on the server. We will update this information on the "Server
+      groups, folders, and datasets" Google sheet on this
+      <a href="https://www.cs.umd.edu/~gihan/resources/pdn-hpc/">web page</a>
+      .
+    </p>
 
-        -->
+    <p>
+      Please note that every folder comes with an expiry date. Check the date on the Google sheet and make sure that your endorsing academic
+      staff member sends a time extension request (e.g. "extend the expiration date of kepler:/e14-4yp-explainable-ml by 6 months") to
+      <a href="webmaster.github.ce@eng.pdn.ac.lk">webmaster.github.ce@eng.pdn.ac.lk</a>
+      when it is close to the expiry date.
+    </p>
 
-        Visit the following document and follow instructions.<a
-        href="https://docs.google.com/document/d/17ADZR2yeEooEmDdvB1BdhFnpnCsliv4tDfJn1tMBw94/edit">How to install and use conda (Anaconda or Miniconda) on Peradeniya servers without sudo accounts</a>
+    <b>Note:</b>
+    <ul>
+      <li>
+        We (server admins) are not very strict/stingy about giving project storage. We won't come and ask you "Why do you need 500GB on a
+        GPU server for a CO222 project?". Also, we might not even go and ask the endorsing staff member if they actually endorsed your
+        project.
+        <br />
+        We want you to use the resources and learn HPC. Our objective is not to gatekeep resources.
+      </li>
+      <li>
+        If you are not on Discord please ask for an invitation from
+        <br />
+        <a href="https://faq.ce.pdn.ac.lk/peracom/discord/">https://faq.ce.pdn.ac.lk/peracom/discord/</a>
+        or email
+        <br />
+        <a href="https://people.ce.pdn.ac.lk/students/e17/154/">https://people.ce.pdn.ac.lk/students/e17/154/</a>
+        or
+        <br />
+        <a href="https://people.ce.pdn.ac.lk/students/e16/088/">https://people.ce.pdn.ac.lk/students/e16/088/</a>
+      </li>
+    </ul>
+  </answer>
+</faq>
 
-    </div>
-</div>
-
-<!-- 3 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
-        aria-expanded="false" aria-controls="collapseExample">
-        How can I change the gcc or g++ version?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse3">
-    <div class="card card-body">
-        <p>Method 1: Please contact the <a href="https://cepdnaclk.github.io/servers/admin/">admin</a> and request them
-            run update-alternatives as documented <a
-                href="https://github.com/cepdnaclk/server-documentation-public">here</a>.</p>
-
-        <p>Method 2: All <b>gcc/g++</b> versions are installed in <b>/usr/bin/</b>. Following is an example on how you
-            can use gcc-8 as gcc using a simple trick (without sudo).</p>
-        <code class="bash">
-gcc -v#You will see what the current gcc version is
-mkdir ~/symlinks
-cd ~/symlinks
-ln -s /usr/bin/gcc-8 ./gcc #We are creating a symbolic link called gcc to gcc-8
-export PATH="~/symlinks:$PATH" #We add the new gcc to the path (before the existing path)
-cd ~
-gcc -v #Now you get the gcc-8 when you run gcc command
-        </code>
-    </div>
-</div>
-
-<!-- 4 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4"
-        aria-expanded="false" aria-controls="collapseExample">
-        Which server is more suitable for my work?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse4">
-    <div class="card card-body">
-        If you are working on a heavy CPU bound computation, use Aiken. Kepler would be suitable if you are working on
-        deep learning because of better GPUs and ready made datasets on the server.
-    </div>
-</div>
-
-<!-- 5 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5"
-        aria-expanded="false" aria-controls="collapseExample">
-        How can I conviniently run experiments on the server and remotely monitor them?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse5">
-    <div class="card card-body">
-        <p>Suggested solution: <a href="https://github.com/labmlai/labml">Labml</a> is an all in one solution for
-            conducting, logging and monitoring NN based experiments on mobile/remote PC.</p>
-    </div>
-</div>
-
-
-
-<!-- 6 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6"
-        aria-expanded="false" aria-controls="collapseExample">
-        How to install and use conda (Anaconda or Miniconda) on Peradeniya servers without sudo accounts
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse6">
-    <div class="card card-body">
-        <ol>
-            <li>
-                SSH into the server using your non-sudo user account.
-            </li>
-            <li>
-                It is assumed that you are installing conda on your home directory ~/miniconda<br>
-                However, given how Peradeniya storage system works, you might have instructions to install it in some other project directory.
-            </li>
-            <li>
-                Go to the miniconda/conda download webpage and copy the download link for the installer. 
-                For example, Miniconda3 Linux 64 bit installer on <br>
-                <a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a> is 
-                <a href="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh">https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</a>
-            </li>
-            <li>
-                Run the following commands on the SSH shell. (Mind the spaces)<br>
-
-                <table style="font-family: Arial, sans-serif; border-collapse: collapse; width: 80%; margin: 20px;">
-                    <tr>
-                        <th style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Command</th>
-                        <th style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Description</th>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>wget<br> https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Download the installer.</td>
-                    </tr>
-                    
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>bash<br> Miniconda3-latest-Linux-x86_64.sh</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Run the .sh bash installer.</td>
-                    </tr>
-                    
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">ENTER</td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">To continue with the installer</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Keep reading the agreement to the end</td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"></td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>yes</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">To agree</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>~/miniconda</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Select an installation folder. This is just an example. You may use something that you see fit.</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>no</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Do not run the init.<br>
-                            Ideally, you should be able to. However, our multiple NFS (network file system) makes things very complicated.</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>~/miniconda/bin/conda init --user bash</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">
-                            <code>
-                                ~/miniconda/bin/conda init
-                            </code>
-                            <br>
-                            Here, we make sure we run the init from our new installation.
-                            <br>
-                            <code>--user</code>
-                            <br>
-                            This change is only for your user account
-                            <br>
-                            <code>bash</code>
-                            <br>
-                            This change is only for your ~/.bashrc
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>--user</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">This change is only for your user account.</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Logout and login to the SSH shell again</td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"></td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;"><code>source ~/.bashrc</code></td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">Once this is run, you should see (base) on your SSH prompt. </td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">
-                            <code>which conda</code>
-                            <br>
-                            <code>which python</code>
-                        </td>
-                        <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px;">You can use these commands to verify if you are using the correct conda/python installations.</td>
-                    </tr>
-                </table>
-                
-            </li>
-            <li>
-                <a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">This document</a> is a good quick start guide for conda.
-            </li>
-            
-            <li>
-                When you log in through SSH later, if you don't see (base) in the prompt, you have to run <b>source ~/.bashrc</b>
-            </li>
-            
-            <li>
-                If you have any questions, you can reach out to the following people. <br>
-                
-                <ul>
-                    <li> <a href="https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/"><b>CO</b> Tesla/Kepler/Aiken/Turing</a></li>
-                    <li><a href="https://github.com/eepdnaclk/server/tree/main/admin"><b>EE</b> COVID server</a></li>
-                </ul>
-            </li>
-
-            <li>
-                If you have questions about anything, please try to ask them on the <b>PeraCOM Discord #ask-for-help</b> channel. 
-                That is helpful to the community as a whole. 
-                If you are not already on the discord, please ask for an invitation from e17154@eng.pdn.ac.lk and e16088@eng.pdn.ac.lk
-            </li>
-        </ol>
-    </div>
-</div>
-
-
-<!-- 7 -->
-<p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7"
-        aria-expanded="false" aria-controls="collapseExample">
-        Requesting/managing project storage on Peradeniya Servers
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse7">
-    <div class="card card-body">
-        <p>
-            Individual students have their storage as babbage.ce.pdn.ac.lk:/home/e14000 [Not really, but don't worry]. 
-            This storage is mounted to the same location to every other server (aiken, tesla, kepler, turing, new HP server) through network interfaces. 
-            However, you can request additional storage for your projects on individual servers. This storage is usually faster than babbage.
-        </p>
-        <br>
-        <p>Make a post on <b>#ask-for-help</b>on <b>#PeraCOM</b>Discord with the following information.</p>
-
-        <ol>
-            <li>Which server do you need this folder to be created on?</li>
-            <li>Project name (This should follow the cepdnaclk github repo naming convention. E.g. e14-co542-deep-learning, e15-4yp-object-detection, pg-deepselectnet).</li>
-            <li>E numbers of the project group (this can be one or more students).If you are a postgrad student, your aiken/tesla username is your “e number”.</li>
-            <li>Endorsing academic staff member (this can be the course coordinator or the project adviser).</li>
-        </ol>
-
-        <p>
-            We will create a unix group and a folder with chmod 770 permission on the server. 
-            We will update this information on the “Server groups, folders, and datasets” Google sheet on this <a href="https://www.cs.umd.edu/~gihan/resources/pdn-hpc/">web page</a>.
-        </p>
-
-        <p>
-            Please note that every folder comes with an expiry date. 
-            Check the date on the Google sheet and make sure that your endorsing academic staff member sends a time extension request 
-            (e.g. “extend the expiration date of kepler:/e14-4yp-explainable-ml by 6 months”)  to 
-            <a href="webmaster.github.ce@eng.pdn.ac.lk">webmaster.github.ce@eng.pdn.ac.lk</a> when it is close to the expiry date.
-        </p>
-
-        <p>
-            <b>Note:</b>
-            <ul>
-                <li>
-                    We (server admins) are not very strict/stingy about giving project storage. 
-                    We won't come and ask you “Why do you need 500GB on a GPU server for a CO222 project?”. 
-                    Also, we might not even go and ask the endorsing staff member if they actually endorsed your project.
-                    <br>
-                    We want you to use the resources and learn HPC. Our objective is not to gatekeep resources.
-                </li>
-                <li>
-                    If you are not on Discord please ask for an invitation from
-                    <br>
-                    <a href="https://faq.ce.pdn.ac.lk/peracom/discord/">https://faq.ce.pdn.ac.lk/peracom/discord/</a> or email <br>
-                    <a href="https://people.ce.pdn.ac.lk/students/e17/154/">https://people.ce.pdn.ac.lk/students/e17/154/</a> or <br>
-                    <a href="https://people.ce.pdn.ac.lk/students/e16/088/">https://people.ce.pdn.ac.lk/students/e16/088/</a>
-                </li>
-            </ul>
-        </p>
-    </div>
-</div>
+<faq>
+  <question>What can I do if my doubt is not listed here?</question>
+  <answer>
+    <p><a href="/network-n-servers/contact-network-admin/">Ask the CE Network Admin</a></p>
+  </answer>
+</faq>

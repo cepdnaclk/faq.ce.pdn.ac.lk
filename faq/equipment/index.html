@@ -1,0 +1,48 @@
+---
+layout: category
+permalink: "/equipment/"
+parent: "home"
+title: "Equipment"
+icon: "/assets/img/icons/equipment.png"
+index: 6
+toc: false
+---
+
+<h5>User Manuals</h5>
+<div>
+  <ul>
+    {%- assign manuals = site.data.user_manuals -%} {%- for m in manuals -%}
+    <li><a href="{{ m[1]['link'] | relative_url }}">{{ m[0] }}</a></li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+<div></div>
+
+<!-- 1 -->
+<faq>
+  <question>How to get started with the Open BCI Cyton Board?</question>
+  <answer>
+    <a href="https://cepdnaclk.github.io/e15-4yp-Brain-Computer-Interface-for-controlling-virtual-objects/">
+      https://cepdnaclk.github.io/e15-4yp-Brain-Computer-Interface-for-controlling-virtual-objects/
+    </a>
+  </answer>
+</faq>
+
+<!-- 2 -->
+<faq>
+  <question>How to use the department 3D printing service ?</question>
+  <answer>
+    See the guidelines for beginners in
+    <a href="https://make.ce.pdn.ac.lk/docs/3d-printing/">Ender 3 Pro 3D Printer User Guide</a>
+  </answer>
+</faq>
+
+<!-- 3 -->
+<faq>
+  <question>How to use the department CNC Machine ?</question>
+  <answer>
+    See the guidelines in
+    <a href="https://make.ce.pdn.ac.lk/docs/cnc/">3018 CNC User Guide</a>
+  </answer>
+</faq>

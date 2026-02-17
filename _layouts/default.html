@@ -2,40 +2,42 @@
 layout: table_wrapper
 ---
 
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
-<head>
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  <head>
     {% include meta.html %}
 
-    {%- if jekyll.environment == 'production' -%}
-    {%- include analytics.html -%}
-    {%- endif -%}
+    {%- if jekyll.environment == 'production' -%} {%- include analytics.html -%} {%- endif -%}
 
     {%- include head.html -%}
+  </head>
 
-</head>
-
-<body>
+  <body>
     {% include navbar.html %}
 
     <div class="container vh-75">
-        <div class="row">
-            <div class="container col-sm-12 col-md-10 col-lg-10 mx-auto mt-3 py-2">
-                {{ content }}
-            </div>
+      <div class="row">
+        <div class="container col-sm-12 col-md-10 col-lg-10 mx-auto mt-3 py-2">
+          {{ content }}
         </div>
+      </div>
     </div>
     {%- if page.github -%}
     <!-- <hr> -->
     <div class="container d-flex justify-content-end">
-        <a class="edit" href="{{ site.gh_edit_repository }}/blob/{{ site.gh_edit_branch }}/{{ page.github }}" title="Edit on GitHub" rel="noreferrer" target="_blank">
-            <i class="fab fa-github"></i> {{ site.gh_edit_link_text }}
-        </a>
+      <a
+        class="edit"
+        href="{{ site.gh_edit_repository }}/blob/{{ site.gh_edit_branch }}/{{ page.github }}"
+        title="Edit on GitHub"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <i class="fab fa-github"></i>
+        {{ site.gh_edit_link_text }}
+      </a>
     </div>
     {%- endif -%}
 
     {% include footer.html %}
-
-</body>
+  </body>
 </html>

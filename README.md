@@ -1,3 +1,4 @@
+[![Weekly Updates](https://github.com/cepdnaclk/faq.ce.pdn.ac.lk/actions/workflows/weekly.yml/badge.svg)](https://github.com/cepdnaclk/faq.ce.pdn.ac.lk/actions/workflows/weekly.yml)
 
 # faq.ce.pdn.ac.lk
 

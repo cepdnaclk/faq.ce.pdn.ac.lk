@@ -1,5 +1,5 @@
 ---
-layout: QA_page
+layout: qa_page
 permalink: "/equipment/user-manuals/"
 
 parent: "Equipment"
@@ -8,28 +8,26 @@ index: 1
 author: "Nuwan Jaliyagoda"
 ---
 
-
 <h3>User Manuals</h3>
 <div>
-    <ul>
-        {%- assign manuals = site.data.user_manuals -%}
-        {%- for m in manuals -%}
-        <li>
-            <a href="{{ m[1]['link'] | relative_url }}">{{ m[0] }}</a>
-            <ul>
-                {%- for eq in m[1]['manuals'] -%}
-                <li class="pb-2">
-                    <b>{{ eq['title'] }}</b><span class="text-muted ms-2">{{ eq['description'] }}</span>
-                    <div class="px-3">
-                        {%- for url in eq['urls'] -%}
-                        <a class="ms-3" href="{{ url['link'] | relative_url}}" target="_blank">{{url['title']}}</a>
-                        {%- endfor -%}
-                    </div>
-                </li>
-                {%- endfor -%}
-            </ul>
-
+  <ul>
+    {%- assign manuals = site.data.user_manuals -%} {%- for m in manuals -%}
+    <li>
+      <a href="{{ m[1]['link'] | relative_url }}">{{ m[0] }}</a>
+      <ul>
+        {%- for eq in m[1]['manuals'] -%}
+        <li class="pb-2">
+          <b>{{ eq['title'] }}</b>
+          <span class="text-muted ms-2">{{ eq['description'] }}</span>
+          <div class="px-3">
+            {%- for url in eq['urls'] -%}
+            <a class="ms-3" href="{{ url['link'] | relative_url}}" target="_blank">{{url['title']}}</a>
+            {%- endfor -%}
+          </div>
         </li>
         {%- endfor -%}
-    </ul>
+      </ul>
+    </li>
+    {%- endfor -%}
+  </ul>
 </div>

@@ -1,0 +1,8 @@
+**/node_modules/**
+**/dist/**
+_site/**
+_layouts/**
+.jekyll-cache/**
+.mypy_cache/**
+.venv/**
+_includes/qa_blocks_v1.html
