@@ -57,14 +57,14 @@ As of now (2020-04-12) you do not need any proxy settings to access the internet
 
 ## How to run ARM assembly code?
 
-1. Install the following software on your computer (already installed on tesla.ce.pdn.ac.lk)
+- Install the following software on your computer (already installed on tesla.ce.pdn.ac.lk)
 
 <pre><code>
     sudo apt-get install gcc-arm-linux-gnueabi
     sudo apt-get install qemu-user
 </code></pre>
 
-1. Assemble and run (example is armProg.s)
+- Assemble and run (example is armProg.s)
 
 <pre><code>
     arm-linux-gnueabi-gcc -Wall armProg.s -o assembledCode
@@ -87,7 +87,7 @@ See <https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-s
 
 1. Contact any instructor/lecturer and request them to install the software.
 2. Request a virtual machine contact: rajitharamanayake[at]gmail[dot]com
-3. There are many workarounds that do not require sudo access such as "pip install --user", "conda install" if all you want to do is indtalling a python package.
+3. There are many workarounds that do not require sudo access such as "pip install --user", "conda install" if all you want to do is installing a python package.
 
 ---
 
@@ -115,33 +115,27 @@ As of now (2020/04/14): @ce.pdn.ac.lk will be deleted one year after the graduat
 
 ## What are my usernames and passwords for university websites?
 
-<table class="table table-bordered">
-<tr><th>Account</th><th>Username</th><th>Password</th></tr>
-    <tr>
-        <td>https://feels.pdn.ac.lk/</td>
-        <td>eXXYYY</td>
-        <td>Given to you during faculty orientation</td>
-    </tr>
-<tr><td>CO Top floor lab linux computers, tesla, aiken, babbage, [at]ce.pdn.ac.lk email, results.ce.pdn.ac.lk</td><td>eXXYYY</td><td>Given to you during the department orientation</td></tr>
-<tr><td>CO Top floor windows password</td><td>eXXYYY</td><td>Given on the first day of using windows software for a lab after enrolling in the department</td></tr>
-<tr><td>CC windows password</td><td>eXXYYY</td><td>FILL THIS</td></tr>
-<tr> <td>[at]eng.pdn.ac.lk password</td><td>You choose</td><td>You choose</td></tr>
-<tr><td>http://me.pefaa.net/</td><td>You choose</td><td>You choose</td></tr>
-</table>
+| Account                                       | Username   | Password                                                                                     |
+| --------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------- |
+| <https://feels.pdn.ac.lk/>                    | eXXYYY     | Given to you during faculty orientation                                                      |
+| CO Top floor lab linux computers / CE servers | eXXYYY     | Given to you during the department orientation                                               |
+| CO Top floor windows password                 | eXXYYY     | Given on the first day of using windows software for a lab after enrolling in the department |
+| CC windows password                           | eXXYYY     | FILL THIS                                                                                    |
+| [at]eng.pdn.ac.lk password                    | You choose | You choose                                                                                   |
+| <http://me.pefaa.net/>                        | You choose | You choose                                                                                   |
 
 ---
 
 ## How can I get help to recover passwords or create accounts?
 
-<table class="table table-bordered">
-<tr><th>Account</th><th>Whom to ask</th></tr>
-<tr><td>https://feels.pdn.ac.lk/</td><td>feels[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
-<tr><td>CO Top floor lab linux computers, tesla, aiken, babbage, [at]ce.pdn.ac.lk email, results.ce.pdn.ac.lk</td><td><a href="https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/">CO server admin</a></td></tr>
-<tr><td>CO Top floor windows password</td><td><a href="https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/">CO server admin</a></td></tr>
-<tr><td>CC windows password</td><td><a href="https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/">CO server admin</a></td></tr>
-<tr><td>[at]eng.pdn.ac.lk password</td><td>roshanr[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
-<tr><td>http://me.pefaa.net/</td><td>kamalanath[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
-</table>
+| Account                                       | Whom to ask                                                                          |
+| --------------------------------------------- | ------------------------------------------------------------------------------------ |
+| <https://feels.pdn.ac.lk/>                    | feels[at]eng[dot]pdn[dot]ac[dot]lk                                                   |
+| CO Top floor lab linux computers / CE servers | [CO server admin](https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/) |
+| CO Top floor windows password                 | [CO server admin](https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/) |
+| CC windows password                           | [CO server admin](https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/) |
+| [at]eng.pdn.ac.lk password                    | roshanr[at]eng[dot]pdn[dot]ac[dot]lk                                                 |
+| [http://me.pefaa.net/](http://me.pefaa.net/)  | kamalanath[at]eng[dot]pdn[dot]ac[dot]lk                                              |
 
 ---
 
