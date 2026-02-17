@@ -9,42 +9,117 @@ index: 6
 <h5>User Manuals</h5>
 <div>
   <ul>
-    {%- assign manuals = site.data.user_manuals -%}
-    {%- for m in manuals -%}
+    {%- assign manuals = site.data.user_manuals -%} {%- for m in manuals -%}
     <li><a href="{{ m[1]['link'] | relative_url }}">{{ m[0] }}</a></li>
     {%- endfor -%}
   </ul>
 </div>
 
-<hr>
+<hr />
 
 <!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
 Later add to template-->
-<p style="text-align:right">
+<p style="text-align: right">
   <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
 </p>
 
-
 <!-- 1 -->
-{% include qa-template.html
-id="1"
-question="How to get started with the Open BCI Cyton Board?"
-answer="See <a href='https://cepdnaclk.github.io/e15-4yp-Brain-Computer-Interface-for-controlling-virtual-objects/'>
-  https://cepdnaclk.github.io/e15-4yp-Brain-Computer-Interface-for-controlling-virtual-objects/</a>"
+{% include qa-template.html id="1" question="How to get started with the Open
+BCI Cyton Board?" answer="See
+[instructions](https://cepdnaclk.github.io/e15-4yp-Brain-Computer-Interface-for-controlling-virtual-objects/)"
 %}
 
 <!-- 2 -->
-{% include qa-template.html
-id="2"
-question="How to use the department 3D printing service ?"
-answer="See the guidelines for beginners in [Ender 3 Pro 3D Printer User
-Guide](https://make.ce.pdn.ac.lk/docs/3d-printing/)"
-%}
+{% include qa-template.html id="2" question="How to use the department 3D
+printing service ?" answer="See the guidelines for beginners in [Ender 3 Pro 3D
+Printer User Guide](https://make.ce.pdn.ac.lk/docs/3d-printing/)" %}
 
 <!-- 3 -->
-{% include qa-template.html
-id="3"
-question="How to use the department CNC Machine ?"
-answer="See the guidelines in [3018 CNC User
-Guide](https://make.ce.pdn.ac.lk/docs/cnc/)"
-%}
+{% include qa-template.html id="3" question="How to use the department CNC
+Machine ?" answer="See the guidelines in [3018 CNC User
+Guide](https://make.ce.pdn.ac.lk/docs/cnc/)" %}
+
+<hr />
+
+<div style="padding-top: 30px">
+  <h3>MakerSpace Locker Spaces</h3>
+  <br />
+
+  <!-- 4 -->
+  {% include qa-template.html id="4" question="Who is eligible to request a
+  MakerSpace locker space?" answer="Students working on department projects,
+  non-course related projects (e.g., PeraSwarm, PeraRide), or course projects
+  are eligible to request a locker space at the MakerSpace. You need to request
+  from the Lecturer in charge of ESCAL for approval." %}
+
+  <!-- 5 -->
+  {% include qa-template.html id="5" question="How do I request a MakerSpace
+  locker space?" answer="To request a locker space, you need to contact the
+  Lecturer in charge of ESCAL. The request should include details about your
+  project and the duration for which you need the locker space." %}
+
+  <!-- 6 -->
+  {% include qa-template.html id="6" question="How are MakerSpace locker spaces
+  allocated?" answer="There are 40 locker spaces in total (two 4x5 locker
+  cabinets). These are allocated as follows:
+  <ul>
+    <li>
+      <b>15 lockers</b> are reserved for department projects and non-course
+      related projects (e.g., PeraSwarm, PeraRide)
+    </li>
+    <li>
+      <b>25 lockers</b> are available for students on request for their course
+      projects
+    </li>
+  </ul>
+  Allocation is done on a first-come, first-served basis, subject to approval
+  and availability." %}
+
+  <!-- 7 -->
+  {% include qa-template.html id="7" question="For how long can I use a
+  MakerSpace locker space?" answer="Locker spaces can be borrowed for durations
+  of
+  <b>3, 5, or 8 months</b>, depending on your project requirements and approval
+  from the Lecturer in charge of ESCAL. Please specify the required duration
+  when making your request." %}
+
+  <!-- 8 -->
+  {% include qa-template.html id="8" question="How are the locker keys managed?"
+  answer="The key management process is as follows:
+  <ul>
+    <li>A copy of all locker keys is kept by a Technical Officer (TO)</li>
+    <li>
+      When a key is assigned to a team, a student representative must sign a
+      logbook (this process may be moved online in the future) acknowledging
+      full responsibility for the key and locker
+    </li>
+    <li>
+      At the end of the use period, the student must clean up the locker space
+      and return the key to the TO
+    </li>
+  </ul>
+  " %}
+
+  <!-- 9 -->
+  {% include qa-template.html id="9" question="What happens if I lose the locker
+  key?" answer="If a locker key is lost, the
+  <b
+    >responsible party (the student or team who signed for the key) must bear
+    the full cost of lock replacement</b
+  >. It is your responsibility to keep the key safe throughout the borrowing
+  period." %}
+
+  <!-- 10 -->
+  {% include qa-template.html id="10" question="What are my responsibilities
+  when using a MakerSpace locker space?" answer="When using a locker space, you
+  are responsible for:
+  <ul>
+    <li>Keeping the locker key safe and secure</li>
+    <li>Using the locker space only for the approved project</li>
+    <li>Maintaining the cleanliness and condition of the locker space</li>
+    <li>Returning the key on time at the end of the borrowing period</li>
+    <li>Cleaning up the locker space completely before returning the key</li>
+    <li>Bearing the cost of lock replacement if the key is lost</li>
+  </ul>
+  " %}
+</div>
