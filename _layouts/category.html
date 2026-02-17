@@ -3,10 +3,10 @@ layout: default
 ---
 
 <!-- TODO move into a common component -->
-{% assign content_ = content | replace: '<faq>', '<div>' %}
+{% assign content_ = content | replace: '<faq>', '<hr><div class="pb-3">' %}
         {% assign content_ = content_ | replace: '</faq>', '</div><br>' %}
 
-{% assign content_ = content_ | replace: '<question>', '<div><b>Q.&nbsp;' %}
+{% assign content_ = content_ | replace: '<question>', '<div class="pb-2"><b>Q.&nbsp;' %}
             {% assign content_ = content_ | replace: '</question>', '</b></div>' %}
 
 {% assign content_ = content_ | replace: '<answer>', '<div>' %}
