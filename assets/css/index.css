@@ -75,3 +75,18 @@ ul li {
 .btn-course {
   margin-bottom: 6px;
 }
+
+/* Text-to-Speech Button */
+#tts-button {
+  margin-top: 5px;
+  min-width: 40px;
+  transition: all 0.3s ease;
+}
+
+#tts-button:hover {
+  transform: scale(1.05);
+}
+
+#tts-button i {
+  font-size: 1rem;
+}
