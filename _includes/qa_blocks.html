@@ -1,0 +1,32 @@
+<!--
+
+This will be act as a wrapper for the content of the faq pages.
+
+It will replace the custom tags with the appropriate HTML tags to style the content.
+
+Example:
+
+<faq>
+    <question>
+       What is Lorem Ipsum?
+    </question>
+    <answer>
+       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </answer>
+</faq>
+
+-->
+
+{% assign content_ = include.content | replace: '<faq>', '<hr><div class="pb-3">' %}
+{% assign content_ = content_ | replace: '</faq>', '</div><br>' %}
+
+{% assign content_ = content_ | replace: '<question>', '<div class="pb-2"><b>Q.&nbsp;' %}
+{% assign content_ = content_ | replace: '</question>', '</b></div>' %}
+
+{% assign content_ = content_ | replace: '<answer>', '<div>' %}
+{% assign content_ = content_ | replace: '</answer>', '</div>' %}
+
+{% assign content_ = content_ | replace: '<code class="', '<div class=" highlight"><pre><code class="dracula ' %}
+{% assign content_ = content_ | replace: '</code>', '</code></pre></div>' %}
+
+{{ content_ }}

@@ -2,19 +2,6 @@
 layout: default
 ---
 
-{% assign content_ = content | replace: '<faq>', '<div>' %}
-        {% assign content_ = content_ | replace: '</faq>', '</div><br>' %}
-
-{% assign content_ = content_ | replace: '<question>', '<div><b>Q.' %}
-            {% assign content_ = content_ | replace: '</question>', '</b></div>' %}
-
-{% assign content_ = content_ | replace: '<answer>', '<div>' %}
-        {% assign content_ = content_ | replace: '</answer>', '</div>' %}
-
-{% assign content_ = content_ | replace: '<code class="', '<div class=" highlight"><pre><code class="dracula ' %}
-{% assign content_ = content_ | replace: '</code>', '</code></pre>
-</div>' %}
-
 {% include page_tree_builder.html pages=site.html_pages -%}
 {%- assign parent_page = pages_list | where: "title", page.parent -%}
 
@@ -40,5 +27,5 @@ layout: default
 </div>
 
 <div class="container pt-5">
-    {{ content_ }}
+  {% include qa_blocks.html content=content %}
 </div>
