@@ -9,6 +9,10 @@ author : Adeepa
 
 
 
+<div class="alert alert-danger" role="alert">
+    <strong>Notice:</strong> The Aiken server is currently dysfunctional and unavailable for use.
+</div>
+
 <h3>aiken.ce.pdn.ac.lk Server</h3>
 <p>This is a HPC (High Performance Computing) server of the Department of Computer Engineering, University of
     Peradeniya.</p>
@@ -38,20 +42,6 @@ Later add to template-->
     </div>
 </div>
 
-<!-- 2 -->
-<p>
-    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
-        aria-expanded="false" aria-controls="collapseExample">
-        I am not an undergraduate of the Department of Computer Engineering, University of Peradeniya. Can I use this
-        server?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse2">
-    <div class="card card-body">
-        Ask headce[at]eng.pdn.ac.lk.
-    </div>
-</div>
-
 <!-- 3 -->
 <p>
     <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
@@ -61,7 +51,7 @@ Later add to template-->
 </p>
 <div class="collapse multi-collapse" id="collapse3">
     <div class="card card-body">
-        <p>You can use ssh login. If it is not clear (or unaccessible)</p>
+        <p>You can directly SSH to this server from anywhere. <a href="/network-n-servers/connect_to_servers/">Read how to SSH</a></p>
     </div>
 </div>
 
@@ -94,29 +84,6 @@ Later add to template-->
     </div>
 </div>
 
-<!-- 6 -->
-<p>
-    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6"
-        aria-expanded="false" aria-controls="collapseExample">
-        How can I run a Jupyter Notebook on the server and access it over the internet?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse6">
-    <div class="card card-body">
-        <ol>
-            <li>Create a conda environment with jupyter notebook package installed.</li>
-            <li>Activate that environment.</li>
-            <li>Run the jupyter notebook. <code class="md">jupyter notebook --no-browser --port=8888 --ip=0.0.0.0</code>
-            </li>
-            <li>You will see a URL like this <code class="md">http://SOMETHING:8888/tree?token=abc123def456</code></li>
-            <li>Type the following address into your PC browser
-                <code class="md">http://aiken.ce.pdn.ac.lk:8888/tree?token=abc123def456</code>
-            </li>
-            <li>Your browser (on your PC) will be showing the jupyter notebook running on the aiken server</li>
-        </ol>
-    </div>
-</div>
-
 <!-- 7 -->
 <p>
     <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7"
@@ -129,19 +96,6 @@ Later add to template-->
         <p>Please request through any <a href="https://people.ce.pdn.ac.lk/staff/academic/">CO staff member</a>.
             Please note that the server admin has no authority to install something unless it is requested by a staff
             memeber.</p>
-    </div>
-</div>
-
-<!-- 8 -->
-<p>
-    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8"
-        aria-expanded="false" aria-controls="collapseExample">
-        What can I do if my doubt is not listed here?
-    </button>
-</p>
-<div class="collapse multi-collapse" id="collapse8">
-    <div class="card card-body">
-        <p>Ask the <a href="{% link faq/network-n-servers/3_contact_network_admin.html %}">CE Network Admin</a></p>
     </div>
 </div>
 
@@ -208,4 +162,12 @@ answer="
         href='https://github.com/cepdnaclk/singularity-deployment'>https://github.com/cepdnaclk/singularity-deployment</a>
 </p>
 "
+%}
+
+<!-- 12 -->
+{% include qa-template.html
+id="12"
+theme="success"
+question="What can I do if my doubt is not listed here?"
+answer="<a href='/network-n-servers/contact-network-admin/'>Ask the CE Network Admin</a>"
 %}

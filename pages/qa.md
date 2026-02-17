@@ -29,8 +29,8 @@ Send an email to e17154ATengDOTpdnDOTacDOTlk from your @ce.pdn.ac.lk email (not 
 <table class="table table-bordered">
     <tr><td>Network</td><td>Username</td><td>Password</td></tr>
     <tr><td>Pera-Wifi</td><td>e14000</td><td>Feels password</td></tr>
-    <tr><td>Eng-Student</td><td>None</td><td><a href="https://cepdnaclk.github.io/servers/admin/">ask</a>(cannot post publicly)</td></tr>
-    <tr><td>NetLab</td><td>None</td><td><a href="https://cepdnaclk.github.io/servers/admin/">ask</a>(cannot post publicly)</td></tr>
+    <tr><td>Eng-Student</td><td>None</td><td><a href="https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/">ask</a>(cannot post publicly)</td></tr>
+    <tr><td>NetLab</td><td>None</td><td><a href="https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/">ask</a>(cannot post publicly)</td></tr>
 </table>
 
 ---
@@ -130,9 +130,9 @@ As of now (2020/04/14): @ce.pdn.ac.lk will be deleted one year after the graduat
 <table class="table table-bordered">
 <tr><th>Account</th><th>Whom to ask</th></tr>
 <tr><td>https://feels.pdn.ac.lk/</td><td>feels[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
-<tr><td>CO Top floor lab linux computers, tesla, aiken, babbage, [at]ce.pdn.ac.lk email, results.ce.pdn.ac.lk</td><td><a href="https://cepdnaclk.github.io/servers/admin/">CO server admin</a></td></tr>
-<tr><td>CO Top floor windows password</td><td><a href="https://cepdnaclk.github.io/servers/admin/">CO server admin</a></td></tr>
-<tr><td>CC windows password</td><td><a href="https://cepdnaclk.github.io/servers/admin/">CO server admin</a></td></tr>
+<tr><td>CO Top floor lab linux computers, tesla, aiken, babbage, [at]ce.pdn.ac.lk email, results.ce.pdn.ac.lk</td><td><a href="https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/">CO server admin</a></td></tr>
+<tr><td>CO Top floor windows password</td><td><a href="https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/">CO server admin</a></td></tr>
+<tr><td>CC windows password</td><td><a href="https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/">CO server admin</a></td></tr>
 <tr><td>[at]eng.pdn.ac.lk password</td><td>roshanr[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
 <tr><td>http://me.pefaa.net/</td><td>kamalanath[at]eng[dot]pdn[dot]ac[dot]lk</td></tr>
 </table>

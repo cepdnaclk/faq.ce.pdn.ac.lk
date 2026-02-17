@@ -26,16 +26,22 @@ Later add to template-->
 {% include qa-template.html
 id="2"
 question="How can I connect to this server?"
-answer="You can use ssh login. Since kepler.ce.pdn.ac.lk is not a public IP you should either
-- use a computer in the Peradeniya network or
-- ssh to a public IP server like tesla.ce.pdn.ac.lk or aiken.ce.pdn.ac.lk and ssh to kepler.ce.pdn.ac.lk from there."
+answer="Since kepler.ce.pdn.ac.lk does not have a public IP, you can either SSH directly from inside the university network, or SSH through Tesla (which has a public IP) from outside the university network. <a href='/network-n-servers/connect_to_servers/'>Read how to SSH</a>
+<br><br>Direct (from inside the university network):<br>
+<b>ssh e14000@kepler.ce.pdn.ac.lk</b>
+<br><br>Jump through Tesla (from outside):<br>
+<b>ssh -J e14000@tesla.ce.pdn.ac.lk e14000@kepler.ce.pdn.ac.lk</b>"
 %}
 
 <!-- 4 -->
 {% include qa-template.html
 id="4"
-question="What are the GPUs in this server?"
-answer="Tesla K40c and Quadro K620."
+question="What is the hardware configuration of this server?"
+answer="
+* CPU: Intel(R) Xeon(R) CPU E5-1630 v3 @ 3.70GHz | Cores: 8
+* RAM: 16 GB DDR4-2133 MT/s
+* GPU: Nvidia Tesla K40c and Nvidia Quadro K620
+"
 %}
 
 <!-- 5 -->
@@ -141,29 +147,14 @@ install something unless it is requested by a staff memeber."
 <!-- 11 -->
 {% include qa-template.html
 id="11"
-question="What can I do if my doubt is not listed here?"
-answer="[Ask via email](/network-n-servers/contact-network-admin/)"
+question="I broke something. What should I do?"
+answer="[Contact server admin](/network-n-servers/contact-network-admin/)"
 %}
+
 
 <!-- 12 -->
 {% include qa-template.html
 id="12"
-question="I am not an undergraduate of the Department of Computer Engineering, University of Peradeniya. Can I use this
-server?"
-answer="Ask headce[at]eng.pdn.ac.lk."
-%}
-
-<!-- 13 -->
-{% include qa-template.html
-id="13"
-question="I broke something. What should I do?"
-answer="[Contact server admin](/network-n-servers/contact-network-admin/)</a>"
-%}
-
-
-<!-- 14 -->
-{% include qa-template.html
-id="14"
 question="How to run a Singularity container on Kepler?"
 answer="
 <ol>
@@ -181,4 +172,11 @@ answer="
 <p>If you need to learn more, go to: <a
     href='https://github.com/cepdnaclk/singularity-deployment'>https://github.com/cepdnaclk/singularity-deployment</a>
 </p>"
+%}
+
+<!-- 13 -->
+{% include qa-template.html
+id="13"
+question="What can I do if my doubt is not listed here?"
+answer="[Ask via email](/network-n-servers/contact-network-admin/)"
 %}

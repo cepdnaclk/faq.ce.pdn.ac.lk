@@ -17,7 +17,7 @@ Later add to template-->
 {% include qa-template.html
 id="1"
 question="How can I connect to this server?"
-answer="You can use ssh login"
+answer="You can directly SSH to this server from anywhere. <a href='/network-n-servers/connect_to_servers/'>Read how to SSH</a>"
 %}
 
 <!-- 2 -->
@@ -60,45 +60,6 @@ answer="Ubuntu 14.04.5 LTS"
   </div>
 </div>
 
-<!-- 5 -->
-<p>
-  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5"
-    aria-expanded="false" aria-controls="collapseExample">
-    How can I run a Jupyter Notebook on the server and access it over the internet?
-  </button>
-</p>
-<div class="collapse multi-collapse" id="collapse5">
-  <div class="card card-body">
-    <ol>
-      <li>Create a conda environment with jupyter notebook package installed.</li>
-      <li>Activate that environment.</li>
-      <li>
-        <div>Run <i>jupyter notebook --generate-config</i></div>
-      </li>
-      <li>
-        <div>It will say the configuration file for your account. Edit the configuration file and add the following two
-          lines. (They are originally commented out as given below.)
-          <code class="bash">
-# c.NotebookApp.allow_origin = ''
-# c.NotebookApp.ip = 'localhost'
-c.NotebookApp.allow_origin = '*'
-c.NotebookApp.ip = '0.0.0.0'
-        </code>
-        </div>
-      </li>
-      <li>Save the configuration file. You should still be in the conda environment.</li>
-      <li>
-        <p>Run the <i>jupyter notebook. jupyter-notebook --no-browser</i></p>
-      </li>
-      <li>You will see a URL like this <i>http://SOMETHING:8888/tree?token=abc123def456</i></li>
-      <li>Type the following address into your PC browser
-        <i>http://tesla.ce.pdn.ac.lk:8888/tree?token=abc123def456</i>
-      </li>
-      <li>Your browser (on your PC) will be showing the jupyter notebook running on the tesla server.</li>
-    </ol>
-  </div>
-</div>
-
 <!-- 6 -->
 {% include qa-template.html
 id="6"
@@ -111,21 +72,13 @@ install something unless it is requested by a staff memeber."
 <!-- 7 -->
 {% include qa-template.html
 id="7"
-question="What can I do if my doubt is not listed here?"
-answer="<a class='btn-link' href='/network-n-servers/contact-network-admin/'>Ask via email</a>"
-%}
-
-<!-- 12 -->
-{% include qa-template.html
-id="12"
-question="I am not an undergraduate of the Department of Computer Engineering, University of Peradeniya. Can I use this
-server?"
-answer="Ask headce[at]eng.pdn.ac.lk."
-%}
-
-<!-- 13 -->
-{% include qa-template.html
-id="13"
 question="I broke something. What should I do?"
 answer="<a class='btn-link' href='/network-n-servers/contact-network-admin/'>Contact server admin</a>"
+%}
+
+<!-- 8 -->
+{% include qa-template.html
+id="8"
+question="What can I do if my doubt is not listed here?"
+answer="<a class='btn-link' href='/network-n-servers/contact-network-admin/'>Ask via email</a>"
 %}
