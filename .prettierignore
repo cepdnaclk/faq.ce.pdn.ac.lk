@@ -1,0 +1,7 @@
+**/node_modules/**
+**/dist/**
+_site/**
+_layouts/**
+.jekyll-cache/**
+.mypy_cache/**
+.venv/**
