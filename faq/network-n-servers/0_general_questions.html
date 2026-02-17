@@ -49,22 +49,14 @@ author: Nuwan
           </tr>
           <tr>
             <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">
-              <code>
-                wget
-                <br />
-                https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-              </code>
+              <code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code>
             </td>
             <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">Download the installer.</td>
           </tr>
 
           <tr>
             <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">
-              <code>
-                bash
-                <br />
-                Miniconda3-latest-Linux-x86_64.sh
-              </code>
+              <code>bash Miniconda3-latest-Linux-x86_64.sh</code>
             </td>
             <td style="border: 1px solid #d2d2d2; text-align: left; padding: 8px">Run the .sh bash installer.</td>
           </tr>
@@ -229,12 +221,13 @@ author: Nuwan
     <p>First, list the available GPUs and their IDs by running:</p>
     <b>nvidia-smi -L</b>
     <p>You will see output like:</p>
-    <pre>
-GPU 0: NVIDIA A100 (UUID: GPU-...)
-GPU 1: NVIDIA A100 (UUID: GPU-...)
-GPU 2: NVIDIA A100 (UUID: GPU-...)
-</pre
-    >
+    <div>
+      GPU 0: NVIDIA A100 (UUID: GPU-...)
+      <br />
+      GPU 1: NVIDIA A100 (UUID: GPU-...)
+      <br />
+      GPU 2: NVIDIA A100 (UUID: GPU-...)
+    </div>
     <p>
       The numbers (0, 1, 2) are the GPU IDs. Use the
       <b>CUDA_VISIBLE_DEVICES</b>
