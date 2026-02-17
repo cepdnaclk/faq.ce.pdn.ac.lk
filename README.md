@@ -1,4 +1,3 @@
-
 # faq.ce.pdn.ac.lk
 
 This is the GitHub repository of the [faq.ce.pdn.ac.lk](https://faq.ce.pdn.ac.lk)

@@ -13,8 +13,8 @@ minima:
   date_format: "%b %-d, %Y"
 
 plugins:
- - jekyll-seo-tag
- - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Google Analytics Tracking (optional)
 ga_tracking: "G-ZD34QKPBLL"
@@ -25,7 +25,6 @@ gh_edit_link: false # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
 gh_edit_repository: "https://github.com/cepdnaclk/faq.ce.pdn.ac.lk" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
-
 
 permalink: pretty
 exclude:
@@ -46,9 +45,8 @@ exclude:
     "graphic_templates",
     "*.py",
     "*.sh",
-    "*.yml"
+    "*.yml",
   ]
-
 
 kramdown:
   syntax_highlighter_opts:

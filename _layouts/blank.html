@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
-<head>
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  <head>
     {% include meta.html %}
 
-    {%- if jekyll.environment == 'production' -%}
-    {%- include analytics.html -%}
-    {%- endif -%}
+    <!-- Google Analytics Script -->
+    {%- if jekyll.environment == 'production' -%}{%- include analytics.html-%} {%- endif -%}
 
+    <!-- Header -->
     {%- include head.html -%}
+  </head>
 
-</head>
-
-<body>
+  <body>
     {{ content }}
-</body>
+  </body>
 </html>
