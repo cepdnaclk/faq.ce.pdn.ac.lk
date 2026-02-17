@@ -1,5 +1,5 @@
 ---
-layout: QA_page
+layout: qna_page
 permalink: "/network-n-servers/ampere/"
 parent: "Network and Servers"
 title: "Ampere"
@@ -12,16 +12,16 @@ Later add to template-->
 <p style="text-align:right">
     <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
   </p>
-  
+
   <p>
     This is a GPU server of the Department of Computer Engineering, University of Peradeniya.
   </p>
-  
+
   <p>
     You can use this server using the LDAP login for ce.pdn.ac.lk undergraduates (which is used for CO top floor lab,
     Aiken and Tesla) without sudo access.
   </p>
-  
+
   <div>
     <u>Specifications</u>
     <ul>
@@ -31,8 +31,8 @@ Later add to template-->
       <li>HP Z Turbo Quad Pro 512GB SSD, 2 * 4TB Sata HDD</li>
     </ul>
   </div>
-  
-  
+
+
   <hr>
 
   <!-- 1 -->
@@ -45,15 +45,15 @@ Later add to template-->
   <br><br>Jump through Tesla (from outside):<br>
   <b>ssh -J e14000@tesla.ce.pdn.ac.lk e14000@ampere.ce.pdn.ac.lk</b>"
   %}
-  
-  
+
+
   <!-- 2 -->
   {% include qa-template.html
   id="2"
   question="What is the IP address of this server?"
   answer="This server uses the internal IP address 10.40.18.10. This address is only valid within the Peradeniya network."
   %}
-  
+
   <!-- 3 -->
   {% include qa-template.html
   id="3"
@@ -61,17 +61,17 @@ Later add to template-->
   answer="If you are an undergraduate student of the department,
    you already have access to this server. If not, follow the instructions on <a href = 'https://faq.ce.pdn.ac.lk/network-n-servers/tesla/'>this</a> web page."
   %}
-  
+
   <!-- 4 -->
   <!--
   {% include qa-template.html
   id="4"
   question="What are the specifications of this server?"
-  answer="2* <a href = 'https://ark.intel.com/content/www/us/en/ark/products/199349/intel-xeon-silver-4215r-processor-11m-cache-3-20-ghz.html'>Intel Xeon 4215R</a> Processors, 
-  128 GB RAM, 2 * <a href = 'https://www.nvidia.com/en-us/design-visualization/rtx-a6000/'> RTX A6000</a> 48GB GPUs, 
+  answer="2* <a href = 'https://ark.intel.com/content/www/us/en/ark/products/199349/intel-xeon-silver-4215r-processor-11m-cache-3-20-ghz.html'>Intel Xeon 4215R</a> Processors,
+  128 GB RAM, 2 * <a href = 'https://www.nvidia.com/en-us/design-visualization/rtx-a6000/'> RTX A6000</a> 48GB GPUs,
   HP Z Turbo Quad Pro 512GB SSD, 2 * 4TB Sata HDD." %}
   -->
-  
+
   <!-- 5 -->
   {% include qa-template.html
   id="5"
@@ -79,7 +79,7 @@ Later add to template-->
   answer="512GB SSD (nvme0n1p2) is used for the operating system.
 
   SATA Hard disks (to be used by students):
-  
+
   sda           8:0    0   3.6T  0 disk
 
   ├─sda1        8:1    0     2T  0 part /storage/datasets<br>
@@ -89,28 +89,28 @@ Later add to template-->
 
   ├─sdb1        8:17   0     2T  0 part /storage/scratch2<br>
   └─sdb2        8:18   0   1.6T  0 part /storage/scratch3" %}
-  
-  
-  
+
+
+
   <!-- 6 -->
   {% include qa-template.html
     id="6"
     question="How can I request storage for a project on this server?"
     answer="Read <a href = 'https://www.cs.umd.edu/~gihan/resources/pdn-hpc/'>https://www.cs.umd.edu/~gihan/resources/pdn-hpc/</a> >> “Requesting/managing project storage on Peradeniya Servers”"
     %}
-  
-  
+
+
   <!-- 7 -->
   {% include qa-template.html
   id="7"
   question="What datasets are stored in this server?"
   answer="Run
   `ls /storage/datasets`
-  to see the preloaded datasets. 
+  to see the preloaded datasets.
   If you want us to store another dataset, make a request on #ask-for-help discord channel."
   %}
-  
-  
+
+
   <!-- 8 -->
   {% include qa-template.html
   id="8"
@@ -120,12 +120,11 @@ Later add to template-->
   Finally, ask on #ask-for-help on Discord.
   "
   %}
-  
+
   <!-- 9 -->
   {% include qa-template.html
   id="9"
   question="My question is not listed here. What should I do?"
-  answer="Post your question on #ask-for-help channel on peracom discord. 
+  answer="Post your question on #ask-for-help channel on peracom discord.
   If you are not on the discord server, reach out to <a href = 'https://people.ce.pdn.ac.lk/students/e17/154/'>E/17/Akila</a> via email."
   %}
-  
