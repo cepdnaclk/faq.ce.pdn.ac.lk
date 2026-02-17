@@ -1,10 +1,11 @@
 ---
-layout: testCategory
+layout: category
 permalink: "/equipment/"
 parent: "home"
 title: "Equipment"
-icon: "/assets/img/equipment.png"
+icon: "/assets/img/icons/equipment.png"
 index: 6
+toc: false
 ---
 
 <h5>User Manuals</h5>
@@ -16,25 +17,32 @@ index: 6
   </ul>
 </div>
 
-<hr />
-
-<!--EXPAND ALL BUTTON ON TOP RIGHT CORNER
-Later add to template-->
-<p style="text-align: right">
-  <button type="button" class="btn btn-dark btn-expand-all">EXPAND ALL</button>
-</p>
+<div></div>
 
 <!-- 1 -->
-{% include qa-template.html id="1" question="How to get started with the Open BCI Cyton Board?"
-answer="See
-[https://cepdnaclk.github.io/e15-4yp-Brain-Computer-Interface-for-controlling-virtual-objects/](https://cepdnaclk.github.io/e15-4yp-Brain-Computer-Interface-for-controlling-virtual-objects/)"
-%}
+<faq>
+  <question>How to get started with the Open BCI Cyton Board?</question>
+  <answer>
+    <a href="https://cepdnaclk.github.io/e15-4yp-Brain-Computer-Interface-for-controlling-virtual-objects/">
+      https://cepdnaclk.github.io/e15-4yp-Brain-Computer-Interface-for-controlling-virtual-objects/
+    </a>
+  </answer>
+</faq>
 
 <!-- 2 -->
-{% include qa-template.html id="2" question="How to use the department 3D printing service ?"
-answer="See the guidelines for beginners in [Ender 3 Pro 3D Printer User
-Guide](https://make.ce.pdn.ac.lk/docs/3d-printing/)" %}
+<faq>
+  <question>How to use the department 3D printing service ?</question>
+  <answer>
+    See the guidelines for beginners in
+    <a href="https://make.ce.pdn.ac.lk/docs/3d-printing/">Ender 3 Pro 3D Printer User Guide</a>
+  </answer>
+</faq>
 
 <!-- 3 -->
-{% include qa-template.html id="3" question="How to use the department CNC Machine ?" answer="See
-the guidelines in [3018 CNC User Guide](https://make.ce.pdn.ac.lk/docs/cnc/)" %}
+<faq>
+  <question>How to use the department CNC Machine ?</question>
+  <answer>
+    See the guidelines in
+    <a href="https://make.ce.pdn.ac.lk/docs/cnc/">3018 CNC User Guide</a>
+  </answer>
+</faq>
