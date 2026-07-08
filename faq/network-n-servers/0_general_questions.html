@@ -171,32 +171,6 @@ author: Nuwan
 </faq>
 
 <faq>
-  <question>How can I change the gcc or g++ version?</question>
-  <answer>
-    <p>
-      Method 1: Please contact the
-      <a href="https://faq.ce.pdn.ac.lk/network-n-servers/contact-network-admin/">admin</a>
-      and request them run update-alternatives as documented
-      <a href="https://github.com/cepdnaclk/server-documentation-public">here</a>
-      .
-    </p>
-
-    <p>
-      Method 2: All
-      <b>gcc/g++</b>
-      versions are installed in
-      <b>/usr/bin/</b>
-      . Following is an example on how you can use gcc-8 as gcc using a simple trick (without sudo).
-    </p>
-    <code class="bash">
-      gcc -v#You will see what the current gcc version is mkdir ~/symlinks cd ~/symlinks ln -s /usr/bin/gcc-8 ./gcc #We are creating a
-      symbolic link called gcc to gcc-8 export PATH="~/symlinks:$PATH" #We add the new gcc to the path (before the existing path) cd ~ gcc
-      -v #Now you get the gcc-8 when you run gcc command
-    </code>
-  </answer>
-</faq>
-
-<faq>
   <question>Which server is more suitable for my work?</question>
   <answer>
     If you are working on a heavy CPU bound computation, use Aiken. Kepler would be suitable if you are working on deep learning because of
