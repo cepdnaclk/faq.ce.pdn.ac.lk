@@ -138,12 +138,10 @@ author: Adeepa
   <question>What CUDA and PyTorch versions should I use on Kepler (Tesla K40c)?</question>
   <answer>
     <p>
-      NVIDIA Tesla K40c is a Kepler GPU (compute capability 3.5). In practice, this limits support to the CUDA 11.x line. NVIDIA
-      deprecated Kepler support in CUDA 11.4 and removed it entirely in CUDA 12.0.
+      NVIDIA Tesla K40c is a Kepler GPU (compute capability 3.5). In practice, this limits support to the CUDA 11.x line. NVIDIA deprecated
+      Kepler support in CUDA 11.4 and removed it entirely in CUDA 12.0.
     </p>
-    <p>
-      A recommended PyTorch setup for this GPU is PyTorch 1.12.1 with torchvision 0.13.1, torchaudio 0.12.1, and CUDA 11.3:
-    </p>
+    <p>A recommended PyTorch setup for this GPU is PyTorch 1.12.1 with torchvision 0.13.1, torchaudio 0.12.1, and CUDA 11.3:</p>
     <code class="bash">conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch</code>
   </answer>
 </faq>

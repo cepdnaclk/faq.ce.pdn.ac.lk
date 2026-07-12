@@ -8,9 +8,7 @@ function isSpeechSynthesisSupported() {
 
 function getPageContent() {
   // Get the main content container
-  const contentContainer = document.querySelector(
-    ".container.pt-5, .container.py-3.pt-5"
-  );
+  const contentContainer = document.querySelector(".container.pt-5, .container.py-3.pt-5");
 
   if (!contentContainer) {
     return "";
@@ -18,9 +16,7 @@ function getPageContent() {
 
   // Extract text content, excluding scripts and styles
   let content = "";
-  const elements = contentContainer.querySelectorAll(
-    "p, h1, h2, h3, h4, h5, h6, li, b, div"
-  );
+  const elements = contentContainer.querySelectorAll("p, h1, h2, h3, h4, h5, h6, li, b, div");
 
   elements.forEach((element) => {
     const text = element.textContent.trim();
@@ -64,9 +60,7 @@ function resetButtonState() {
 
 function toggleTextToSpeech() {
   if (!isSpeechSynthesisSupported()) {
-    alert(
-      "Sorry, your browser doesn't support the Web Speech API. Please try using a modern browser like Chrome, Edge, or Safari."
-    );
+    alert("Sorry, your browser doesn't support the Web Speech API. Please try using a modern browser like Chrome, Edge, or Safari.");
     return;
   }
 
